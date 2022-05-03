@@ -1,16 +1,15 @@
-import logo from './logo.svg';
+
+
 import './App.css';
 import { useSelector } from 'react-redux';
 import Navbar from './Components/Navbar/Navbar';
+import React from 'react'
+import Slider from './Components/home/Slider/Slider'
+import Sliderdata from './Components/home/Slider/Slider' 
 
-
-
-
-
-
-function App() {
-  
+const App = () => {
   return (
+
     <div className="App">
       {/* <Navbar/> */}
       {/* <header className="App-header">
@@ -27,8 +26,13 @@ function App() {
           Learn React
         </a>
       </header> */}
-    </div>
-  );
-}
 
-export default App;
+    <Slider></Slider> 
+    </div>
+   
+
+
+  );
+};
+
+export default App
