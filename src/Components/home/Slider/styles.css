@@ -1,0 +1,41 @@
+
+.productContainer img{
+  height: 82%;
+  width:100%
+}
+.productContainer{
+  border:1px solid red;
+  height:28em;
+  width:250px;
+  /* text-align:center; */
+  position: relative;
+  cursor: pointer;
+ 
+}
+p{
+  padding-left: 4px;
+}
+
+.Quicklook{
+ 
+  width:100%;
+  height:48px;
+  position: absolute;
+  bottom: 78px;
+  margin:auto;
+  display:none;
+  color:teal;
+  background-color:0.2px transparent;
+  z-index:-0.8;
+  border:0.7px solid rgb(210, 210, 210);
+  font-size: 18px;
+}
+.productContainer:hover .Quicklook{
+display:block;
+cursor:pointer;
+/* border:0.4px solid rgb(87, 81, 81); */
+}
+.Quicklook:hover{
+  border:2.1px solid teal;
+}
+

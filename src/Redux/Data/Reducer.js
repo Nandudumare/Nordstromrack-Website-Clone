@@ -3,7 +3,8 @@ import data from "../../Data/data.json"
 const Data = data.data
 
 const initState = {
-    data: [...Data]
+    data: [...Data],
+
 }
 
 
