@@ -1,0 +1,115 @@
+.topdiv{
+
+    /* border: 1px solid black; */
+    display: flex;
+    gap:3%;
+    font-family: Text,Arial,sans-serif;
+} 
+
+.cat{
+    /* border: 1px solid yellow; */
+    display: flex;
+    font-family:  Text,Arial,sans-serif;
+    
+}
+
+.cat>div{
+    margin-right: 2%;
+    box-sizing: border-box;
+    padding: 1%;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin-left: 16%;
+    margin-top: 10%;
+    gap:1%;
+}
+
+.grid>div{
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    box-sizing: border-box;
+    padding: 4%;
+ 
+}
+.grid>div>p{
+    text-align: left;
+
+}
+.grid>div{
+    text-align: left;
+}
+.grid>div>img{
+    width: 90%;
+    height: 300px;
+}
+
+.nav{
+
+    border: 1px solid green;
+    height: 200px;
+
+}
+.left{
+    text-align: left;
+    margin-top: 1%;
+    height: 50px;
+    color: rgb(114, 109, 109);
+}
+.left1{
+    text-align: left;
+    margin-left: 16%;
+}
+
+.left2{
+    text-align: left;
+    margin-left: 16%;
+    color: gray;
+}
+
+
+.sidebar{
+    border: 1px solid black;
+    height: 500px;
+    width: 200px;
+}
+
+.allcategory{
+    display: flex;
+    margin-left: 14.5%;
+    justify-content: space-around;
+}
+
+.shipping{
+    color: rgb(153, 151, 151);
+    font-size: 20px;
+}
+
+.price{
+    font-weight: bold;
+}
+
+.sort{
+    border: 1px solid black;
+    width: 250px;
+    height: 40px;
+    margin-left: 80%;
+    margin-top: 2%;
+}
+.hover{
+    text-decoration: underline;
+    color: yellow;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.line{
+    border: 1px solid grey;
+    margin-left: 16%;
+    margin-top: 1%;
+}
+
