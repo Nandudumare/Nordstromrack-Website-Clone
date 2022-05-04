@@ -13,8 +13,8 @@ const MainRoutes = () => {
     <>
       <Navbar />
       {/* <Products /> */}
-      {/* <Modals /> */}
-      <Side />
+      <Modals />
+      {/* <Side /> */}
 
       <Routes>
         <Route path="signin" element={<SignIn />} />
