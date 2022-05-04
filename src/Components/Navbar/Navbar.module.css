@@ -1,3 +1,9 @@
+/* body{
+    overflow:hidden;
+} */
+
+
+
 .darkcyan_1{
     height: 35px;
     width: 100%;
@@ -5,7 +11,6 @@
     color: white;
     display:flex;
     justify-content:center;
-    
 }
 .darkcyan_1>p{
     margin:0px;
@@ -19,8 +24,8 @@
 
 .div__2{
     display: grid;
-    grid-template-columns: 100px 800px 100px ;
-    gap:90px;
+    grid-template-columns: 100px 800px 150px ;
+    gap:70px;
     justify-content:space-evenly;
     margin-top:20px;
     width: 100%;
@@ -43,7 +48,7 @@
 
 .div__2>div:nth-child(2)>input{
     height: 38px;
-    width: 714px;
+    width: 798px;
     font-size:1.1rem;
     border:none;
     outline:none;
@@ -59,7 +64,7 @@
 
 .div__3{
     display: grid;
-    grid-template-columns: 50px 50px;
+    grid-template-columns: 90px 30px;
     gap:20px; 
 }
 
@@ -77,8 +82,8 @@
     display: none;
     position: absolute;
     background-color: white;
-    /* right: 5px; */
-    left:-150px;
+    /* right: 890px; */
+    left:-120px;
     min-width: 270px;
     min-height: 500px;
     /* overflow: hidden; */
@@ -98,7 +103,7 @@
     flex-direction: column;
   }
 
-  .dropdown_content a:hover {
+  .dropdown_content p:hover {
     color:#00819d;
     text-decoration: underline;
   }
@@ -107,3 +112,12 @@
     display: block;
   }
 
+
+.relative_position{
+    position:relative;
+}
+
+
+.your_acc{
+     font-size:1.2rem;
+}
