@@ -2,7 +2,9 @@ import {
     DETAILS,
     LOG_IN,
     SIGNIN_1,
-    SIGN_OUT
+    SIGN_OUT,
+    DESCRIPTION_DATA,
+    SORTED_DATA
 } from "./ActionTypes"
 
 
@@ -57,4 +59,22 @@ export const login = (dispatch) => {
 
 
 
+}
+
+
+export const description_data = (dispatch,payload)=>{
+    dispatch({
+        type:DESCRIPTION_DATA,
+        payload
+    })
+}
+
+
+
+
+export const sorted_data = (dispatch,payload)=>{
+    dispatch({
+        type:SORTED_DATA,
+        payload
+    })
 }

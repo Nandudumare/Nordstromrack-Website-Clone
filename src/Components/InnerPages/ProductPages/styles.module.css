@@ -115,7 +115,6 @@ a:hover{
     width: 230px;
 }
 
-
 .productContainer{
 
     position: relative;
@@ -123,7 +122,6 @@ a:hover{
     /* border: 1px solid green; */
    
   }
-
 
 .Quicklook{
   width:100%;
@@ -162,4 +160,8 @@ a:hover{
 .side{
     border: 1px solid black;
     font-weight: bold;
+}
+
+.you{
+    text-align: center;
 }

@@ -7,18 +7,21 @@ import SignIn from "../Components/Navbar/SignIn";
 import Products from "../Components/InnerPages/ProductPages/Products";
 import Modals from "../Components/Navbar/Modals";
 import Side from "../Components/Navbar/Auth/Side";
+import Description from "../Components/InnerPages/Description/Description";
 
 const MainRoutes = () => {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       {/* <Products /> */}
       {/* <Modals /> */}
-      <Side />
+      {/* <Side /> */}
 
       <Routes>
         <Route path="signin" element={<SignIn />} />
         <Route path="createacc" element={<CreateAcc />} />
+        <Route path="products" element={ <Products />}/>
+        <Route path="description" element={<Description/>}/>
       </Routes>
     </>
   );

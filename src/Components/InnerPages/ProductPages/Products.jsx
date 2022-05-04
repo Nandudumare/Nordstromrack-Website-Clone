@@ -1,7 +1,7 @@
 // import { colors } from '@mui/material'
-import React from 'react'
+import React, { useState } from 'react'
 
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import styles from "./styles.module.css"
 
 import {Navigation} from 'react-minimal-side-navigation';
@@ -10,124 +10,61 @@ import 'react-minimal-side-navigation/lib/ReactMinimalSideNavigation.css';
 
 import { ProSidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
 import 'react-pro-sidebar/dist/css/styles.css';
+import { useNavigate } from 'react-router-dom';
+import { description_data, sorted_data } from '../../../Redux/Data/Action';
 
 
 
 
 const Products = () => {
   const data = useSelector((state) => state.Data.data)
-
+  const navigate = useNavigate()
+  const dispatch= useDispatch()
+  const [state,setState] = useState(false )
+  // console.log(data)
   const filterData = data.filter((item )=>{return item.title.includes("Women")})
 
-  console.log("filter data",filterData,filterData.length)
+  // console.log("filter data",filterData,filterData.length)
+
+  const sortedData = useSelector(state=>state.Data.sortedData)
+  console.log(sortedData)
+  // console.log(...filterData +"Filtered")
+
+
+
+
+
+//description 
+
+const handleclick =(payload) =>{
+  description_data(dispatch,payload)
+navigate("/description") 
+
+
+}
+
 
 //the sort
 
-// const Select = styled.select`
-//   background-color: #b6ffdb;
-//   border: none;
-//   outline: none;
-//   padding: 4px 10px;
-//   font-size: 20px;
-// `;
-
-// function handlesort()
-// {
-//   filterData.sort((a,b) => {
-
-//     if (value === "asc") {
-//       return a.price - b.price;
-//     } else {
-//       return b.price - a.price;
-//     }
-
-//   })
-
-// }
 
 const handlesort = (e) => {
-  sortProducts(e.target.value)
-  console.log("value",e.target.value)
-}
-
-
-
-// console.log(filterData[0].price.raw)
-var arr=[]
-
-for(var i=0; i<filterData.length; i++)
-{
-      if(filterData[i].price.extracted==undefined)
-      {
-        filterData[i].price.extracted=100
-      }
-      var x = (filterData[i].price.extracted)
-
-      arr.push(x)
-
-}
-
-console.log(arr,"xhere")
-
-
-     arr.sort(function (a,b){
-       return a-b
-     })
-
-
-     console.log(arr,"sortedarray")
-
-
-function sortProducts(value)
-{
-
-  filterData.sort((a,b)=>{
-
-    if(value=="acs")
-    {
-        if(a.price.extracted==undefined && b.price.extracted==undefined)
-        {
-          a.price.extracted=100
-          b.price.extracted=100
-        }
-
+  // sortProducts(e.target.value)
+  if(e.target.value==="asc"){
+   const data =   filterData.sort((a,b)=>{
       return Number(a.price.extracted)-Number(b.price.extracted)
-    }
-    if(value=="dec")
-    {
+    })
+    sorted_data(dispatch,data)
+    setState(true)
 
-      if(b.price.extracted==undefined && a.price.extracted==undefined)
-      {
-        b.price.extracted=100
-          a.price.extracted=100
-      }
+    
+  }else if(e.target.value==="desc"){
+    const data =   filterData.sort((a,b)=>{
       return Number(b.price.extracted)-Number(a.price.extracted)
-    }
-  })
-  
-
-  console.log(filterData,"filter")
-
-  // arr.sort(function(a,b){
-  //   if(value=="asc")
-  //   {
-  //     return a-b
-  //   }
-  //   if(value=="dec")
-  //   {
-  //     return b-a
-  //   }
-
-  //   console.log(arr,"aftersort")
-
-  // })
-
-
+    })
+    sorted_data(dispatch,data)
+    setState(true)
+  }
 }
-
-
- 
-
 
 
 
@@ -143,41 +80,9 @@ function sortProducts(value)
      </div>
     <div className={styles.topdiv}>
           <div>
-
                 <div>
                   {/* side bar div */}
                   <div  className={styles.sidebar} >
-
-
-
-{/* 
-    <ProSidebar>
-  <Menu iconShape="square">
-    <SubMenu title="Components" >
-      <MenuItem>Component 1</MenuItem>
-      <MenuItem>Component 2</MenuItem>
-    </SubMenu>
-    <SubMenu title="Components" >
-      <MenuItem>Component 1</MenuItem>
-      <MenuItem>Component 2</MenuItem>
-    </SubMenu>
-    <SubMenu title="Components" >
-      <MenuItem>Component 1</MenuItem>
-      <MenuItem>Component 2</MenuItem>
-    </SubMenu>
-  </Menu>
-</ProSidebar>; */}
- 
-
- {/* <div>
-        <Header onClick={this.handleViewSidebar} />
-        <SideBar isOpen={this.state.sidebarOpen} toggleSidebar={this.handleViewSidebar} />
-        <Content isOpen={this.state.sidebarOpen} />
-      </div> */}
-
-
-
-
 
 
 
@@ -195,7 +100,7 @@ function sortProducts(value)
             // elemBefore: () => <Icon name="inbox" />,
           },
           {
-            title: <h4 >Size</h4>,
+            title: <h4>Size</h4>,
             itemId: '/1',
             // elemBefore: () => <Icon name="users" />,
             subNav: [
@@ -304,7 +209,7 @@ function sortProducts(value)
               {
                 title: <>
                 <input type="checkbox"/>
-                <lable> Pnik</lable>
+                <lable> Pink</lable>
           </>,
                 itemId: '/27',
               },
@@ -416,27 +321,12 @@ function sortProducts(value)
           </>,
                 itemId: '/45',
               },
-           
-              
-              
             ],
           },
-
-
-
-
           {
             title: <h4>Feature</h4>,
             itemId: '/5',
             subNav: [
-             
-              {
-                title:<>
-                <input type="checkbox"/>
-                <lable> Breathable</lable>
-                </>,
-                itemId: '/management/teams',
-              },
               {
                 title: <>
                 <input type="checkbox"/>
@@ -464,29 +354,18 @@ function sortProducts(value)
                 <lable> Wrinkle Resistant</lable>
                 </>,
                 itemId: '/management/teams',
-              },
-             
-              
+              }, 
             ],
           },
         ]}
       />
-
-
-
-
-                  </div>
+                </div>
                 </div>
 
           </div>
-
-
-
-
           <div >
 
-                  <div><p>That Dress is So You</p></div>
-
+                  <div><h4 className={styles.you}>That Dress is So You</h4></div>
 
                   <div className={styles.cat}>
              
@@ -496,19 +375,16 @@ function sortProducts(value)
                   </div>
 
                   <div>
-            
                   <img src={filterData[4].thumbnail}/>
                   <a>{filterData[4].cat}</a>
                   </div>
 
                   <div>
-           
                   <img src={filterData[5].thumbnail}/>
                   <a>{filterData[5].cat}</a>
                   </div>
 
                   <div>
-             
                   <img src={filterData[6].thumbnail}/>
                   <a>{filterData[6].cat}</a>
                   </div>
@@ -516,7 +392,6 @@ function sortProducts(value)
 
 
                   <div>
-                  
                   <img src={filterData[7].thumbnail}/>
                   <a>{filterData[7].cat}</a>
                   </div>
@@ -526,10 +401,6 @@ function sortProducts(value)
 
                   </div>
 
-
-
-                  
-                  
           </div>
     </div>
 
@@ -566,13 +437,14 @@ function sortProducts(value)
 
     <div className={styles.grid}>
 
-        {filterData.map(e => {
+    { state ? (
+      sortedData.map(e => {
 
         return <>
-
-            <div className={styles.productContainer} >
+        
+            <div onClick={()=>{handleclick(e)}} className={styles.productContainer} >
               
-
+        
                     <img src={e.thumbnail}/>
                     <a>{e.title}</a>
                     {/* <p>{e.price.raw}</p> */}
@@ -583,16 +455,40 @@ function sortProducts(value)
                     <p className={styles.shipping}>{e.shipping}</p>
                     <p className={styles.sold}>{e.extensions}</p>
                     <button  className={styles.Quicklook}>Quick Look</button> 
-               
                 
             </div>
-
+        
         </>
-        })}
+        })
+    ):
+
+filterData.map(e => {
+
+  return <>
+  
+      <div onClick={()=>{handleclick(e)}} className={styles.productContainer} >
+        
+  
+              <img src={e.thumbnail}/>
+              <a>{e.title}</a>
+              {/* <p>{e.price.raw}</p> */}
+              <p>{e.condition}</p>
+              <p className={styles.price}>{e.price.raw}</p>
+              {/* <p>{e.price.extracted}</p> */}
+              {/* <p>{e.price.from.raw}</p> */}
+              <p className={styles.shipping}>{e.shipping}</p>
+              <p className={styles.sold}>{e.extensions}</p>
+              <button  className={styles.Quicklook}>Quick Look</button> 
+         
+          
+      </div>
+  
+  </>
+  })
+
+    }
 
         </div>
-
-
     </>
   )
 }
