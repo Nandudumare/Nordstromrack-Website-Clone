@@ -6,6 +6,7 @@ import Navbar from "../Components/Navbar/Navbar";
 import SignIn from "../Components/Navbar/SignIn";
 import Products from "../Components/InnerPages/ProductPages/Products";
 import Modals from "../Components/Navbar/Modals";
+import { Example } from "../Components/Navbar/dummy";
 
 const MainRoutes = () => {
   return (
@@ -13,6 +14,7 @@ const MainRoutes = () => {
       <Navbar />
       {/* <Products /> */}
       <Modals />
+      <Example />
       <Routes>
         <Route path="signin" element={<SignIn />} />
         <Route path="createacc" element={<CreateAcc />} />

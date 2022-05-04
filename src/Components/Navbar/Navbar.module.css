@@ -48,7 +48,7 @@
 
 .div__2>div:nth-child(2)>input{
     height: 38px;
-    width: 714px;
+    width: 798px;
     font-size:1.1rem;
     border:none;
     outline:none;
@@ -118,3 +118,6 @@
 }
 
 
+.your_acc{
+     font-size:1.2rem;
+}
