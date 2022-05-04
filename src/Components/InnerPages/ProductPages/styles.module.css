@@ -17,19 +17,17 @@
     margin-right: 2%;
     box-sizing: border-box;
     padding: 1%;
-    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+   
 }
 
-.grid{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    margin-left: 16%;
-    margin-top: 10%;
-    gap:1%;
+.cat>div:hover{
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
 }
+
+
 
 .grid>div{
-    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    /* box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px; */
     box-sizing: border-box;
     padding: 4%;
  
@@ -40,6 +38,9 @@
 }
 .grid>div{
     text-align: left;
+}
+.grid>div:hover{
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
 }
 .grid>div>img{
     width: 90%;
@@ -70,12 +71,6 @@
 }
 
 
-.sidebar{
-    border: 1px solid black;
-    height: 500px;
-    width: 200px;
-}
-
 .allcategory{
     display: flex;
     margin-left: 14.5%;
@@ -93,7 +88,7 @@
 
 .sort{
     border: 1px solid black;
-    width: 250px;
+    width: 270px;
     height: 40px;
     margin-left: 80%;
     margin-top: 2%;
@@ -113,3 +108,58 @@ a:hover{
     margin-top: 1%;
 }
 
+
+.sidebar{
+    /* border: 1px solid black; */
+    height: 500px;
+    width: 230px;
+}
+
+
+.productContainer{
+
+    position: relative;
+    cursor: pointer;
+    /* border: 1px solid green; */
+   
+  }
+
+
+.Quicklook{
+  width:100%;
+  height:40px;
+  position: absolute;
+  bottom: 45%;
+  display:none;
+  color:rgb(101, 196, 196);
+  background-color:0.2px transparent;
+  margin-left: -11px;
+  /* z-index:-0.8; */
+  border:0.7px solid rgb(210, 210, 210);
+  /* border:2.1px solid rgb(24, 134, 134); */
+  font-size: 18px;
+  }
+
+  .productContainer:hover .Quicklook{
+  display:block;
+  cursor:pointer;
+  }
+
+
+  .Quicklook:hover{
+    border:1px solid teal;
+  }
+
+
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin-left: 16%;
+    margin-top: 10%;
+    gap:1%;
+}
+
+.side{
+    border: 1px solid black;
+    font-weight: bold;
+}
