@@ -1,13 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import { cyan } from "@mui/material/colors";
 import { styled } from "@mui/material/styles";
 import Button from "@mui/material/Button";
+import { signout } from "../../Redux/Data/Action";
+import { useDispatch, useSelector } from "react-redux";
+// import CreateAcc from "./CreateAcc";
 
 const Navbar = () => {
   const navigate = useNavigate();
+
+  const dispatch = useDispatch();
+
+  // const Name = useSelector((state) => state.Data.signInData.firstName);
+
   const name = JSON.parse(localStorage.getItem("name"));
+
+  const state = useSelector((state) => state.Data.signInData.signInState);
 
   const ColorButton = styled(Button)(() => ({
     color: "white",
@@ -48,14 +58,14 @@ const Navbar = () => {
           />
         </div>
 
-        <div style={{ position: "relative" }}>
+        <div className={styles.relative_position} >
           <span style={{ position: "absolute" }}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
               height="20"
               fill="currentColor"
-              class="bi bi-search"
+              className="bi bi-search"
               viewBox="0 0 16 16"
               style={{ marginTop: "10px", marginLeft: "10px" }}
             >
@@ -73,25 +83,59 @@ const Navbar = () => {
                   className={styles.dropbtn}
                   onClick={() => {
                     navigate("/signin");
+                    // setSignIn(false);
                   }}
                 >
-                  {name ? `Hi, ${name}` : `Sign In`}
+                  {state ? `Hi, ${name}` : `Sign In`}
                 </p>
                 <div className={styles.dropdown_content}>
                   <div className={styles.dropdown_flex}>
-                    <div
-                      onClick={() => {
-                        navigate("/signin");
-                      }}
-                    >
-                      <ColorButton variant="outlined">
-                        Sign In | Create Account
-                      </ColorButton>
-                    </div>
+                    {state ? (
+                      ""
+                    ) : (
+                      <div
+                        onClick={() => {
+                          navigate("/signin");
+                        }}
+                      >
+                        <ColorButton variant="outlined">
+                          Sign In | Create Account
+                        </ColorButton>
+                      </div>
+                    )}
+
                     <div>
-                      <h4 style={{ margin: "0px", marginLeft: "15px" }}>
-                        Your Account
-                      </h4>
+                      {state ? (
+                        <div
+                          style={{
+                            display: "flex",
+                            justifyContent: "space-between",
+                            marginTop: "10px",
+                          }}
+                        >
+                          <h4 style={{ margin: "0px", marginLeft: "15px" }}>
+                            {name} Account
+                          </h4>
+                          <p
+                            style={{
+                              margin: "0px",
+                              marginRight: "15px",
+                              cursor: "pointer",
+                            }}
+                            onClick={() => {
+                              signout(dispatch);
+                              // setSignIn(true);
+                            }}
+                          >
+                            Sign Out
+                          </p>
+                        </div>
+                      ) : (
+                        <h4 style={{ margin: "0px", marginLeft: "15px" }}>
+                          Your Account
+                        </h4>
+                      )}
+
                       <div style={{ display: "flex", cursor: "pointer" }}>
                         <span>
                           <svg
@@ -99,7 +143,7 @@ const Navbar = () => {
                             width="15"
                             height="15"
                             fill="currentColor"
-                            class="bi bi-lock"
+                            className="bi bi-lock"
                             viewBox="0 0 16 16"
                             style={{
                               marginTop: "20px",
@@ -126,7 +170,7 @@ const Navbar = () => {
                             width="15"
                             height="15"
                             fill="currentColor"
-                            class="bi bi-heart"
+                            className="bi bi-heart"
                             viewBox="0 0 16 16"
                             style={{
                               marginTop: "20px",
@@ -153,7 +197,7 @@ const Navbar = () => {
                             width="15"
                             height="15"
                             fill="currentColor"
-                            class="bi bi-wrench-adjustable-circle"
+                            className="bi bi-wrench-adjustable-circle"
                             viewBox="0 0 16 16"
                             style={{
                               marginTop: "20px",
@@ -181,7 +225,7 @@ const Navbar = () => {
                             width="15"
                             height="15"
                             fill="currentColor"
-                            class="bi bi-truck"
+                            className="bi bi-truck"
                             viewBox="0 0 16 16"
                             style={{
                               marginTop: "20px",
@@ -208,7 +252,7 @@ const Navbar = () => {
                             width="15"
                             height="15"
                             fill="currentColor"
-                            class="bi bi-credit-card"
+                            className="bi bi-credit-card"
                             viewBox="0 0 16 16"
                             style={{
                               marginTop: "20px",
@@ -236,7 +280,7 @@ const Navbar = () => {
                             width="15"
                             height="15"
                             fill="currentColor"
-                            class="bi bi-box-arrow-up-right"
+                            className="bi bi-box-arrow-up-right"
                             viewBox="0 0 16 16"
                             style={{
                               marginTop: "20px",
@@ -245,11 +289,11 @@ const Navbar = () => {
                             }}
                           >
                             <path
-                              fill-rule="evenodd"
+                              fillRule="evenodd"
                               d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"
                             />
                             <path
-                              fill-rule="evenodd"
+                              fillRule="evenodd"
                               d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"
                             />
                           </svg>
@@ -270,7 +314,7 @@ const Navbar = () => {
                             width="15"
                             height="15"
                             fill="currentColor"
-                            class="bi bi-shop"
+                            className="bi bi-shop"
                             viewBox="0 0 16 16"
                             style={{
                               marginTop: "20px",
@@ -307,7 +351,7 @@ const Navbar = () => {
                             width="15"
                             height="15"
                             fill="currentColor"
-                            class="bi bi-key"
+                            className="bi bi-key"
                             viewBox="0 0 16 16"
                             style={{
                               marginTop: "20px",
@@ -335,7 +379,7 @@ const Navbar = () => {
                             width="15"
                             height="15"
                             fill="currentColor"
-                            class="bi bi-envelope"
+                            className="bi bi-envelope"
                             viewBox="0 0 16 16"
                             style={{
                               marginTop: "20px",
@@ -374,7 +418,7 @@ const Navbar = () => {
               width="30"
               height="30"
               fill="currentColor"
-              class="bi bi-lock"
+              className="bi bi-lock"
               viewBox="0 0 16 16"
               style={{ marginTop: "10px", marginLeft: "10px" }}
             >

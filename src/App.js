@@ -14,22 +14,7 @@ import MainRoutes from './Routes/MainRoutes';
 const App = () => {
   return (
 
-
-    
-
-    <div className="App">
-
-      {/* <MainRoutes/>
-   */}
-
-
-
-      {/* <MainRoutes/> */}
-    
-      </div>
-  
-   
-
+  <MainRoutes/>
 
   );
 };

@@ -24,8 +24,8 @@
 
 .div__2{
     display: grid;
-    grid-template-columns: 100px 800px 100px ;
-    gap:90px;
+    grid-template-columns: 100px 800px 150px ;
+    gap:70px;
     justify-content:space-evenly;
     margin-top:20px;
     width: 100%;
@@ -64,7 +64,7 @@
 
 .div__3{
     display: grid;
-    grid-template-columns: 50px 50px;
+    grid-template-columns: 90px 30px;
     gap:20px; 
 }
 
@@ -82,8 +82,8 @@
     display: none;
     position: absolute;
     background-color: white;
-    /* right: 150px; */
-    left:-150px;
+    /* right: 890px; */
+    left:-120px;
     min-width: 270px;
     min-height: 500px;
     /* overflow: hidden; */
@@ -111,4 +111,10 @@
   .dropdown:hover .dropdown_content {
     display: block;
   }
+
+
+.relative_position{
+    position:relative;
+}
+
 

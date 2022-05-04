@@ -34,9 +34,11 @@ const CreateAcc = () => {
   return (
     <div className={Styles.div__1}>
       <form
-        onSubmit={() => {
+        onSubmit={(e) => {
+          e.preventDefault();
           detailsFn(dispatch, first, last, password);
-          navigate("signin");
+          navigate("/");
+          // setSignIn(true);
         }}
       >
         <p>Create Account</p>
@@ -48,7 +50,7 @@ const CreateAcc = () => {
               width="15"
               height="15"
               fill="currentColor"
-              class="bi bi-credit-card"
+              className="bi bi-credit-card"
               viewBox="0 0 16 16"
               style={{
                 marginTop: "15px",
@@ -70,7 +72,7 @@ const CreateAcc = () => {
               width="15"
               height="15"
               fill="currentColor"
-              class="bi bi-truck"
+              className="bi bi-truck"
               viewBox="0 0 16 16"
               style={{
                 marginTop: "15px",
@@ -91,7 +93,7 @@ const CreateAcc = () => {
               width="15"
               height="15"
               fill="currentColor"
-              class="bi bi-wrench-adjustable-circle"
+              className="bi bi-wrench-adjustable-circle"
               viewBox="0 0 16 16"
               style={{
                 marginTop: "15px",
