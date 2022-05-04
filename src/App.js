@@ -11,15 +11,15 @@ import MainRoutes from './Routes/MainRoutes';
 const App = () => {
   return (
 
-    <div className="App">
+   <>
 
-      {/* <MainRoutes/>
-   */}
+      {/* <MainRoutes/> */}
+  
 
-    <Slider></Slider> 
-    </div>
+    {/* <Slider></Slider>  */}
+  
    
-
+    </>
 
   );
 };
