@@ -20,12 +20,14 @@ const Modals = () => {
   const navigate = useNavigate();
 
   const state = useSelector((state) => state.Data.signInData.signInState);
+  // const Email = useSelector((state) => state.Data.signInData.email);
+  // const passWord = useSelector((state) => state.Data.signInData.password);
 
   const handleSubmit = (dispatch, email, password) => {
+    const PassWord = JSON.parse(localStorage.getItem("password"));
     const Email = JSON.parse(localStorage.getItem("email"));
-    const Password = JSON.parse(localStorage.getItem("password"));
 
-    if (email === Email && password === Password) {
+    if (email === Email && password === PassWord) {
       navigate("/");
     }
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import { cyan } from "@mui/material/colors";
@@ -6,6 +6,7 @@ import { styled } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 import { signout } from "../../Redux/Data/Action";
 import { useDispatch, useSelector } from "react-redux";
+
 // import CreateAcc from "./CreateAcc";
 
 const Navbar = () => {
@@ -113,7 +114,13 @@ const Navbar = () => {
                             marginTop: "10px",
                           }}
                         >
-                          <h4 style={{ margin: "0px", marginLeft: "15px" }}>
+                          <h4
+                            style={{
+                              margin: "0px",
+                              marginLeft: "15px",
+                              fontSize: "1.2rem",
+                            }}
+                          >
                             {name} Account
                           </h4>
                           <p
@@ -136,7 +143,13 @@ const Navbar = () => {
                         </div>
                       )}
 
-                      <div style={{ display: "flex", cursor: "pointer" }}>
+                      <div
+                        style={{
+                          display: "flex",
+                          cursor: "pointer",
+                          marginTop: "10px",
+                        }}
+                      >
                         <span>
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
