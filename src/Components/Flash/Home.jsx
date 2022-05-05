@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 // import { colors } from '@mui/material'
 import React from 'react'
 
@@ -95,6 +96,13 @@ const Home = () => {
         </div> 
         </div>
     </>
+=======
+import React from 'react'
+
+export const Home = () => {
+  return (
+    <div>home</div>
+>>>>>>> Stashed changes
   )
 }
 
