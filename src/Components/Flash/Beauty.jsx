@@ -1,15 +1,14 @@
 // import { colors } from '@mui/material'
 import React from 'react'
 
-<<<<<<< Updated upstream
 import { useSelector } from 'react-redux'
 import styles from "./Flash.module.css"
-import womensdata from "./Data/womensdata.json"
+import beauty from "./Data/beauty.json"
 import { Link, useNavigate } from 'react-router-dom'
 
   
-const Flash = () => {
-  const Data=womensdata.womensData
+const Beauty = () => {
+  const Data=beauty.beauty
   //const data = useSelector((state) => state.Data.data)
 
   const filterData = Data.filter((item )=>{return item.title.includes("a")})
@@ -26,8 +25,7 @@ const Flash = () => {
     <div className={styles.left}>
       <a> Home /</a>
       <a>styles Events/ </a>
-      <Link  to={`flash/women`}>Women's styles Events </Link>
-      
+      <Link  to="flash/men">Women's syles Events </Link>
      </div>
     <div className={styles.topdiv}>
      
@@ -37,11 +35,11 @@ const Flash = () => {
                   <div  className={styles.sidebar} >
 
                     <h3>Flash Events</h3>
-                    <Link to="/flash/women">Women's styles Events </Link>
-                    <Link to="/flash/mens">Men's styles Events</Link>
-                    <Link to="/flash/kids">kid's styles Events </Link>
-                    <Link to="/flash/home">Home styles Events </Link>
-                    <Link to="/flash/beauty">Beauty styles Events </Link>
+                    <a>Women's styles Events </a>
+                    <a>Men's styles Events</a>
+                    <a>kid's styles Events </a>
+                    <a>Home styles Events </a>
+                    <a>Beauty styles Events </a>
                     <h3>Featured</h3>
                     <a>Women's Must-Have Bright & Bold Sandals</a>
                     <a>Men's Must-Have Sandals Up to 60% Off </a>
@@ -60,67 +58,43 @@ const Flash = () => {
                   </div>
                 
 <div className={styles.women}><h2>Women's styles Events</h2>
-    <img className={styles.image} src="https://n.nordstrommedia.com/id/cc3b28d5-08ef-440d-b791-1e46d7ab48a1.png?h=185&w=1560" alt="" />
+    <img className={styles.img} src="https://n.nordstrommedia.com/id/cc3b28d5-08ef-440d-b791-1e46d7ab48a1.png?h=185&w=1560" alt="" />
     <h3>Today's Event</h3>
+     
+    
+          <div >
+                  
+                  
+          </div>
     
 
+    
 
+   
 
-<div className={styles.sk}>
+    <div className={styles.beauty}>
 
-    {Data.map(e => {
+        {Data.map(e => {
 
-    return <>
+        return <>
 
-        <div >
-          
-            <div>
+            <div >
+              
 
-                <img src={e.imgurl}/>
+            <img src={e.imgurl}/>
+                    <p className={styles.bold}>{e.title}</p>
+                    <p className={styles.normal}>{e.para}</p>
+                   
             </div>
-            <div className={styles.titl} >
-                <p className={styles.bold}>{e.title}</p>
-                <p className={styles.normal}>{e.para}</p>
 
-            </div>
-                {/* <p>{e.price.raw}</p> */}
-                {/* <p>{e.condition}</p> */}
-                {/* <p className={styles.price}>{e.price.raw}</p> */}
-                {/* <p>{e.price.extracted}</p> */}
-                {/* <p>{e.price.from.raw}</p> */}
-                {/* <p className={styles.shipping}>{e.shipping}</p> */}
-                {/* <p className={styles.sold}>{e.extensions}</p> */}
-            
+        </>
+        })}
+
         </div>
-
-    </>
-    })}
-
-    </div>
-
-
-    </div> 
-</div>
-    
-
-    
-
-
+        </div>
+        </div>
     </>
   )
 }
 
-export default  Flash;
-=======
-const Flash = () => {
-  return (
-    <>
-    <div id="parent">
-    <div></div>
-    </div>
-    </>   
-  )
-}
-
-export default Flash;
->>>>>>> Stashed changes
+export default  Beauty;

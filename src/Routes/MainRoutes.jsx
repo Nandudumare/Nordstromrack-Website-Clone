@@ -1,3 +1,9 @@
+import Flash from "../Components/Flash/Flash";
+import Kids from "../Components/Flash/Kids";
+import Mens from "../Components/Flash/Mens";
+import Home from "../Components/Flash/Home";
+import Beauty from "../Components/Flash/Beauty";
+
 import React from "react";
 
 import { Route, Routes } from "react-router-dom";
@@ -28,8 +34,12 @@ const MainRoutes = () => {
       {/* <PaymentMethods /> */}
       {/* <Password /> */}
       {/* <Cart /> */}
-
       <Routes>
+        <Route path="flash/women" element={<Flash />} />
+        <Route path="flash/kids" element={<Kids />} />
+        <Route path="flash/mens" element={<Mens />} />
+        <Route path="flash/home" element={<Home />} />
+        <Route path="flash/beauty" element={<Beauty />} />
         <Route path="signin" element={<SignIn />} />
         <Route path="createacc" element={<CreateAcc />} />
         <Route path="products" element={<Products />} />
@@ -38,5 +48,4 @@ const MainRoutes = () => {
     </>
   );
 };
-
 export default MainRoutes;
