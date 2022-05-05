@@ -4,11 +4,9 @@ import {
     SIGNIN_1,
     SIGN_OUT,
     DESCRIPTION_DATA,
-    SORTED_DATA
+    SORTED_DATA,
+    
 } from "./ActionTypes"
-
-
-
 
 
 export const signInFn = (dispatch, email) => {
@@ -78,3 +76,4 @@ export const sorted_data = (dispatch,payload)=>{
         payload
     })
 }
+

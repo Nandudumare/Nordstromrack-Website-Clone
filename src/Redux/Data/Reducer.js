@@ -5,7 +5,8 @@ import {
     SIGN_OUT,
     LOG_IN,
     DESCRIPTION_DATA,
-    SORTED_DATA
+    SORTED_DATA,
+
 } from "./ActionTypes"
 
 const Data = data.data
@@ -71,6 +72,7 @@ export const dataReducer = (state = initState, {
                 sortedData:[...payload]
             }
         }
+
         default: {
             return state
         }

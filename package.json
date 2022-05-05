@@ -17,6 +17,7 @@
     "react-dom": "^18.1.0",
     "react-elastic-carousel": "^0.11.5",
     "react-lifecycles-compat": "^3.0.4",
+    "react-loading-spin": "^2.1.9",
     "react-minimal-side-navigation": "^1.9.2",
     "react-pro-sidebar": "^0.7.1",
     "react-redux": "^8.0.1",

@@ -20,6 +20,8 @@ const Products = () => {
   const data = useSelector((state) => state.Data.data)
   const navigate = useNavigate()
   const dispatch= useDispatch()
+
+
   const [state,setState] = useState(false )
   // console.log(data)
   const filterData = data.filter((item )=>{return item.title.includes("Women")})
@@ -33,13 +35,11 @@ const Products = () => {
 
 
 
-
 //description 
 
 const handleclick =(payload) =>{
   description_data(dispatch,payload)
 navigate("/description") 
-
 
 }
 
@@ -70,8 +70,6 @@ const handlesort = (e) => {
 
   return (
     <>
-    <div className={styles.nav}>Navbar</div>
-
 
     <div className={styles.left}>
       <a> Home /</a>

@@ -2,7 +2,6 @@
 
     /* border: 1px solid black; */
     display: flex;
-    gap:3%;
     font-family: Text,Arial,sans-serif;
 } 
 
@@ -10,6 +9,7 @@
     /* border: 1px solid yellow; */
     display: flex;
     font-family:  Text,Arial,sans-serif;
+    text-align: center;
     
 }
 
@@ -21,6 +21,7 @@
 }
 
 .cat>div:hover{
+    text-decoration: underline;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
 }
 
@@ -40,6 +41,7 @@
     text-align: left;
 }
 .grid>div:hover{
+   
     box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
 }
 .grid>div>img{
@@ -92,14 +94,6 @@
     height: 40px;
     margin-left: 80%;
     margin-top: 2%;
-}
-.hover{
-    text-decoration: underline;
-    color: yellow;
-}
-
-a:hover{
-    text-decoration: underline;
 }
 
 .line{
@@ -165,3 +159,4 @@ a:hover{
 .you{
     text-align: center;
 }
+
