@@ -16,7 +16,7 @@ const App = () => {
 
    <>
 
-      {/* <MainRoutes/> */}
+      <MainRoutes/>
   
 
     {/* <Slider></Slider>  */}
