@@ -6,7 +6,9 @@ import "slick-carousel/slick/slick-theme.css";
 
 import Slider from "react-slick";
 import Carousel from "react-elastic-carousel";
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { description_data } from '../../../Redux/Data/Action';
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -88,8 +90,11 @@ const breakPoints = [
   ];
 
 const NewFlash = () => {
+
    const Dataslider = useSelector((state)=>state.Data.data)
    const filterData = Dataslider.filter((item)=>{return item.title.includes("Trouser")})
+   const dispatch = useDispatch();
+   const navigate = useNavigate()
   //  console.log(filterData)
   return (
     <div className="newflashmain">
@@ -99,7 +104,7 @@ const NewFlash = () => {
         <Carousel breakPoints={breakPoints}>
         {filterData.map((item)=>{
             return (
-                <div className="productContainer" key={nanoid()}>
+                <div onClick={()=>{navigate("description");description_data(dispatch,item)}} className="productContainer" key={nanoid()}>
                 <img src={item.thumbnail}/>
                 <button  className="Quicklook">Quick Look</button> 
                <p>{item.condition}</p>  
@@ -121,9 +126,14 @@ const NewFlash = () => {
 
 
 const Slippers = () => {
+  
   const Dataslider = useSelector((state)=>state.Data.data)
   const filterData = Dataslider.filter((item)=>{return item.title.includes("Slippers")})
+  const dispatch = useDispatch();
+  const navigate = useNavigate()
   // console.log(filterData)
+ 
+
  return (
    <div className="slippersmain">
 
@@ -133,7 +143,7 @@ const Slippers = () => {
        <Carousel breakPoints={breakPoints}>
        {filterData.map((item)=>{
            return (
-               <div className="slippersContainer" key={nanoid()}>
+               <div onClick={()=>{navigate("description");description_data(dispatch,item)}} className="slippersContainer" key={nanoid()}>
                <img src={item.thumbnail}/>
                <button  className="Quicklook">Quick Look</button> 
               <p>{item.condition}</p>  
@@ -184,6 +194,8 @@ const ManJeans = () => {
   const Dataslider = useSelector((state)=>state.Data.data)
   const filterData = Dataslider.filter((item)=>{return item.title.includes("Men's")})
   // console.log(filterData)
+  const dispatch = useDispatch();
+  const navigate = useNavigate()
  return (
    <div>
   <h1 style={{ textAlign: "center" }}></h1>
@@ -191,7 +203,7 @@ const ManJeans = () => {
        <Carousel breakPoints={breakPoints}>
        {filterData.map((item)=>{
            return (
-               <div className="JeansContainer" key={nanoid()}>
+               <div onClick={()=>{navigate("description");description_data(dispatch,item)}} className="JeansContainer" key={nanoid()}>
                <img src={item.thumbnail}/>
                {/* <button  className="Quicklook">Quick Look</button>  */}
               <p>{item.condition}</p>  
@@ -215,6 +227,8 @@ const WomenJeans = () => {
   const Dataslider = useSelector((state)=>state.Data.data)
   const filterData = Dataslider.filter((item)=>{return item.title.includes("Jeans")})
   // console.log(filterData)
+  const dispatch = useDispatch();
+  const navigate = useNavigate()
  return (
    <div>
   <h1 style={{ textAlign: "center" }}></h1>
@@ -222,7 +236,7 @@ const WomenJeans = () => {
        <Carousel breakPoints={breakPoints}>
        {filterData.map((item)=>{
            return (
-               <div className="JeansContainer" key={nanoid()}>
+               <div onClick={()=>{navigate("description");description_data(dispatch,item)}} className="JeansContainer" key={nanoid()}>
                <img src={item.thumbnail}/>
                {/* <button  className="Quicklook">Quick Look</button>  */}
               <p>{item.condition}</p>  
@@ -270,6 +284,8 @@ const Springaccess = () => {
 const BestSelling = () => {
   const Dataslider = useSelector((state)=>state.Data.data)
   const filterData = Dataslider.filter((item)=>{return item.title.includes("Suit")})
+  const dispatch = useDispatch();
+  const navigate = useNavigate()
  //  console.log(filterData)
  return (
    <div>
@@ -279,7 +295,7 @@ const BestSelling = () => {
        <Carousel breakPoints={breakPoints}>
        {filterData.map((item)=>{
            return (
-               <div className="productContainer" key={nanoid()}>
+               <div onClick={()=>{navigate("description");description_data(dispatch,item)}} className="productContainer" key={nanoid()}>
                <img src={item.thumbnail}/>
                <button  className="Quicklook">Quick Look</button> 
               <p>{item.condition}</p>  
@@ -303,6 +319,8 @@ const Looks = () => {
   const Dataslider = useSelector((state)=>state.Data.data)
   const filterData = Dataslider.filter((item)=>{return item.title.includes("Maxi")})
  //  console.log(filterData)
+ const dispatch = useDispatch();
+ const navigate = useNavigate()
  return (
    <div>
 <h2 style={{padding:"20px"}}>Best-Selling items</h2>
@@ -311,7 +329,7 @@ const Looks = () => {
        <Carousel breakPoints={breakPoints}>
        {filterData.map((item)=>{
            return (
-               <div className="lookContainer" key={nanoid()}>
+               <div onClick={()=>{navigate("description");description_data(dispatch,item)}}  className="lookContainer" key={nanoid()}>
                <img src={item.thumbnail}/>
                </div>
                

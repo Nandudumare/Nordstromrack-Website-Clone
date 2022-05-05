@@ -12,13 +12,26 @@ export function CheckPop({data}) {
   const [show, setShow] = useState(false);
 
 
+
+
+// send Data to cart page>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+  const senData=()=>{
+    console.log(data,"addbag")
+}
   const sendToCart=()=>{
-    console.log(data)
+    console.log(data,"chekout")
   }
+// send Data to cart page ends >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
+
 
   return (
     <div>
-    <Button className={styles.Addbag} variant="primary" onClick={() => setShow(true)}>
+    <Button className={styles.Addbag} variant="primary" onClick={() => {setShow(true); senData()} }>
            Add to Cart
 
       </Button>

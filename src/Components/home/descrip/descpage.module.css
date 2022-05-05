@@ -52,7 +52,8 @@
     color: #fff;
     font-weight: 400;
     text-align: center;
-    border-radius:5px
+    border-radius:5px;
+    padding:9px
     /* border:1px solid black */
 
 }

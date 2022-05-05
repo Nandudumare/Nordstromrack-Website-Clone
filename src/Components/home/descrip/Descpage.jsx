@@ -6,12 +6,25 @@ import styles from "./descpage.module.css"
 
 const Descpage = () => {
 
+
+
+
+   
+
     const Datades = useSelector((state)=>state.Data.data)
     // const descData = useSelector((state)=>state.Data.descriptionData)
     // console.log(descData)
     const filterData = Datades.filter((item)=>{return item.title.includes("Men's Jean")})
     let descData = filterData[0]
    console.log(descData)
+
+
+
+
+
+
+
+
         return( 
 <div className={styles.descpagemaindiv}>
 
@@ -54,8 +67,8 @@ const Descpage = () => {
         <div>Delivery</div>
       
         {/* <div className={styles.Addbag}>Add to bag</div> */}
-        <CheckPop data={descData}/>
-        <a href="#">Add to Wish List</a>
+        <CheckPop data={descData} />
+        <a  href="#">Add to Wish List</a>
     </div>
     
 </div>
