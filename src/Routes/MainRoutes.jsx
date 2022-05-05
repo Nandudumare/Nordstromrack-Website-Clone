@@ -1,11 +1,30 @@
-import React from 'react'
+import React from "react";
+
+import { Route, Routes } from "react-router-dom";
+import CreateAcc from "../Components/Navbar/CreateAcc";
+import Navbar from "../Components/Navbar/Navbar";
+import SignIn from "../Components/Navbar/SignIn";
+import Products from "../Components/InnerPages/ProductPages/Products";
+import Modals from "../Components/Navbar/Modals";
+import Side from "../Components/Navbar/Auth/Side";
+import Description from "../Components/InnerPages/Description/Description";
 
 const MainRoutes = () => {
   return (
-    <div>
-      
-    </div>
-  )
-}
+    <>
+      {/* <Navbar /> */}
+      {/* <Products /> */}
+      {/* <Modals /> */}
+      {/* <Side /> */}
 
-export default MainRoutes
+      <Routes>
+        <Route path="signin" element={<SignIn />} />
+        <Route path="createacc" element={<CreateAcc />} />
+        <Route path="products" element={ <Products />}/>
+        <Route path="description" element={<Description/>}/>
+      </Routes>
+    </>
+  );
+};
+
+export default MainRoutes;

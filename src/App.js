@@ -8,4 +8,17 @@ function App() {
   );
 }
 
-export default App;
+//    <>
+
+//       {/* <MainRoutes/> */}
+  
+
+//     {/* <Slider></Slider>  */}
+  
+   
+//     </>
+
+//   );
+// };
+
+export default App
