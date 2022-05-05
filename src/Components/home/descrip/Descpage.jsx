@@ -7,6 +7,8 @@ import styles from "./descpage.module.css"
 const Descpage = () => {
 
     const Datades = useSelector((state)=>state.Data.data)
+    // const descData = useSelector((state)=>state.Data.descriptionData)
+    // console.log(descData)
     const filterData = Datades.filter((item)=>{return item.title.includes("Men's Jean")})
     let descData = filterData[0]
    console.log(descData)
@@ -14,14 +16,14 @@ const Descpage = () => {
 <div className={styles.descpagemaindiv}>
 
 <div className={styles.descimagediv}>
-    <img src={descData.thumbnail}></img>
+    <img  src={descData.thumbnail}></img>
 </div>
 
 
 
 <div className={styles.descdetaildiv}>
-    <h1>{descData.title}</h1>
-    <p>{descData.price.from.extracted}</p>
+    <h3>{descData.title}</h3>
+    {/* <p>{descData.price.from.extracted}</p> */}
     <p>{descData.shipping}</p>
     <p>{descData.condition}</p>
     <p>{descData.extensions}</p>
@@ -49,12 +51,13 @@ const Descpage = () => {
     </select>
 
     <div>
-        <div>delivery</div>
+        <div>Delivery</div>
       
-        <div className={styles.Addbag}>Add to bag</div>
+        {/* <div className={styles.Addbag}>Add to bag</div> */}
+        <CheckPop data={descData}/>
         <a href="#">Add to Wish List</a>
     </div>
-    <CheckPop/>
+    
 </div>
 </div>
         )

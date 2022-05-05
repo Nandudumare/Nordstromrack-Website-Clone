@@ -1,7 +1,6 @@
 // import { colors } from '@mui/material'
 import React from 'react'
 
-<<<<<<< Updated upstream
 import { useSelector } from 'react-redux'
 import styles from "./Flash.module.css"
 import womensdata from "./Data/womensdata.json"
@@ -111,16 +110,3 @@ const Flash = () => {
 }
 
 export default  Flash;
-=======
-const Flash = () => {
-  return (
-    <>
-    <div id="parent">
-    <div></div>
-    </div>
-    </>   
-  )
-}
-
-export default Flash;
->>>>>>> Stashed changes

@@ -8,9 +8,9 @@ const Main = () => {
   return (
     <div className='maincontainer' style={{margin:"10px"}}>
 
-   {/* <div className="mothercard">
+   <div className="mothercard">
      <img src="https://n.nordstrommedia.com/id/5a42dc96-aff4-4ace-8628-3f7923cf9a96.jpeg?h=200&w=1608" alt=""></img>
-   </div> */}
+   </div>
     {/* <Slideshow></Slideshow>
     <Slippers></Slippers>
     <Spring></Spring>
@@ -24,8 +24,8 @@ const Main = () => {
     <ManJeans></ManJeans>
     <Springaccess></Springaccess>
     <BestSelling></BestSelling>
-    <Looks></Looks> */}
-    {/* <Example style={{border:"1px solid red"}}></Example> */}
+    <Looks></Looks>
+    <Example style={{border:"1px solid red"}}></Example> */}
 
     <Descpage></Descpage>
     </div>

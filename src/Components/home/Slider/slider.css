@@ -4,10 +4,13 @@
   height:160px;
   margin: auto;
   margin-bottom: 40px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 .mothercard img{
   width:100%;
-  height:100%
+  height:100%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px
+
 }
 
 /* slidecsss */
@@ -19,16 +22,18 @@
 /* //new flash styles>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 .productContainer img{
   height: 82%;
-  width:100%
+  width:100%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px
+
 }
 .productContainer{
-  border:1px solid rgb(138, 82, 82);
+  /* border:1px solid rgb(138, 82, 82); */
   height:22em;
   width:200px;
   /* text-align:center; */
   position: relative;
   cursor: pointer;
- 
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 .productContainer p{
   margin-top: -3px;
@@ -67,19 +72,22 @@ border:0.4px solid rgb(87, 81, 81);
 /* shoes slider csss>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
 .slippersmain{
-  margin-top:-60px;
+  margin-top:-10px;
   margin-bottom:100px;
- 
+  /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
 }
 .slippersContainer{
   width:190px;
   height:16em;
   /* border:1px solid black */
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .slippersContainer img{
   width:100%;
   /* height:15em */
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px */
+
 }
 
 .slippersContainer p{
@@ -100,21 +108,25 @@ border:0.4px solid rgb(87, 81, 81);
   margin-top:10px;
   margin-bottom:100px;
   /* border:1px solid blue */
+  /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
 }
 
 /* spring>>>>>>>>>>>>>>>>>>>>>>>>>> */
 .Springcompo{
   display:flex;
   justify-content:space-around;
+  /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
 }
 .Springimg{
 width:644px;
 height:444px;
+box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 
 }
 .Springimg img{
   width:100%;
   height:100%;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 .Spring>p{
   color:#393939;
@@ -129,6 +141,7 @@ height:444px;
 .Spring{
   margin-bottom: 150px;
   /* border:1px solid teal */
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 /* Jeans container>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
@@ -137,11 +150,13 @@ height:444px;
   width:190px;
   height:18em;
   /* border:1px solid black */
+  /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
 }
 
 .JeansContainer img{
   width:100%;
-  height:14em
+  height:14em;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .JeansContainer p{
@@ -176,6 +191,8 @@ height:444px;
 .springacc{
   margin-bottom:150px;
   margin-top:120px;
+  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px */
+
 }
 .springacc>p{
   width:100%;
@@ -201,4 +218,32 @@ height:444px;
 .springaccimg img{
   width:100%;
   height:100%;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px
+
 }
+
+
+/* checoutcarousel */
+.Checkoutcarousel{
+  width:75px;
+  height:115px;
+  border-radius:5px
+}
+
+.Checkoutcarousel img{
+  width:100%;
+  height:100%;
+  border-radius:5px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;}
+
+
+
+.lookContainer{
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.lookContainer img{
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+}
+
