@@ -54,7 +54,7 @@ const Modals = () => {
 
   const ColorButton1 = styled(Button)(() => ({
     color: cyan[600],
-    width: "30%",
+    width: "35%",
     height: "40px",
     borderRadius: "0px",
     backgroundColor: "none",

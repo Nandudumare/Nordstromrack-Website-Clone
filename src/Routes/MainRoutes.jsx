@@ -23,6 +23,7 @@ import Cart from "../Components/Navbar/Auth/Cart";
 
 import Main from "../Components/home/main/Main";
 import { RequiredAuth } from "./RequiredAuth";
+import Descpage from "../Components/home/descrip/Descpage";
 
 const MainRoutes = () => {
   return (
@@ -30,7 +31,14 @@ const MainRoutes = () => {
       <Navbar />
 
       <Routes>
-        <Route path="/" element={<></>} />
+        <Route
+          path="/"
+          element={
+            <>
+              <Main />
+            </>
+          }
+        />
         <Route path="signin" element={<SignIn />} />
         <Route path="createacc" element={<CreateAcc />} />
         <Route
@@ -83,20 +91,14 @@ const MainRoutes = () => {
           }
         />
 
+        <Route path="products" element={<Products />} />
+        <Route path="description" element={<Descpage />} />
         <Route path="flash/women" element={<Flash />} />
         <Route path="flash/kids" element={<Kids />} />
         <Route path="flash/mens" element={<Mens />} />
         <Route path="flash/home" element={<Home />} />
         <Route path="flash/beauty" element={<Beauty />} />
       </Routes>
-      {/* <Main></Main> */}
-      {/* <Navbar /> */}
-      {/* <br />
-      
-      <br /> */}
-      {/* <Cart /> */}
-      {/* <PaymentMethods /> */}
-      {/* <Password /> */}
     </>
   );
 };
