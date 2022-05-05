@@ -6,7 +6,6 @@ import {
     LOG_IN,
     DESCRIPTION_DATA,
     SORTED_DATA,
-
 } from "./ActionTypes"
 
 const Data = data.data
@@ -20,8 +19,8 @@ const initState = {
         password: "",
         signInState: false
     },
-    descriptionData : {},
-    sortedData:[]
+    descriptionData: {},
+    sortedData: []
 
 }
 
@@ -47,29 +46,49 @@ export const dataReducer = (state = initState, {
             }
         }
         case SIGN_OUT: {
-            
+
             state.signInData.signInState = payload.state
             return {
                 ...state,
             }
         }
         case LOG_IN: {
-            
+
             state.signInData.signInState = payload.state
             return {
                 ...state,
             }
         }
-        case DESCRIPTION_DATA:{
+        case DESCRIPTION_DATA: {
             return {
                 ...state,
-                descriptionData:payload
+                descriptionData: payload
             }
         }
-        case SORTED_DATA:{
+        case SORTED_DATA: {
             return {
                 ...state,
-                sortedData:[...payload]
+                sortedData: [...payload]
+            }
+        }
+        case MAINSTATE_TRUE: {
+            state.signInData.signInState = payload.state
+            return {
+                ...state,
+            }
+        }
+        case MAINSTATE_FALSE: {
+            state.signInData.signInState = payload.state
+            return {
+                ...state,
+            }
+        }
+        case REMOVE_CART_ITEM: {
+            return {
+                ...state,
+                data: state.data.filter((item) => {
+                    return item.title !== payload.title
+                })
             }
         }
 

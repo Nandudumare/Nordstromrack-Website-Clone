@@ -1,8 +1,10 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import Styles from "./Side.module.css";
 const Side = () => {
   const name = useSelector((state) => state.Data.signInData.firstName);
+  const navigate = useNavigate();
   return (
     <div className={Styles.div__1}>
       <div
@@ -30,6 +32,7 @@ const Side = () => {
           display: "flex",
           cursor: "pointer",
         }}
+        onClick={() => navigate("/purchase")}
       >
         <span>
           <svg
@@ -60,6 +63,7 @@ const Side = () => {
           display: "flex",
           cursor: "pointer",
         }}
+        onClick={() => navigate("/wishlist")}
       >
         <span>
           <svg
@@ -90,6 +94,7 @@ const Side = () => {
           display: "flex",
           cursor: "pointer",
         }}
+        
       >
         <span>
           <svg
@@ -121,6 +126,7 @@ const Side = () => {
           display: "flex",
           cursor: "pointer",
         }}
+        onClick={() => navigate("/shippingaddress")}
       >
         <span>
           <svg
@@ -151,6 +157,7 @@ const Side = () => {
           display: "flex",
           cursor: "pointer",
         }}
+        onClick={() => navigate("/paymentmethods")}
       >
         <span>
           <svg
@@ -185,6 +192,7 @@ const Side = () => {
           display: "flex",
           cursor: "pointer",
         }}
+        onClick={() => navigate("/password")}
       >
         <span>
           <svg

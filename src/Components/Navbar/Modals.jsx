@@ -20,6 +20,7 @@ const Modals = () => {
   const navigate = useNavigate();
 
   const state = useSelector((state) => state.Data.signInData.signInState);
+  const firstName = useSelector((state) => state.Data.signInData.firstName);
   // const Email = useSelector((state) => state.Data.signInData.email);
   // const passWord = useSelector((state) => state.Data.signInData.password);
 
@@ -29,6 +30,11 @@ const Modals = () => {
 
     if (email === Email && password === PassWord) {
       navigate("/");
+
+      const myName = localStorage.getItem("myName");
+      localStorage.setItem("name", myName);
+    } else {
+      alert("Invalid Email or Password");
     }
 
     login(dispatch);
@@ -48,7 +54,7 @@ const Modals = () => {
 
   const ColorButton1 = styled(Button)(() => ({
     color: cyan[600],
-    width: "30%",
+    width: "35%",
     height: "40px",
     borderRadius: "0px",
     backgroundColor: "none",
