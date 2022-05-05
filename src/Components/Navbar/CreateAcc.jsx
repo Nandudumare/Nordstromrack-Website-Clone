@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Styles from "./CreateAcc.module.css";
 import { cyan } from "@mui/material/colors";
 import { styled } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { detailsFn } from "../../Redux/Data/Action";
 
 const CreateAcc = () => {
@@ -18,6 +18,17 @@ const CreateAcc = () => {
   const [password, setPassword] = useState("");
 
   const dispatch = useDispatch();
+  const location = useLocation();
+
+  const from = location?.state?.from?.pathname || "/home";
+
+  const state = useSelector((state) => state.Data.signInData.signInState);
+
+  useEffect(() => {
+    if (state) {
+      navigate(from, { replace: true });
+    }
+  }, [state]);
 
   const ColorButton = styled(Button)(() => ({
     color: "white",
@@ -38,6 +49,7 @@ const CreateAcc = () => {
           e.preventDefault();
           detailsFn(dispatch, first, last, password);
           navigate("/");
+          localStorage.setItem("myName", JSON.stringify(first));
           // setSignIn(true);
         }}
       >

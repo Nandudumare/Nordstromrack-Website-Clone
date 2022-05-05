@@ -30,7 +30,7 @@ function App() {
 
     
 
-    <div className="App">
+
 
      <MainRoutes/>
   
@@ -39,7 +39,7 @@ function App() {
 
     
     
-      </div>
+ 
   
 
     
