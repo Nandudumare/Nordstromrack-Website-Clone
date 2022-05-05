@@ -13,6 +13,7 @@ import MainRoutes from './Routes/MainRoutes';
 
 const App = () => {
   return (
+<<<<<<< Updated upstream
 
 
     
@@ -28,6 +29,10 @@ const App = () => {
     
       </div>
   
+=======
+    <div>
+    
+>>>>>>> Stashed changes
    
 
 
