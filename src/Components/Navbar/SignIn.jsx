@@ -5,7 +5,7 @@ import { styled } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
 import { signInFn } from "../../Redux/Data/Action";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 const SignIn = () => {
   const navigate = useNavigate();
@@ -27,9 +27,10 @@ const SignIn = () => {
   return (
     <div className={Styles.div__1}>
       <form
-        onSubmit={() => {
+        onSubmit={(e) => {
+          e.preventDefault();
           signInFn(dispatch, email);
-          navigate("/createacc")
+          navigate("/createacc");
         }}
       >
         <p>Sign In | Create Account</p>

@@ -4,10 +4,21 @@ import styles from "./Navbar.module.css";
 import { cyan } from "@mui/material/colors";
 import { styled } from "@mui/material/styles";
 import Button from "@mui/material/Button";
+import { signout } from "../../Redux/Data/Action";
+import { useDispatch, useSelector } from "react-redux";
+
+// import CreateAcc from "./CreateAcc";
 
 const Navbar = () => {
   const navigate = useNavigate();
+
+  const dispatch = useDispatch();
+
+  // const Name = useSelector((state) => state.Data.signInData.firstName);
+
   const name = JSON.parse(localStorage.getItem("name"));
+
+  const state = useSelector((state) => state.Data.signInData.signInState);
 
   const ColorButton = styled(Button)(() => ({
     color: "white",
@@ -48,14 +59,14 @@ const Navbar = () => {
           />
         </div>
 
-        <div style={{ position: "relative" }}>
+        <div className={styles.relative_position}>
           <span style={{ position: "absolute" }}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
               height="20"
               fill="currentColor"
-              class="bi bi-search"
+              className="bi bi-search"
               viewBox="0 0 16 16"
               style={{ marginTop: "10px", marginLeft: "10px" }}
             >
@@ -73,36 +84,81 @@ const Navbar = () => {
                   className={styles.dropbtn}
                   onClick={() => {
                     navigate("/signin");
+                    // setSignIn(false);
                   }}
                 >
-                  {name ? `Hi, ${name}` : `Sign In`}
+                  {state ? `Hi, ${name}` : `Sign In`}
                 </p>
                 <div className={styles.dropdown_content}>
                   <div className={styles.dropdown_flex}>
-                    <div
-                      onClick={() => {
-                        navigate("/signin");
-                      }}
-                    >
-                      <ColorButton variant="outlined">
-                        Sign In | Create Account
-                      </ColorButton>
-                    </div>
+                    {state ? (
+                      ""
+                    ) : (
+                      <div
+                        onClick={() => {
+                          navigate("/signin");
+                        }}
+                      >
+                        <ColorButton variant="outlined">
+                          Sign In | Create Account
+                        </ColorButton>
+                      </div>
+                    )}
+
                     <div>
-                      <h4 style={{ margin: "0px", marginLeft: "15px" }}>
-                        Your Account
-                      </h4>
-                      <div style={{ display: "flex", cursor: "pointer" }}>
+                      {state ? (
+                        <div
+                          style={{
+                            display: "flex",
+                            justifyContent: "space-between",
+                            marginTop: "10px",
+                          }}
+                        >
+                          <h4
+                            style={{
+                              margin: "0px",
+                              marginLeft: "15px",
+                              fontSize: "1.2rem",
+                            }}
+                          >
+                            {name} Account
+                          </h4>
+                          <p
+                            style={{
+                              margin: "0px",
+                              marginRight: "15px",
+                              cursor: "pointer",
+                            }}
+                            onClick={() => {
+                              signout(dispatch);
+                              // setSignIn(true);
+                            }}
+                          >
+                            Sign Out
+                          </p>
+                        </div>
+                      ) : (
+                        <div style={{ marginLeft: "15px" }}>
+                          <h4 className={styles.your_acc}>Your Account</h4>
+                        </div>
+                      )}
+
+                      <div
+                        style={{
+                          display: "flex",
+                          cursor: "pointer",
+                          marginTop: "10px",
+                        }}
+                      >
                         <span>
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="15"
                             height="15"
                             fill="currentColor"
-                            class="bi bi-lock"
+                            className="bi bi-lock"
                             viewBox="0 0 16 16"
                             style={{
-                              marginTop: "20px",
                               marginLeft: "15px",
                               marginRight: "10px",
                             }}
@@ -116,7 +172,7 @@ const Navbar = () => {
                       <div
                         style={{
                           display: "flex",
-                          marginTop: "-20px",
+                          marginTop: "-10px",
                           cursor: "pointer",
                         }}
                       >
@@ -126,10 +182,9 @@ const Navbar = () => {
                             width="15"
                             height="15"
                             fill="currentColor"
-                            class="bi bi-heart"
+                            className="bi bi-heart"
                             viewBox="0 0 16 16"
                             style={{
-                              marginTop: "20px",
                               marginLeft: "15px",
                               marginRight: "10px",
                             }}
@@ -143,7 +198,7 @@ const Navbar = () => {
                       <div
                         style={{
                           display: "flex",
-                          marginTop: "-20px",
+                          marginTop: "-10px",
                           cursor: "pointer",
                         }}
                       >
@@ -153,10 +208,9 @@ const Navbar = () => {
                             width="15"
                             height="15"
                             fill="currentColor"
-                            class="bi bi-wrench-adjustable-circle"
+                            className="bi bi-wrench-adjustable-circle"
                             viewBox="0 0 16 16"
                             style={{
-                              marginTop: "20px",
                               marginLeft: "15px",
                               marginRight: "10px",
                             }}
@@ -171,7 +225,7 @@ const Navbar = () => {
                       <div
                         style={{
                           display: "flex",
-                          marginTop: "-20px",
+                          marginTop: "-10px",
                           cursor: "pointer",
                         }}
                       >
@@ -181,10 +235,9 @@ const Navbar = () => {
                             width="15"
                             height="15"
                             fill="currentColor"
-                            class="bi bi-truck"
+                            className="bi bi-truck"
                             viewBox="0 0 16 16"
                             style={{
-                              marginTop: "20px",
                               marginLeft: "15px",
                               marginRight: "10px",
                             }}
@@ -198,7 +251,7 @@ const Navbar = () => {
                       <div
                         style={{
                           display: "flex",
-                          marginTop: "-20px",
+                          marginTop: "-10px",
                           cursor: "pointer",
                         }}
                       >
@@ -208,10 +261,9 @@ const Navbar = () => {
                             width="15"
                             height="15"
                             fill="currentColor"
-                            class="bi bi-credit-card"
+                            className="bi bi-credit-card"
                             viewBox="0 0 16 16"
                             style={{
-                              marginTop: "20px",
                               marginLeft: "15px",
                               marginRight: "10px",
                             }}
@@ -226,7 +278,7 @@ const Navbar = () => {
                       <div
                         style={{
                           display: "flex",
-                          marginTop: "-20px",
+                          marginTop: "-10px",
                           cursor: "pointer",
                         }}
                       >
@@ -236,20 +288,19 @@ const Navbar = () => {
                             width="15"
                             height="15"
                             fill="currentColor"
-                            class="bi bi-box-arrow-up-right"
+                            className="bi bi-box-arrow-up-right"
                             viewBox="0 0 16 16"
                             style={{
-                              marginTop: "20px",
                               marginLeft: "15px",
                               marginRight: "10px",
                             }}
                           >
                             <path
-                              fill-rule="evenodd"
+                              fillRule="evenodd"
                               d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"
                             />
                             <path
-                              fill-rule="evenodd"
+                              fillRule="evenodd"
                               d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"
                             />
                           </svg>
@@ -260,7 +311,7 @@ const Navbar = () => {
                       <div
                         style={{
                           display: "flex",
-                          marginTop: "-20px",
+                          marginTop: "-10px",
                           cursor: "pointer",
                         }}
                       >
@@ -270,10 +321,9 @@ const Navbar = () => {
                             width="15"
                             height="15"
                             fill="currentColor"
-                            class="bi bi-shop"
+                            className="bi bi-shop"
                             viewBox="0 0 16 16"
                             style={{
-                              marginTop: "20px",
                               marginLeft: "15px",
                               marginRight: "10px",
                             }}
@@ -291,13 +341,15 @@ const Navbar = () => {
                           cursor: "pointer",
                         }}
                       >
-                        <p style={{ marginLeft: "15px" }}>Account Settings</p>
+                        <p style={{ marginLeft: "15px", fontWeight: "500" }}>
+                          Account Settings
+                        </p>
                       </div>
 
                       <div
                         style={{
                           display: "flex",
-                          marginTop: "-20px",
+                          marginTop: "-10px",
                           cursor: "pointer",
                         }}
                       >
@@ -307,10 +359,9 @@ const Navbar = () => {
                             width="15"
                             height="15"
                             fill="currentColor"
-                            class="bi bi-key"
+                            className="bi bi-key"
                             viewBox="0 0 16 16"
                             style={{
-                              marginTop: "20px",
                               marginLeft: "15px",
                               marginRight: "10px",
                             }}
@@ -325,7 +376,7 @@ const Navbar = () => {
                       <div
                         style={{
                           display: "flex",
-                          marginTop: "-20px",
+                          marginTop: "-10px",
                           cursor: "pointer",
                         }}
                       >
@@ -335,10 +386,9 @@ const Navbar = () => {
                             width="15"
                             height="15"
                             fill="currentColor"
-                            class="bi bi-envelope"
+                            className="bi bi-envelope"
                             viewBox="0 0 16 16"
                             style={{
-                              marginTop: "20px",
                               marginLeft: "15px",
                               marginRight: "10px",
                             }}
@@ -346,7 +396,7 @@ const Navbar = () => {
                             <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
                           </svg>
                         </span>
-                        <p>Password & Personal Info</p>
+                        <p>Email & Mail Preferences</p>
                       </div>
 
                       <h4 style={{ margin: "0px", marginLeft: "15px" }}>
@@ -356,7 +406,7 @@ const Navbar = () => {
                       <div
                         style={{
                           display: "flex",
-                          marginTop: "-10px",
+                          marginTop: "-0px",
                           cursor: "pointer",
                         }}
                       >
@@ -374,9 +424,9 @@ const Navbar = () => {
               width="30"
               height="30"
               fill="currentColor"
-              class="bi bi-lock"
+              className="bi bi-lock"
               viewBox="0 0 16 16"
-              style={{ marginTop: "10px", marginLeft: "10px" }}
+              // style={{ marginTop: "10px", marginLeft: "10px" }}
             >
               <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z" />
             </svg>

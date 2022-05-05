@@ -34,25 +34,26 @@ const CreateAcc = () => {
   return (
     <div className={Styles.div__1}>
       <form
-        onSubmit={() => {
+        onSubmit={(e) => {
+          e.preventDefault();
           detailsFn(dispatch, first, last, password);
-          navigate("signin");
+          navigate("/");
+          // setSignIn(true);
         }}
       >
         <p>Create Account</p>
 
-        <div style={{ display: "flex", cursor: "pointer", marginTop: "-20px" }}>
+        <div style={{ display: "flex", cursor: "pointer", marginTop: "-10px" }}>
           <span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="15"
               height="15"
               fill="currentColor"
-              class="bi bi-credit-card"
+              className="bi bi-credit-card"
               viewBox="0 0 16 16"
               style={{
-                marginTop: "15px",
-
+                marginTop: "-8px",
                 marginRight: "10px",
               }}
             >
@@ -63,17 +64,17 @@ const CreateAcc = () => {
           <p style={{ fontSize: "0.8rem" }}>Check out Faster</p>
         </div>
 
-        <div style={{ display: "flex", cursor: "pointer", marginTop: "-20px" }}>
+        <div style={{ display: "flex", cursor: "pointer", marginTop: "-10px" }}>
           <span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="15"
               height="15"
               fill="currentColor"
-              class="bi bi-truck"
+              className="bi bi-truck"
               viewBox="0 0 16 16"
               style={{
-                marginTop: "15px",
+                marginTop: "-8px",
 
                 marginRight: "10px",
               }}
@@ -84,17 +85,17 @@ const CreateAcc = () => {
           <p style={{ fontSize: "0.8rem" }}>Track Order easily</p>
         </div>
 
-        <div style={{ display: "flex", cursor: "pointer", marginTop: "-20px" }}>
+        <div style={{ display: "flex", cursor: "pointer", marginTop: "-10px" }}>
           <span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="15"
               height="15"
               fill="currentColor"
-              class="bi bi-wrench-adjustable-circle"
+              className="bi bi-wrench-adjustable-circle"
               viewBox="0 0 16 16"
               style={{
-                marginTop: "15px",
+                marginTop: "-8px",
 
                 marginRight: "10px",
               }}
@@ -205,13 +206,16 @@ const CreateAcc = () => {
               marginTop: "20px",
             }}
           >
-            <input type="checkbox" style={{ cursor: "pointer" }} />
+            <input
+              type="checkbox"
+              style={{ cursor: "pointer", marginTop: "4px" }}
+            />
             <p style={{ fontSize: "0.8rem", margin: "0px", cursor: "pointer" }}>
               Keep me signed up. Details
             </p>
           </div>
 
-          <p style={{ fontSize: "0.8rem" }}>
+          <p style={{ fontSize: "0.8rem", marginTop: "10px" }}>
             By tapping Next, you agree to our <a href="#">Privacy Policy</a> and
             <a href="#"> Terms & Conditions.</a>
           </p>

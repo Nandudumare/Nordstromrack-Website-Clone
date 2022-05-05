@@ -1,19 +1,31 @@
 
 
 import './App.css';
-import { useSelector } from 'react-redux';
-import Navbar from './Components/Navbar/Navbar';
+
+//import Navbar from './Components/Navbar/Navbar';
 import React from 'react'
-import Slider from './Components/home/Slider/Slider'
-import Sliderdata from './Components/home/Slider/Slider' 
-
-import SignIn from './Components/Navbar/SignIn';
-
+// import Slider from './Components/home/Slider/Slider'
+// import Sliderdata from './Components/home/Slider/Slider' 
+import Flash from './Components/Flash/Flash';
+import Flashs from './Components/Flash/Flash';
 import MainRoutes from './Routes/MainRoutes';
 
-const App = () => {
+
+
+
+
+ import { useSelector } from 'react-redux';
+//  import Flash from './Components/Flash/Flash';
+import FlashEvents from './Components/Flash/FlashEvents';
+import Home from './Components/Flash/Home';
+
+
+import Megha from "./Components/Meghamenu/Megha";
+
+function App() {
+
   return (
-<<<<<<< Updated upstream
+
 
 
     
@@ -29,14 +41,15 @@ const App = () => {
     
       </div>
   
-=======
-    <div>
+
     
->>>>>>> Stashed changes
+
    
 
-
+   
   );
-};
+}
+
+
 
 export default App
