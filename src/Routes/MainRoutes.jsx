@@ -21,4 +21,14 @@ const MainRoutes = () => {
   )
 }
 
-export default MainRoutes
+      <Routes>
+        <Route path="signin" element={<SignIn />} />
+        <Route path="createacc" element={<CreateAcc />} />
+        <Route path="products" element={ <Products />}/>
+        <Route path="description" element={<Description/>}/>
+      </Routes>
+    </>
+  );
+};
+
+export default MainRoutes;
