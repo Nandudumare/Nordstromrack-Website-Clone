@@ -6,6 +6,9 @@ import {
     LOG_IN,
     DESCRIPTION_DATA,
     SORTED_DATA,
+    MAINSTATE_TRUE,
+    MAINSTATE_FALSE,
+    REMOVE_CART_ITEM,
 } from "./ActionTypes"
 
 const Data = data.data

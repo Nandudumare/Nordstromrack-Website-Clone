@@ -101,12 +101,17 @@
     margin-left: 16%;
     margin-top: 1%;
 }
+/* input[type=checkbox]{
+    width: 10px;
+    height: 30px;
+    margin-right: 20px;
+} */
 
 
 .sidebar{
     /* border: 1px solid black; */
     height: 500px;
-    width: 230px;
+    width: 220px;
 }
 
 .productContainer{
@@ -147,7 +152,7 @@
     display: grid;
     grid-template-columns: repeat(4,1fr);
     margin-left: 16%;
-    margin-top: 10%;
+    margin-top: 5%;
     gap:1%;
 }
 
@@ -160,3 +165,15 @@
     text-align: center;
 }
 
+.flex__div{
+    display: flex;
+     flex-direction: row;
+}
+
+.input_1{
+    width: 20px; 
+}
+
+.label__1{
+    margin-top:5px;
+}

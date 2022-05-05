@@ -1,6 +1,4 @@
-import {
-    type
-} from "@testing-library/user-event/dist/type"
+
 import {
     DETAILS,
     LOG_IN,
@@ -8,6 +6,9 @@ import {
     SIGN_OUT,
     DESCRIPTION_DATA,
     SORTED_DATA,
+    MAINSTATE_TRUE,
+    MAINSTATE_FALSE,
+    REMOVE_CART_ITEM,
     
 } from "./ActionTypes"
 

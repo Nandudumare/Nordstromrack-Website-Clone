@@ -16,6 +16,14 @@ import Side from "../Components/Navbar/Auth/Side";
 import Description from "../Components/InnerPages/Description/Description";
 import Checkout from "../Components/InnerPages/Checkout/Checkout";
 import Payment from "../Components/InnerPages/Payment/Payment";
+import { RequiredAuth } from "./RequiredAuth";
+import Cart from "../Components/Navbar/Auth/Cart";
+import Purchase from "../Components/Navbar/Auth/Purchase";
+import WishList from "../Components/Navbar/Auth/WishList";
+import ShippingAddress from "../Components/Navbar/Auth/ShippingAddress";
+import PaymentMethods from "../Components/Navbar/Auth/PaymentMethod";
+import Password from "../Components/Navbar/Auth/Password";
+import Descpage from "../Components/home/descrip/Descpage";
 
 const MainRoutes = () => {
   return (
@@ -24,14 +32,11 @@ const MainRoutes = () => {
 
       {/* <Checkout/> */}
 
-      
-      
-
       <Routes>
-        <Route path="checkout" element={ <Checkout/>}/>
+        <Route path="checkout" element={<Checkout />} />
 
-        <Route path ="payment" element={<Payment/>} />
-    
+        <Route path="payment" element={<Payment />} />
+
         <Route path="signin" element={<SignIn />} />
         <Route path="createacc" element={<CreateAcc />} />
         <Route
@@ -84,7 +89,7 @@ const MainRoutes = () => {
           }
         />
 
-        <Route path="products" element={<Products />} />
+        <Route path="products/:id" element={<Products />} />
         <Route path="description" element={<Descpage />} />
         <Route path="flash/women" element={<Flash />} />
         <Route path="flash/kids" element={<Kids />} />

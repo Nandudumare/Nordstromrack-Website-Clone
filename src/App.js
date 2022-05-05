@@ -10,26 +10,20 @@ import MainRoutes from './Routes/MainRoutes';
 
 
 
-      <MainRoutes/>
-  
+<
+MainRoutes / >
 
 
-import {
-  useSelector
-} from 'react-redux';
-//  import Flash from './Components/Flash/Flash';
-import FlashEvents from './Components/Flash/FlashEvents';
-import Home from './Components/Flash/Home';
 
 
-import Megha from "./Components/Meghamenu/Megha";
+  //  import Flash from './Components/Flash/Flash';
 
-function App() {
 
-  return ( <
-    MainRoutes / >
-  );
-}
+  function App() {
+
+    return ( < MainRoutes / >
+    );
+  }
 
 
 
