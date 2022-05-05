@@ -22,23 +22,81 @@ import Password from "../Components/Navbar/Auth/Password";
 import Cart from "../Components/Navbar/Auth/Cart";
 
 import Main from "../Components/home/main/Main";
+import { RequiredAuth } from "./RequiredAuth";
 
 const MainRoutes = () => {
   return (
     <>
-      {/* <Navbar />
-      <Products />
+      <Navbar />
+
       <Routes>
+        <Route path="/" element={<></>} />
+        <Route path="signin" element={<SignIn />} />
+        <Route path="createacc" element={<CreateAcc />} />
+        <Route
+          path="cart"
+          element={
+            <RequiredAuth>
+              <Cart />
+            </RequiredAuth>
+          }
+        />
+        <Route
+          path="purchase"
+          element={
+            <RequiredAuth>
+              <Purchase />
+            </RequiredAuth>
+          }
+        />
+        <Route
+          path="wishlist"
+          element={
+            <RequiredAuth>
+              <WishList />
+            </RequiredAuth>
+          }
+        />
+        <Route
+          path="shippingaddress"
+          element={
+            <RequiredAuth>
+              <ShippingAddress />
+            </RequiredAuth>
+          }
+        />
+        <Route
+          path="paymentmethods"
+          element={
+            <RequiredAuth>
+              <PaymentMethods />
+            </RequiredAuth>
+          }
+        />
+
+        <Route
+          path="password"
+          element={
+            <RequiredAuth>
+              <Password />
+            </RequiredAuth>
+          }
+        />
+
         <Route path="flash/women" element={<Flash />} />
         <Route path="flash/kids" element={<Kids />} />
         <Route path="flash/mens" element={<Mens />} />
         <Route path="flash/home" element={<Home />} />
         <Route path="flash/beauty" element={<Beauty />} />
-        <Route path="signin" element={<SignIn />} />
-        <Route path="createacc" element={<CreateAcc />} />
-      </Routes> */}
-      <Main></Main>
-     
+      </Routes>
+      {/* <Main></Main> */}
+      {/* <Navbar /> */}
+      {/* <br />
+      
+      <br /> */}
+      {/* <Cart /> */}
+      {/* <PaymentMethods /> */}
+      {/* <Password /> */}
     </>
   );
 };
