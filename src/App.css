@@ -1,4 +1,6 @@
-
+body{
+  position: relative;
+}
 #parent{
   height:auto;
   width: auto;

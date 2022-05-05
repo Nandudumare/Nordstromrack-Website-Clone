@@ -1,22 +1,22 @@
 .descpagemaindiv{
     display:flex;
     justify-content:space-between;
-    border:1px solid black;
+    /* border:1px solid black; */
 }
 
 .descimagediv{
-    border:1px solid red;
+    /* border:1px solid red; */
     width: 40%;
     height:auto
 }
 .descimagediv img{
     width:70%;
-    height:80%
-}
+    height:80%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;}
 
 .descdetaildiv{
-    border:1px solid rgb(0, 0, 0);
-    width: 45%;
+    /* border:1px solid rgb(0, 0, 0); */
+    width: 50%;
     height:auto
 }
 
@@ -34,10 +34,32 @@
 .Addbag{
     width:400px;
     height:40px;
-    background: #00819d none;
+    background: #00819d;
     border-color: #00819d;
     color: #fff;
     font-weight: 400;
     text-align: center;
+    border-radius:5px
 
 }
+
+
+.checkoutpop{
+    width:100px;
+    height:40px;
+    background: #00819d;
+    border-color: #00819d;
+    color: #fff;
+    font-weight: 400;
+    text-align: center;
+    border-radius:5px
+    /* border:1px solid black */
+
+}
+
+.checkoutpop:hover{
+    color:teal;
+    transition:all ease 0.3sec;
+    background-color:white;
+}
+
