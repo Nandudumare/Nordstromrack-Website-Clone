@@ -19,12 +19,12 @@ const App = () => {
 
     <div className="App">
 
-      {/* <MainRoutes/>
-   */}
+     <MainRoutes/>
+  
 
 
 
-      {/* <MainRoutes/> */}
+    
     
       </div>
   

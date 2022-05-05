@@ -1,0 +1,204 @@
+/* mother card>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+.mothercard{
+  width: 95%;
+  height:160px;
+  margin: auto;
+  margin-bottom: 40px;
+}
+.mothercard img{
+  width:100%;
+  height:100%
+}
+
+/* slidecsss */
+.slideapp {
+  padding: 10px 30px;
+}
+
+
+/* //new flash styles>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+.productContainer img{
+  height: 82%;
+  width:100%
+}
+.productContainer{
+  border:1px solid rgb(138, 82, 82);
+  height:22em;
+  width:200px;
+  /* text-align:center; */
+  position: relative;
+  cursor: pointer;
+ 
+}
+.productContainer p{
+  margin-top: -3px;
+  padding-left: 4px;
+}
+
+.Quicklook{
+ 
+  width:100%;
+  height:45px;
+  position: absolute;
+  bottom: 60px;
+
+  margin:auto;
+  display:none;
+  color:teal;
+  background-color:0.1px solid transparent;
+  z-index:-0.8;
+  border:0.7px solid rgb(152, 23, 23);
+  font-size: 18px;
+}
+.productContainer:hover .Quicklook{
+display:block;
+cursor:pointer;
+color:teal;
+
+border:0.4px solid rgb(87, 81, 81);
+}
+.productContainer>.Quicklook:hover{
+  border:2.2px solid teal;
+  /* background-color:green; */
+}
+
+
+
+/* shoes slider csss>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+.slippersmain{
+  margin-top:-60px;
+  margin-bottom:100px;
+ 
+}
+.slippersContainer{
+  width:190px;
+  height:16em;
+  /* border:1px solid black */
+}
+
+.slippersContainer img{
+  width:100%;
+  /* height:15em */
+}
+
+.slippersContainer p{
+  margin-top: -3px;
+  padding-left: 4px;
+}
+.newflash p{
+  color:#393939;
+  text-align:center;
+  /* border:1px solid rgb(0, 0, 0); */
+  font-family: Text,Arial,sans-serif;
+  font-weight: 700;
+  line-height: 1.4;
+  font-size: 25px;
+  height:40px
+}
+.newflashmain{
+  margin-top:10px;
+  margin-bottom:100px;
+  /* border:1px solid blue */
+}
+
+/* spring>>>>>>>>>>>>>>>>>>>>>>>>>> */
+.Springcompo{
+  display:flex;
+  justify-content:space-around;
+}
+.Springimg{
+width:644px;
+height:444px;
+
+}
+.Springimg img{
+  width:100%;
+  height:100%;
+}
+.Spring>p{
+  color:#393939;
+  text-align:center;
+  /* border:1px solid rgb(0, 0, 0); */
+  font-family: Text,Arial,sans-serif;
+  font-weight: 700;
+  line-height: 1.4;
+  font-size: 25px;
+  height:40px
+}
+.Spring{
+  margin-bottom: 150px;
+  /* border:1px solid teal */
+}
+
+/* Jeans container>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+.JeansContainer{
+  width:190px;
+  height:18em;
+  /* border:1px solid black */
+}
+
+.JeansContainer img{
+  width:100%;
+  height:14em
+}
+
+.JeansContainer p{
+  margin-top: -3px;
+  padding-left: 4px;
+}
+
+/* jeans nav */
+.navjean{
+  display:flex;
+  justify-content:center;
+  gap:50px;
+  /* border:1px solid red */
+}
+.jean{
+  width:100px;
+  height:100%;
+  color:#393939;
+  text-align:center;
+  
+  font-family: Text,Arial,sans-serif;
+  font-weight: 700;
+  line-height: 1.4;
+  font-size: 25px;
+  height:40px
+}
+.jean:hover{
+  border-bottom: 5px solid teal;
+}
+
+/* springaccc>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+.springacc{
+  margin-bottom:150px;
+  margin-top:120px;
+}
+.springacc>p{
+  width:100%;
+  height:100%;
+  color:#393939;
+  text-align:center;
+  font-family: Text,Arial,sans-serif;
+  font-weight: 700;
+  line-height: 1.4;
+  font-size: 25px;
+  height:40px;
+  
+}
+.springaccdiv{
+  display:flex;
+}
+.springaccimg{
+  width:429px;
+  height:401px;
+  margin: auto;
+
+}
+.springaccimg img{
+  width:100%;
+  height:100%;
+}

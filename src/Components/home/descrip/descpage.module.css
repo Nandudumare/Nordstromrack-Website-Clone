@@ -1,0 +1,43 @@
+.descpagemaindiv{
+    display:flex;
+    justify-content:space-between;
+    border:1px solid black;
+}
+
+.descimagediv{
+    border:1px solid red;
+    width: 40%;
+    height:auto
+}
+.descimagediv img{
+    width:70%;
+    height:80%
+}
+
+.descdetaildiv{
+    border:1px solid rgb(0, 0, 0);
+    width: 45%;
+    height:auto
+}
+
+.selectTag{
+    width:400px;
+    height:44px;
+    margin-bottom: 13px;
+    border:2px solid whitesmoke;
+
+}
+.selectTag:hover{
+    border-bottom: 2.4px solid teal;
+}
+
+.Addbag{
+    width:400px;
+    height:40px;
+    background: #00819d none;
+    border-color: #00819d;
+    color: #fff;
+    font-weight: 400;
+    text-align: center;
+
+}
