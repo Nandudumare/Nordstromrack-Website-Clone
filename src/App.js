@@ -1,5 +1,3 @@
-
-
 import './App.css';
 
 //import Navbar from './Components/Navbar/Navbar';
@@ -14,7 +12,9 @@ import MainRoutes from './Routes/MainRoutes';
 
 
 
- import { useSelector } from 'react-redux';
+import {
+  useSelector
+} from 'react-redux';
 //  import Flash from './Components/Flash/Flash';
 import FlashEvents from './Components/Flash/FlashEvents';
 import Home from './Components/Flash/Home';
@@ -24,29 +24,8 @@ import Megha from "./Components/Meghamenu/Megha";
 
 function App() {
 
-  return (
-
-
-
-    
-
-
-
-     <MainRoutes/>
-  
-
-
-
-    
-    
- 
-  
-
-    
-
-   
-
-   
+  return ( <
+    MainRoutes / >
   );
 }
 
