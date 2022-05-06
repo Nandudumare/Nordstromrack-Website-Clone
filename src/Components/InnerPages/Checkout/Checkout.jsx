@@ -172,10 +172,10 @@ const Checkout = () => {
                 <p className={styles.bold}>Card number</p>
                 <input className={styles.input} type="number" />
 
-                <p className={styles.bold}>Card number</p>
+                <p className={styles.bold}>Expiry Date</p>
                 <input className={styles.inputcart} type="date" />
 
-                <p className={styles.bold}>Card number</p>
+                <p className={styles.bold}>CVV</p>
                 <input className={styles.inputcart} type="password" />
 
                 <input className={styles.submit} type="submit" />

@@ -18,6 +18,8 @@ const Payment = () => {
   console.log("formData:", formData);
   const navigate = useNavigate();
 
+  console.log(formData.fname,"namehere")
+
   setTimeout(() => setIsHide(false), 5000);
 
   return (
@@ -69,7 +71,7 @@ const Payment = () => {
         </div>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default Payment;
+export default Payment
