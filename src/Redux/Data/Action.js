@@ -1,4 +1,3 @@
-
 import {
     DETAILS,
     LOG_IN,
@@ -9,7 +8,9 @@ import {
     MAINSTATE_TRUE,
     MAINSTATE_FALSE,
     REMOVE_CART_ITEM,
-    
+    ADD_TO_BAG,
+    FORM_DATA,
+
 } from "./ActionTypes"
 
 
@@ -110,3 +111,17 @@ export const remove_cart_item = (dispatch, payload) => {
     })
 }
 
+
+export const add_to_bag = (dispatch, payload) => {
+    dispatch({
+        type: ADD_TO_BAG,
+        payload
+    })
+}
+
+export const form_data = (dispatch, payload) => {
+    dispatch({
+        type: FORM_DATA,
+        payload
+    })
+}

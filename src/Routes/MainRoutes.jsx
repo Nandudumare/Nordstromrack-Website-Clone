@@ -93,6 +93,7 @@ const MainRoutes = () => {
             </RequiredAuth>
           }
         />
+        
         <Route path="gift" element={<Gift />} />
 
         <Route path="products/:id" element={<Products />} />

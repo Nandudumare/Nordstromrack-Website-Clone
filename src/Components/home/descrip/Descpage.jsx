@@ -4,14 +4,14 @@ import CheckPop from "./CheckPop";
 import styles from "./descpage.module.css";
 
 const Descpage = () => {
-  const Datades = useSelector((state) => state.Data.data);
-  // const descData = useSelector((state)=>state.Data.descriptionData)
-  // console.log(descData)
-  const filterData = Datades.filter((item) => {
-    return item.title.includes("Men's Jean");
-  });
-  let descData = filterData[0];
+  // const Datades = useSelector((state) => state.Data.data);
+  const descData = useSelector((state) => state.Data.descriptionData);
   console.log(descData);
+  // const filterData = Datades.filter((item) => {
+  //   return item.title.includes("Men's Jean");
+  // });
+  // let descData = filterData[0];
+  // console.log(descData);
 
   return (
     <div className={styles.descpagemaindiv}>
@@ -24,7 +24,7 @@ const Descpage = () => {
         {/* <p>{descData.price.from.extracted}</p> */}
         <p>{descData.shipping}</p>
         <p>{descData.condition}</p>
-        <p>{descData.extensions}</p>
+        {/* <p>{descData.extensions[0]}</p> */}
         <select className={styles.selectTag}>
           <option value="size">Size</option>
           <option>5</option>

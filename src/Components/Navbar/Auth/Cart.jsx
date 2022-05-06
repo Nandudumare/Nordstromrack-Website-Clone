@@ -1,13 +1,59 @@
 import { nanoid } from "nanoid";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { remove_cart_item } from "../../../Redux/Data/Action";
+import { useNavigate } from "react-router-dom";
 import Styles from "./Cart.module.css";
-
+import styles from "../../InnerPages/Checkout/Check.module.css";
 const Cart = () => {
-  const data = useSelector((state) => state.Data.data);
+  const data = useSelector((state) => state.Data.cartData);
   const length = data.length;
   const dispatch = useDispatch();
+  const [state, setState] = useState(false);
+  const navigate = useNavigate();
+
+  // const valueChange = (e, item) => {
+  //   const value = e.target.value;
+  //   if (value === "1") {
+  //     item.price.extracted *= 1;
+  //     console.log(item.price.extracted);
+  //   }
+  //   if (value === "2") {
+  //     item.price.extracted *= 2;
+  //     console.log(item.price.extracted);
+  //   }
+  //   if (value === "3") {
+  //     item.price.extracted *= 3;
+  //     console.log(item.price.extracted);
+  //   }
+  //   if (value === "4") {
+  //     item.price.extracted *= 4;
+  //     console.log(item.price.extracted);
+  //   }
+  // };
+
+  var total = 0;
+  var shipping = 199;
+
+  for (var i = 0; i < data.length; i++) {
+    total = total + Number(data[i].price.extracted);
+    // shipping = shipping+ Number(sampledata[i].shipping)
+  }
+
+  console.log(total);
+  console.log(shipping);
+
+  var final = total + shipping + 14;
+
+  console.log(final);
+  const payment = () => {
+    // return <>
+    //       <LoadingSpin />
+
+    // </>
+
+    navigate("/checkout");
+  };
 
   return (
     <div className={Styles.div__1}>
@@ -103,7 +149,15 @@ const Cart = () => {
                 </button>
               </div>
               <div style={{ marginTop: "20px", marginLeft: "70px" }}>
-                <select name="" id="" style={{ border: "none" }}>
+                <select
+                  name=""
+                  id=""
+                  style={{ border: "none" }}
+                  onClick={(e) => {
+                    // valueChange(e, item);
+                    // setState(true);
+                  }}
+                >
                   <option value="">Qty</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -118,11 +172,43 @@ const Cart = () => {
                 </select>
               </div>
               <div style={{ marginTop: "20px", marginLeft: "100px" }}>
-                <p>Price :{Math.floor(Math.random() * 1000)}</p>
+                <p>Price :{item.price.raw}</p>
               </div>
             </div>
           );
         })}
+      </div>
+
+      <div className={styles.review1}>
+        <div className={styles.review12}>
+          <p className={styles.size}> Review order</p>
+
+          <div className={styles.flexs}>
+            <p>Your items</p>
+            <p>$ {total}</p>
+          </div>
+
+          <div className={styles.flexs}>
+            <p>Shipping</p>
+            <p>$ {shipping}</p>
+          </div>
+
+          <div className={styles.flexs}>
+            <p>Estimated tax</p>
+            <p>$ 14</p>
+          </div>
+
+          <div className={styles.line}></div>
+
+          <div className={styles.flexs}>
+            <p>Estimated total</p>
+            <p>$ {final}</p>
+          </div>
+
+          <button onClick={payment} className={styles.reviewButton}>
+            Review Order
+          </button>
+        </div>
       </div>
     </div>
   );

@@ -1,8 +1,9 @@
 .majordiv{
     display: flex;
     gap: 3%;
-    margin: auto;
-    width: 58%;
+    
+    width: 77%;
+    margin:auto;
     margin-top:50px;
     /* border: 1px solid yellow; */
 }

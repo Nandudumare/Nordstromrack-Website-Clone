@@ -1,14 +1,23 @@
+.main{
+    width:80%
+}
+
+
+
+
 .topdiv{
 
     /* border: 1px solid black; */
     display: flex;
     font-family: Text,Arial,sans-serif;
-    gap:3%
+    gap:1%
 } 
 
 .cat{
     /* border: 1px solid yellow; */
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(5,190px);
+    gap:20px;
     font-family:  Text,Arial,sans-serif;
     text-align: center;
     
@@ -18,10 +27,12 @@
     margin-right: 2%;
     box-sizing: border-box;
     padding: 1%;
-    display: grid;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-around;
     /* border: 1px solid red; */
-    height: 400px;
-    width: 290px;
+    /* height: 400px;
+    width: 290px; */
    
 }
 
@@ -32,7 +43,7 @@
 
 
 
-.grid>div{
+.grid___1>div{
     /* box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px; */
     box-sizing: border-box;
     padding: 4%;
@@ -40,16 +51,16 @@
     /* border: 1px solid black; */
  
 }
-.grid>div>p{
+.grid___1>div>p{
     text-align: left;
 
 }
 
-.grid>div:hover{
+.grid___1>div:hover{
    
     box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
 }
-.grid>div>img{
+.grid___1>div>img{
     width: 90%;
     height: 350px;
     padding-bottom: 20px;
@@ -59,24 +70,25 @@
 .left{
     text-align: left;
     margin-top: 1%;
+    margin-left: 10px;
     height: 50px;
     color: rgb(114, 109, 109);
 }
 .left1{
     text-align: left;
-    margin-left: 16%;
+    margin-left: 23%;
 }
 
 .left2{
     text-align: left;
-    margin-left: 16%;
+    margin-left: 23%;
     color: gray;
 }
 
 
 .allcategory{
     display: flex;
-    margin-left: 14.5%;
+    margin-left: 23%;
     justify-content: space-around;
 }
 
@@ -93,17 +105,18 @@
     border: 1px solid black;
     width: 270px;
     height: 40px;
-    margin-left: 80%;
+    margin-left: 95%;
     margin-top: 2%;
 }
 
 .line{
     border: 1px solid grey;
-    margin-left: 16%;
+    margin-left: 23%;
+    width:100%;
     margin-top: 1%;
 }
 
-.sidebar{
+.sidebar__1{
     /* border: 1px solid black; */
     height: 500px;
     width: 220px;
@@ -115,13 +128,21 @@
     cursor: pointer;
     /* border: 1px solid green; */
     height: 600px;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    gap:5px;
    
+  }
+  .productContainer>div:nth-child(1){
+      position: relative;
   }
 
 .Quicklook{
-  width:100%;
+  width:110%;
   height:50px;
   position: absolute;
+  top:100%;
   display:none;
   color:rgb(77, 133, 156);
   background-color:0.2px transparent;
@@ -144,10 +165,10 @@
   }
 
 
-  .grid{
+  .grid___1{
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    margin-left: 16%;
+    grid-template-columns: repeat(4,250px);
+    margin-left: 23%;
     margin-top: 5%;
     gap:1%;
 }
