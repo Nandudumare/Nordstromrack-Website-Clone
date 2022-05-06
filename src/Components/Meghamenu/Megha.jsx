@@ -267,54 +267,54 @@ const Megha = () => {
                         <Link to="/products/Shoes">Activewear</Link>
                       </li>
                       <li>
-                        <Link to="/products/Men">Blazers</Link>
+                        <Link to="/products/women">Blazers</Link>
                       </li>
                       <li>
-                        <Link to="/products/Men">Coats & Jackets</Link>
+                        <Link to="/products/women">Coats & Jackets</Link>
                       </li>
                       <li>
-                        <Link to="/products/Men">Dresses</Link>
+                        <Link to="/products/women">Dresses</Link>
                       </li>
                       <li>
-                        <Link to="/products/Men">Jeans & Denim</Link>
+                        <Link to="/products/women">Jeans & Denim</Link>
                       </li>
                       <li>
-                        <Link to="/products/Men">Jumpsuits & Rompers</Link>
+                        <Link to="/products/women">Jumpsuits & Rompers</Link>
                       </li>
                       <li>
-                        <Link to="/products/Men">
+                        <Link to="/products/women">
                           Lingerie, Hosiery & Shapewear
                         </Link>
                       </li>
                       <li>
-                        <Link to="/products/Men">Loungewear</Link>
+                        <Link to="/products/women">Loungewear</Link>
                       </li>
                       <li>
-                        <Link to="/products/Men">Jeans & Denim</Link>
+                        <Link to="/products/women">Jeans & Denim</Link>
                       </li>
                       <li>
-                        <Link to="/products/Men">Pants & Leggings</Link>
+                        <Link to="/products/women">Pants & Leggings</Link>
                       </li>
                       <li>
-                        <Link to="/products/Men">Shorts</Link>
+                        <Link to="/products/women">Shorts</Link>
                       </li>
                       <li>
-                        <Link to="/products/Men">Skirts</Link>
+                        <Link to="/products/women">Skirts</Link>
                       </li>
                       <li>
-                        <Link to="/products/Men">Sleepwear & Robes</Link>
+                        <Link to="/products/women">Sleepwear & Robes</Link>
                       </li>
                       <li>
-                        <Link to="/products/Men">Sweaters</Link>
+                        <Link to="/products/women">Sweaters</Link>
                       </li>
                       <li>
-                        <Link to="/products/Men">Sweatshirts & Hoodies</Link>
+                        <Link to="/products/women">Sweatshirts & Hoodies</Link>
                       </li>
                       <li>
-                        <Link to="/products/Men">Swimsuits & Cover-Ups</Link>
+                        <Link to="/products/women">Swimsuits & Cover-Ups</Link>
                       </li>
                       <li>
-                        <Link to="/products/Men">Tops</Link>
+                        <Link to="/products/women">Tops</Link>
                       </li>
                       <br />
 

@@ -385,7 +385,6 @@ const Products = () => {
                             <lable
                               style={{ marginTop: "5px", fontSize: "0.8rem" }}
                             >
-                              {" "}
                               Billabog
                             </lable>
                           </div>
@@ -539,7 +538,7 @@ const Products = () => {
         </div>
         <div>
           <div>
-            <h4 className={styles.you}>HiGHLIGHTS OF THE DAY</h4>
+            <h4 className={styles.you}>HIGHLIGHT OF THE DAY</h4>
           </div>
 
           <div className={styles.cat}>
