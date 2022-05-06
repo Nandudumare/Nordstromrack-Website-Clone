@@ -1,9 +1,16 @@
-import React from 'react'
+import React from "react";
+import Momgift, { Motherfaq, Therealdeal } from "./Momgift";
+import Shopyourway from "./Shopyourway";
 
 const Gift = () => {
   return (
-    <div>Gift</div>
-  )
-}
+    <div>
+      <Momgift />
+      <Therealdeal />
+      <Motherfaq />
+      <Shopyourway />
+    </div>
+  );
+};
 
-export default Gift
+export default Gift;

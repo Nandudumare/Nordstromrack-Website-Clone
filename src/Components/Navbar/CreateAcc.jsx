@@ -220,7 +220,12 @@ const CreateAcc = () => {
           >
             <input
               type="checkbox"
-              style={{ cursor: "pointer", marginTop: "4px" }}
+              style={{
+                cursor: "pointer",
+                marginTop: "4px",
+                height: "13px",
+                width: "13px",
+              }}
             />
             <p style={{ fontSize: "0.8rem", margin: "0px", cursor: "pointer" }}>
               Keep me signed up. Details

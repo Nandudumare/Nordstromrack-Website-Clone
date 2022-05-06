@@ -11,11 +11,13 @@ export function Example() {
       <Button
         style={{
           marginLeft: "93%",
-          position: "static",
+          position: "fixed",
           zIndex: "100",
-          width: "70px",
-          height: "60px",
+          width: "45px",
+          height: "40px",
           background: "white",
+          bottom: "2%",
+          right: "2%",
         }}
         variant="primary"
         onClick={() => setShow(true)}
@@ -44,7 +46,7 @@ export function Example() {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body style={{ height: "500px", width: "376px" }}>
-          <div style={{ texalign: "left" }}>
+          <div style={{ texalign: "left" }} className="popup__1">
             <div>
               <input
                 style={{
