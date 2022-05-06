@@ -548,27 +548,27 @@ const Products = () => {
           <div className={styles.cat}>
             <div>
               <img src={filterData[3].thumbnail} />
-              <a>{filterData[3].cat}</a>
+              <a>{filterData[3].title}</a>
             </div>
 
             <div>
               <img src={filterData[4].thumbnail} />
-              <a>{filterData[4].cat}</a>
+              <a>{filterData[4].title}</a>
             </div>
 
             <div>
               <img src={filterData[5].thumbnail} />
-              <a>{filterData[5].cat}</a>
+              <a>{filterData[5].title}</a>
             </div>
 
             <div>
               <img src={filterData[6].thumbnail} />
-              <a>{filterData[6].cat}</a>
+              <a>{filterData[6].title}</a>
             </div>
 
             <div>
               <img src={filterData[7].thumbnail} />
-              <a>{filterData[7].cat}</a>
+              <a>{filterData[7].title}</a>
             </div>
           </div>
         </div>
@@ -614,16 +614,16 @@ const Products = () => {
                     }}
                     className={styles.productContainer}
                   >
-                    <img src={e.thumbnail} alt="Not Found" />
+                    <img className={styles.theimg} src={e.thumbnail} alt="Not Found" />
                     <a>{e.title}</a>
                     {/* <p>{e.price.raw}</p> */}
                     <p>{e.condition}</p>
-                    {/* <p className={styles.price}>{e.price.raw}</p> */}
+                    <p className={styles.price}>{e.price.raw}</p>
                     {/* <p>{e.price.extracted}</p> */}
                     {/* <p>{e.price.from.raw}</p> */}
                     <p className={styles.shipping}>{e.shipping}</p>
-                    {/* <p className={styles.sold}>{e.extensions}</p> */}
-                    <button className={styles.Quicklook}>Quick Look</button>
+                    <p className={styles.sold}>{e.extensions}</p>
+                    <button className={styles.Quicklook}>Quick View</button>
                   </div>
                 </>
               );
@@ -637,16 +637,16 @@ const Products = () => {
                     }}
                     className={styles.productContainer}
                   >
-                    <img src={e.thumbnail} />
-                    <a>{e.title}</a>
+                    <img className={styles.theimg} src={e.thumbnail} />
+                    <a className={styles.title} >{e.title}</a>
                     {/* <p>{e.price.raw}</p> */}
                     <p>{e.condition}</p>
-                    {/* <p className={styles.price}>{e.price.raw}</p> */}
+                    <p className={styles.price}>{e.price.raw}</p>
                     {/* <p>{e.price.extracted}</p> */}
                     {/* <p>{e.price.from.raw}</p> */}
                     <p className={styles.shipping}>{e.shipping}</p>
-                    {/* <p className={styles.sold}>{e.extensions}</p> */}
-                    <button className={styles.Quicklook}>Quick Look</button>
+                    <p className={styles.sold}>{e.extensions}</p>
+                    <button className={styles.Quicklook}>Quick View</button>
                   </div>
                 </>
               );

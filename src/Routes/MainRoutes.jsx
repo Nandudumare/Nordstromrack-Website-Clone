@@ -24,6 +24,10 @@ import ShippingAddress from "../Components/Navbar/Auth/ShippingAddress";
 import PaymentMethods from "../Components/Navbar/Auth/PaymentMethod";
 import Password from "../Components/Navbar/Auth/Password";
 import Descpage from "../Components/home/descrip/Descpage";
+import Main from "../Components/home/main/Main";
+import Footer from "../Components/Footer/Footer";
+import Megha from "../Components/Meghamenu/Megha";
+import Gift from "../Components/Gift/Gift";
 
 const MainRoutes = () => {
   return (
@@ -33,6 +37,7 @@ const MainRoutes = () => {
       {/* <Checkout/> */}
 
       <Routes>
+        <Route path="/" element={<Main />} />
         <Route path="checkout" element={<Checkout />} />
 
         <Route path="payment" element={<Payment />} />
@@ -88,6 +93,7 @@ const MainRoutes = () => {
             </RequiredAuth>
           }
         />
+        <Route path="gift" element={<Gift />} />
 
         <Route path="products/:id" element={<Products />} />
         <Route path="description" element={<Descpage />} />
@@ -97,6 +103,7 @@ const MainRoutes = () => {
         <Route path="flash/home" element={<Home />} />
         <Route path="flash/beauty" element={<Beauty />} />
       </Routes>
+      <Footer />
     </>
   );
 };

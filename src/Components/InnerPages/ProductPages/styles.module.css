@@ -3,6 +3,7 @@
     /* border: 1px solid black; */
     display: flex;
     font-family: Text,Arial,sans-serif;
+    gap:3%
 } 
 
 .cat{
@@ -17,6 +18,10 @@
     margin-right: 2%;
     box-sizing: border-box;
     padding: 1%;
+    display: grid;
+    /* border: 1px solid red; */
+    height: 400px;
+    width: 290px;
    
 }
 
@@ -31,30 +36,26 @@
     /* box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px; */
     box-sizing: border-box;
     padding: 4%;
+    text-align: left;
+    /* border: 1px solid black; */
  
 }
 .grid>div>p{
     text-align: left;
 
 }
-.grid>div{
-    text-align: left;
-}
+
 .grid>div:hover{
    
     box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
 }
 .grid>div>img{
     width: 90%;
-    height: 300px;
-}
-
-.nav{
-
-    border: 1px solid green;
-    height: 200px;
+    height: 350px;
+    padding-bottom: 20px;
 
 }
+
 .left{
     text-align: left;
     margin-top: 1%;
@@ -101,12 +102,6 @@
     margin-left: 16%;
     margin-top: 1%;
 }
-/* input[type=checkbox]{
-    width: 10px;
-    height: 30px;
-    margin-right: 20px;
-} */
-
 
 .sidebar{
     /* border: 1px solid black; */
@@ -119,20 +114,20 @@
     position: relative;
     cursor: pointer;
     /* border: 1px solid green; */
+    height: 600px;
    
   }
 
 .Quicklook{
   width:100%;
-  height:40px;
+  height:50px;
   position: absolute;
-  bottom: 45%;
   display:none;
-  color:rgb(101, 196, 196);
+  color:rgb(77, 133, 156);
   background-color:0.2px transparent;
-  margin-left: -11px;
-  /* z-index:-0.8; */
-  border:0.7px solid rgb(210, 210, 210);
+  margin-left: -12px;
+  z-index:-0.8;
+  border:0.7px solid rgb(77, 133, 156);
   /* border:2.1px solid rgb(24, 134, 134); */
   font-size: 18px;
   }
@@ -140,11 +135,12 @@
   .productContainer:hover .Quicklook{
   display:block;
   cursor:pointer;
+
   }
 
 
   .Quicklook:hover{
-    border:1px solid teal;
+    border:2px solid rgb(77, 133, 156);
   }
 
 
@@ -176,4 +172,17 @@
 
 .label__1{
     margin-top:5px;
+}
+.title{
+
+    text-decoration: none;
+    color: black;
+
+}
+
+.title:hover{
+
+    text-decoration: underline;
+    color: black;
+
 }
