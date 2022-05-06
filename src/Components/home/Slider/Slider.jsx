@@ -115,7 +115,7 @@ const NewFlash = () => {
 const Slippers = () => {
   const Dataslider = useSelector((state) => state.Data.data);
   const filterData = Dataslider.filter((item) => {
-    return item.title.includes("Slippers");
+    return item.title.includes("bag");
   });
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -218,7 +218,7 @@ const ManJeans = () => {
 const WomenJeans = () => {
   const Dataslider = useSelector((state) => state.Data.data);
   const filterData = Dataslider.filter((item) => {
-    return item.title.includes("Jeans");
+    return item.title.includes("women");
   });
   // console.log(filterData)
   const dispatch = useDispatch();
@@ -279,7 +279,7 @@ const Springaccess = () => {
 const BestSelling = () => {
   const Dataslider = useSelector((state) => state.Data.data);
   const filterData = Dataslider.filter((item) => {
-    return item.title.includes("Suit");
+    return item.title.includes("Shoes");
   });
   const dispatch = useDispatch();
   const navigate = useNavigate();

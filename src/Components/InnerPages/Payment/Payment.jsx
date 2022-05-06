@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Spinner } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import styles from "./Pay.module.css";
+import { useNavigate } from "react-router-dom";
 // import {ReactSpinner} from 'react-spinning-wheel';
 // import 'react-spinning-wheel/dist/style.css';
 
@@ -15,6 +16,7 @@ const Payment = () => {
 
   const formData = useSelector((state) => state.Data.formData);
   console.log("formData:", formData);
+  const navigate = useNavigate();
 
   setTimeout(() => setIsHide(false), 5000);
 
@@ -24,7 +26,14 @@ const Payment = () => {
         <div className={styles.paymentdiv}>
           <h1>Thank you!</h1>
           <p>Your Payment is Successfully Done.</p>
-          <button className={styles.button}>Home</button>
+          <button
+            className={styles.button}
+            onClick={() => {
+              navigate("/");
+            }}
+          >
+            Home
+          </button>
         </div>
       ) : (
         <div>
