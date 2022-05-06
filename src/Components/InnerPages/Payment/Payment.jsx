@@ -14,9 +14,14 @@ const Payment = () => {
   const [isHide, setIsHide] = useState(true);
 
   const formData = useSelector((state) => state.Data.formData);
+<<<<<<< Updated upstream
   console.log("formData:", formData);
+=======
+  // console.log("formData:", formData);
+  const navigate = useNavigate();
+>>>>>>> Stashed changes
 
-  console.log(formData.fname,"namehere")
+  // console.log(formData.fname,"namehere")
 
   setTimeout(() => setIsHide(false), 5000);
 
@@ -24,6 +29,7 @@ const Payment = () => {
     <div className={styles.div}>
       {!isHide ? (
         <div className={styles.paymentdiv}>
+<<<<<<< Updated upstream
 
           <img style={{width:"80px"}} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYfD7SshGzpdEJQU6y9ViAWpuHHXI97tTNEQ&usqp=CAU"/>
           <h1>Thank You!</h1>
@@ -45,6 +51,22 @@ const Payment = () => {
 
           <h4 >Happy Shopping {formData.fname} {formData.lname}</h4>
           <button className={styles.button}>Home</button>
+=======
+          <h3>Thank you! {formData.fname}</h3>
+          <p>Your Payment is Successfully Done.</p>
+          <p>
+            The order Will deliver at {formData.address} by tommarro at 8'O
+            clock .
+          </p>
+          <button
+            className={styles.button}
+            onClick={() => {
+              navigate("/");
+            }}
+          >
+            Home
+          </button>
+>>>>>>> Stashed changes
         </div>
       ) : (
         <div>
@@ -80,7 +102,7 @@ const Payment = () => {
         </div>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default Payment
+export default Payment;

@@ -17,6 +17,8 @@ const Navbar = () => {
 
   const dispatch = useDispatch();
 
+  const cartData = useSelector((state) => state.Data.cartData);
+
   // const Name = useSelector((state) => state.Data.signInData.firstName);
 
   const name = JSON.parse(localStorage.getItem("name"));
@@ -448,6 +450,18 @@ const Navbar = () => {
               </div>
             </div>
             <div onClick={() => navigate("cart")}>
+              <p
+                style={{
+                  position: "absolute",
+                  fontSize: "0.8rem",
+                  right: "37px",
+                  top: "68px",
+                  color: "red",
+                  fontWeight: "bold"
+                }}
+              >
+                {cartData.length}
+              </p>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="30"
@@ -455,7 +469,7 @@ const Navbar = () => {
                 fill="currentColor"
                 className="bi bi-lock"
                 viewBox="0 0 16 16"
-                // style={{ marginTop: "10px", marginLeft: "10px" }}
+                style={{ position: "relative" }}
               >
                 <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z" />
               </svg>
@@ -466,7 +480,6 @@ const Navbar = () => {
 
       <hr style={{ marginBottom: "0px" }} />
       {/* <Modals /> */}
-      
     </>
   );
 };

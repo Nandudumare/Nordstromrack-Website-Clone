@@ -43,8 +43,11 @@ const Checkout = () => {
     //       <LoadingSpin />
 
     // </>
-
-    navigate("/payment");
+    if (formdata) {
+      navigate("/payment");
+    } else {
+      alert("Please Fill the Details");
+    }
   };
 
   return (
