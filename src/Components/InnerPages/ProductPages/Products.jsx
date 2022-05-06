@@ -60,9 +60,9 @@ const Products = () => {
   return (
     <div className={styles.main}>
       <div className={styles.left}>
-        <a> Home /</a>
-        <a>Women / </a>
-        <a>Dresses </a>
+        <p> Home /</p>
+        <p>Category / </p>
+        <p className={styles.ids}>{id} </p>
       </div>
       <div className={styles.topdiv}>
         <div>

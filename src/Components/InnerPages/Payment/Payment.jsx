@@ -16,14 +16,34 @@ const Payment = () => {
   const formData = useSelector((state) => state.Data.formData);
   console.log("formData:", formData);
 
+  console.log(formData.fname,"namehere")
+
   setTimeout(() => setIsHide(false), 5000);
 
   return (
     <div className={styles.div}>
       {!isHide ? (
         <div className={styles.paymentdiv}>
-          <h1>Thank you!</h1>
-          <p>Your Payment is Successfully Done.</p>
+
+          <img style={{width:"80px"}} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYfD7SshGzpdEJQU6y9ViAWpuHHXI97tTNEQ&usqp=CAU"/>
+          <h1>Thank You!</h1>
+          <h4>You have Placed the  Order {"\n"} Successfully</h4>
+          <p>Your order has been proccessed and {"\n"}
+          will be diliver soon</p>
+
+          
+
+    
+        
+          <p className={styles.add} >Name: {formData.fname}</p>
+          {/* <p>{formData.fname}</p> */}
+      
+
+          <p className={styles.add}>Delivery address: {formData.address}</p>
+          <p></p>
+
+
+          <h4 >Happy Shopping {formData.fname} {formData.lname}</h4>
           <button className={styles.button}>Home</button>
         </div>
       ) : (
@@ -60,7 +80,7 @@ const Payment = () => {
         </div>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default Payment;
+export default Payment

@@ -29,7 +29,7 @@ export function CheckPop({ data }) {
 
   return (
     <div>
-      <Button
+      <Button style={{backgroundColor:"rgb(77, 133, 156)",boder:"1px solid rgb(77, 133, 156)"}}
         className={styles.Addbag}
         variant="primary"
         onClick={() => {

@@ -32,4 +32,9 @@
     border: 2px solid  rgb(80, 136, 160);
     border-radius: 40px;
 }
-
+.add{
+    display: flex;
+    text-align: left;
+    /* justify-content: space-between; */
+    /* font-weight: bold; */
+}
