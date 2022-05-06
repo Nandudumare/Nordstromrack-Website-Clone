@@ -75,7 +75,7 @@ const Modals = () => {
       ) : (
         <div
           style={{
-            marginTop: "20px",
+            marginTop: "50px",
             marginLeft: "430px",
             display: "grid",
             gridTemplateRows: "30px 80px",
@@ -188,7 +188,7 @@ const Modals = () => {
             >
               <input
                 type="checkbox"
-                style={{ cursor: "pointer", marginTop: "5px" }}
+                style={{ cursor: "pointer", marginTop: "5px",height:"13px",width:"13px" }}
               />
               <p
                 style={{ fontSize: "0.8rem", margin: "0px", cursor: "pointer" }}

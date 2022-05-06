@@ -8,6 +8,7 @@ import { mainState_true, signout } from "../../Redux/Data/Action";
 import { useDispatch, useSelector } from "react-redux";
 import { mainState_false } from "../../Redux/Data/Action";
 import Modals from "./Modals";
+import Megha from "../Meghamenu/Megha";
 
 // import CreateAcc from "./CreateAcc";
 
@@ -69,7 +70,7 @@ const Navbar = () => {
         </div>
 
         <div className={styles.div__2}>
-          <div>
+          <div onClick={() => navigate("/")}>
             <img
               style={{ width: "100%", height: "100%" }}
               src="https://n.nordstrommedia.com/alias/nordstrom-rack-logo.svg"
@@ -462,6 +463,8 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+
+      <hr style={{ marginBottom: "0px" }} />
       {/* <Modals /> */}
     </>
   );
