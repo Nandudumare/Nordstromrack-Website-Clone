@@ -539,7 +539,7 @@ const Products = () => {
         </div>
         <div>
           <div>
-            <h4 className={styles.you}>This Item is Of {id}</h4>
+            <h4 className={styles.you}>HiGHLIGHTS OF THE DAY</h4>
           </div>
 
           <div className={styles.cat}>
