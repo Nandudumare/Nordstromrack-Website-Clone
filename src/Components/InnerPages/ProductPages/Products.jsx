@@ -58,17 +58,17 @@ const Products = () => {
   };
 
   return (
-    <>
+    <div className={styles.main}>
       <div className={styles.left}>
-        <a> Home /</a>
-        <a>Women / </a>
-        <a>Dresses </a>
+        <p> Home /</p>
+        <p>Category / </p>
+        <p className={styles.ids}>{id} </p>
       </div>
       <div className={styles.topdiv}>
         <div>
           <div>
             {/* side bar div */}
-            <div className={styles.sidebar}>
+            <div className={styles.sidebar__1}>
               <Navigation
                 // you can use your own router's api to get pathname
                 activeItemId="/management/members"
@@ -94,7 +94,7 @@ const Products = () => {
                       {
                         title: (
                           <div className={styles.flex__div}>
-                            <input style={{ width: "20px" }} type="checkbox" />
+                            <input style={{ width: "50px" }} type="checkbox" />
                             <lable
                               style={{ marginTop: "5px", fontSize: "0.8rem" }}
                             >
@@ -125,7 +125,6 @@ const Products = () => {
                             <lable
                               style={{ marginTop: "5px", fontSize: "0.8rem" }}
                             >
-                              {" "}
                               2,XS
                             </lable>
                           </div>
@@ -268,7 +267,6 @@ const Products = () => {
                             <lable
                               style={{ marginTop: "5px", fontSize: "0.8rem" }}
                             >
-                              {" "}
                               Blue
                             </lable>
                           </div>
@@ -387,7 +385,6 @@ const Products = () => {
                             <lable
                               style={{ marginTop: "5px", fontSize: "0.8rem" }}
                             >
-                              {" "}
                               Billabog
                             </lable>
                           </div>
@@ -485,7 +482,6 @@ const Products = () => {
                             <lable
                               style={{ marginTop: "5px", fontSize: "0.8rem" }}
                             >
-                              {" "}
                               Nursing
                             </lable>
                           </div>
@@ -542,39 +538,43 @@ const Products = () => {
         </div>
         <div>
           <div>
-            <h4 className={styles.you}>That Dress is So You</h4>
+            <h4 className={styles.you}>HIGHLIGHT OF THE DAY</h4>
           </div>
 
           <div className={styles.cat}>
             <div>
-              <img src={filterData[3].thumbnail} />
-              <a>{filterData[3].cat}</a>
+              <div>
+                <img src={filterData[3].thumbnail} />
+              </div>
+              <div>
+                <a>{filterData[3].title}</a>
+              </div>
             </div>
 
             <div>
               <img src={filterData[4].thumbnail} />
-              <a>{filterData[4].cat}</a>
+              <a>{filterData[4].title}</a>
             </div>
 
             <div>
               <img src={filterData[5].thumbnail} />
-              <a>{filterData[5].cat}</a>
+              <a>{filterData[5].title}</a>
             </div>
 
             <div>
               <img src={filterData[6].thumbnail} />
-              <a>{filterData[6].cat}</a>
+              <a>{filterData[6].title}</a>
             </div>
 
             <div>
               <img src={filterData[7].thumbnail} />
-              <a>{filterData[7].cat}</a>
+              <a>{filterData[7].title}</a>
             </div>
           </div>
         </div>
       </div>
 
-      <h2 className={styles.left1}>Dresses for Women</h2>
+      <h2 className={styles.left1}>Items for {id}</h2>
 
       <div className={styles.allcategory}>
         <a>All Dresses</a>
@@ -603,7 +603,7 @@ const Products = () => {
         </select>
       </div>
 
-      <div className={styles.grid}>
+      <div className={styles.grid___1}>
         {state
           ? sortedData.map((e) => {
               return (
@@ -614,16 +614,19 @@ const Products = () => {
                     }}
                     className={styles.productContainer}
                   >
-                    <img src={e.thumbnail} alt="Not Found" />
-                    <a>{e.title}</a>
-                    {/* <p>{e.price.raw}</p> */}
-                    <p>{e.condition}</p>
-                    {/* <p className={styles.price}>{e.price.raw}</p> */}
-                    {/* <p>{e.price.extracted}</p> */}
-                    {/* <p>{e.price.from.raw}</p> */}
-                    <p className={styles.shipping}>{e.shipping}</p>
-                    {/* <p className={styles.sold}>{e.extensions}</p> */}
-                    <button className={styles.Quicklook}>Quick Look</button>
+                    <div>
+                      <img className={styles.theimg} src={e.thumbnail} />
+                      <div>
+                        <button className={styles.Quicklook}>Quick View</button>
+                      </div>
+                    </div>
+                    <div>
+                      <a className={styles.title}>{e.title}</a>
+                      <p>{e.condition}</p>
+                      <p className={styles.price}>{e.price.raw}</p>
+                      <p className={styles.shipping}>{e.shipping}</p>
+                      <p className={styles.sold}>{e.extensions}</p>
+                    </div>
                   </div>
                 </>
               );
@@ -637,22 +640,25 @@ const Products = () => {
                     }}
                     className={styles.productContainer}
                   >
-                    <img src={e.thumbnail} />
-                    <a>{e.title}</a>
-                    {/* <p>{e.price.raw}</p> */}
-                    <p>{e.condition}</p>
-                    {/* <p className={styles.price}>{e.price.raw}</p> */}
-                    {/* <p>{e.price.extracted}</p> */}
-                    {/* <p>{e.price.from.raw}</p> */}
-                    <p className={styles.shipping}>{e.shipping}</p>
-                    {/* <p className={styles.sold}>{e.extensions}</p> */}
-                    <button className={styles.Quicklook}>Quick Look</button>
+                    <div>
+                      <img className={styles.theimg} src={e.thumbnail} />
+                      <div>
+                        <button className={styles.Quicklook}>Quick View</button>
+                      </div>
+                    </div>
+                    <div>
+                      <a className={styles.title}>{e.title}</a>
+                      <p>{e.condition}</p>
+                      <p className={styles.price}>{e.price.raw}</p>
+                      <p className={styles.shipping}>{e.shipping}</p>
+                      <p className={styles.sold}>{e.extensions}</p>
+                    </div>
                   </div>
                 </>
               );
             })}
       </div>
-    </>
+    </div>
   );
 };
 

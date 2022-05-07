@@ -3,7 +3,7 @@ import "./Footer.css";
 // import "./f.jpg"
 const Footer = () => {
   return (
-    <>
+    <div id="Footer">
     {/* <div class="image">
     <img src="./img.jpg" alt=""/>
     </div> */}
@@ -163,7 +163,7 @@ const Footer = () => {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

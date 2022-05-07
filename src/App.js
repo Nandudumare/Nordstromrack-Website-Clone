@@ -1,17 +1,3 @@
-// import Megha from "./Components/Meghamenu/Megha";
-import Footer from "./Components/Footer/Footer";
-import React from "react";
-function App() {
-  return (
-    <div className="App">
-    {/* <Megha/> */}
-    <Footer/>
-    </div>
-  );
-}
-
-// import './App.css';
-
 // //import Navbar from './Components/Navbar/Navbar';
 // import React from 'react'
 // // import Slider from './Components/home/Slider/Slider'
@@ -19,24 +5,15 @@ function App() {
 // import Flash from './Components/Flash/Flash';
 // import Flashs from './Components/Flash/Flash';
 // import MainRoutes from './Routes/MainRoutes';
+// import Megha from "./Components/Meghamenu/Megha";
+import Footer from "./Components/Footer/Footer";
+import React from "react";
+import MainRoutes from "./Routes/MainRoutes";
 
+function App() {
 
-
-// <
-// MainRoutes / >
-
-
-
-
-//   //  import Flash from './Components/Flash/Flash';
-
-
-//   function App() {
-
-//     return ( < MainRoutes / >
-//     );
-//   }
-
+  return ( < MainRoutes / > );
+}
 
 
 export default App

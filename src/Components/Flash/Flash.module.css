@@ -5,8 +5,9 @@
     grid-template-columns: 200px 900px;
     gap:3%;
     font-family: Text,Arial,sans-serif;
-    margin-top: 0px;
-   height: 4500px;
+    margin-top: 50px;
+    height: 4500px;
+    
     
 } 
 
@@ -39,7 +40,7 @@
     font-weight: 700;
     font-family: Brandon Text,Arial,sans-serif;
     color: #393939;
-    margin-bottom: -10px;
+    margin-bottom: -0px;
     
 }
 .normal{
@@ -140,12 +141,12 @@
 
 .left{
     text-align: left;
-    margin-top: 0px;
+    margin-top: 50px;
     height: 50px;
     color: rgb(114, 109, 109);
     /* border: 1px solid green; */
      width: 315px;
-    margin-left: 2px;
+    margin-left: 20px;
     
 
 } 
@@ -153,10 +154,10 @@
 .sidebar{
     border: 1px solid black;
     height: 650px;
-    width:100px;
+    /* width:50%; */
     display: grid;
     /* gap: 10px; */
-    padding-right: 130px;
+    padding-right:200px;
     text-align: center;
     /* overflow-y: scroll; */
     font-size: 16px;
@@ -212,6 +213,16 @@
 
 
 
+
+.sidebar::-webkit-scrollbar {
+    width: 0.3rem;
+  }
+  
+  .sidebar::-webkit-scrollbar-thumb {
+    background-color: rgb(169, 169, 169);
+    border-radius: 0.5rem;
+  }
+  
 
 
 

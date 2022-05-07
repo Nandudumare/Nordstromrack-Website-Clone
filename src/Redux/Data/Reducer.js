@@ -9,6 +9,8 @@ import {
     MAINSTATE_TRUE,
     MAINSTATE_FALSE,
     REMOVE_CART_ITEM,
+    ADD_TO_BAG,
+    FORM_DATA,
 } from "./ActionTypes"
 
 const Data = data.data
@@ -23,7 +25,13 @@ const initState = {
         signInState: false
     },
     descriptionData: {},
-    sortedData: []
+    sortedData: [],
+    cartData: [],
+    formData: {
+        fname: "",
+        lname: "",
+        address: ""
+    }
 
 }
 
@@ -89,9 +97,24 @@ export const dataReducer = (state = initState, {
         case REMOVE_CART_ITEM: {
             return {
                 ...state,
-                data: state.data.filter((item) => {
+                cartData: state.cartData.filter((item) => {
                     return item.title !== payload.title
                 })
+            }
+        }
+        case ADD_TO_BAG: {
+            return {
+                ...state,
+                cartData: [...state.cartData, payload]
+            }
+        }
+        case FORM_DATA: {
+            state.formData.fname = payload.fname
+            state.formData.lname = payload.lname
+            state.formData.address = payload.address
+            return {
+                ...state,
+
             }
         }
 

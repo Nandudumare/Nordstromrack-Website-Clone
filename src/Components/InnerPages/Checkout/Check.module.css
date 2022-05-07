@@ -1,8 +1,9 @@
 .majordiv{
     display: flex;
     gap: 3%;
-    margin: auto;
-    width: 75%;
+ 
+    width: 77%;
+    margin:auto;
     margin-top:50px;
     /* border: 1px solid yellow; */
 }
@@ -70,12 +71,22 @@
     justify-content: space-between
 }
 .submit{
-    background-color: white;
+ 
     margin-left: 2%;
-    color: blue;
+    background-color: rgb(80, 136, 160);
+    color: white;
+    border: 1px solid  rgb(80, 136, 160);
     height: 40px;
     width: 100px;
-    border: 1px solid black;
+
+}
+
+.submit:hover{
+    background-color: white;
+    color: rgb(80, 136, 160);
+    
+    border: 1px solid  rgb(80, 136, 160);
+
 }
 .input{
     width : 350px;

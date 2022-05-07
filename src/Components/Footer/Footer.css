@@ -1,5 +1,11 @@
+#Footer{
+    margin-top:50px;
+}
+
+
+
 .sign {
-margin-left: 56%;
+margin-left: 45%;
 }
 .sign>input {
     height:45px;
@@ -37,11 +43,16 @@ ul li a:hover{
 }
 #apps{
     font-size:18px;
+    width:130%;
     /* padding-bottom: */
 }
 #apps:hover{
     color: #59b3b9;
     text-decoration:underline;
+}
+
+.social-icons{
+    width:110%;
 }
 #social-fb,#social-tw,#social-gp,#social-em{
     color: #000;

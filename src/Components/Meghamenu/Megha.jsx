@@ -1,22 +1,30 @@
 import React from "react";
 import "./megamenu.css";
+import { Link } from "react-router-dom";
+
 const Megha = () => {
+  const [hover, setHover] = React.useState(false);
   return (
     <>
-      <nav>
+      <nav className="menu">
         <div className="wrapper">
           <div className="logo">
             <input type="radio" name="slide" id="menu-btn" />
             <input type="radio" name="slide" id="cancel-btn" />
           </div>
-          <ul className="nav-links">
+          <ul className="nav-links" id={hover ? "navs__links" : ""}>
             <label className="btn cancel-btn" htmlFor="cancel-btn">
               <i className="fa fa-times"></i>
             </label>
             <li>
-              <a href="/#" className="desktop-item" id="clear">
+              <Link
+                to="/#"
+                className="desktop-item"
+                onClick={() => setHover((prev) => !prev)}
+                id="clear"
+              >
                 Clearance
-              </a>
+              </Link>
               <input type="checkbox" id="showMega" />
               <label htmlFor="showMega" className="mobile-item">
                 Services
@@ -26,80 +34,87 @@ const Megha = () => {
                 <div className="content">
                   <div className="row">
                     <header>Clearance: Get Inspired</header>
-                    <hr />
-                    <ul className="mega-links">
+                    <hr id="horizontal-line" />
+                    <ul className="mega-links" id="line-height-new">
                       <li>
-                        <a href="/#" id="bold">Women</a>
+                        <Link to="/products/women" id="bold">
+                          Women
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#">Clothing</a>
+                        <Link to="/products/women">Clothing</Link>
                       </li>
                       <li>
-                        <a href="/#">Shoes</a>
+                        <Link to="/products/Shoes">Shoes</Link>
                       </li>
                       <li>
-                        <a href="/#">Handbags</a>
+                        <Link to="/products/bag">Handbags</Link>
                       </li>
                       <li>
-                        <a href="/#">Sunglasses & Eyewear</a>
+                        <Link to="/#">Sunglasses & Eyewear</Link>
                       </li>
                       <li>
-                        <a href="/#">Jewelry</a>
+                        <Link to="/#">Jewelry</Link>
                       </li>
                       <li>
-                        <a href="/#">Watches</a>
+                        <Link to="/#">Watches</Link>
                       </li>
                       <li>
-                        <a href="/#">Accessories</a>
+                        <Link to="/#">Accessories</Link>
                       </li>
                     </ul>
                   </div>
 
                   <div className="row">
                     <header>Men</header>
-                    <ul className="mega-links">
+                    <ul className="mega-links" id="line-height-men">
                       <li>
-                        <a href="/#">Clothing</a>
+                        <Link to="/products/Men">Clothing</Link>
                       </li>
                       <li>
-                        <a href="/#">Shoes</a>
+                        <Link to="/products/Shoes">Shoes</Link>
                       </li>
                       <li>
-                        <a href="/#">Watches</a>
+                        <Link to="/products/Shoes">Watches</Link>
                       </li>
                       <li>
-                        <a href="/#">Accessories</a>
+                        <Link to="/#">Accessories</Link>
                       </li>
                       <br />
                       <li>
-                        <a href="/#" id="bold">Designer</a>
+                        <Link to="/#" id="bold">
+                          Designer
+                        </Link>
                       </li>
                     </ul>
                   </div>
+
                   <div className="row">
                     <header>Kids</header>
-                    <ul className="mega-links">
+                    <ul className="mega-links" id="line-height-new__2">
                       <li>
-                        <a href="/#">Girls'Clothing</a>
+                        <Link to="/products/women">Girls'Clothing</Link>
                       </li>
                       <li>
-                        <a href="/#">Girls'Shoes</a>
+                        <Link to="/products/Shoes">Girls'Shoes</Link>
                       </li>
                       <li>
-                        <a href="/#">Boys' Clothing</a>
+                        <Link to="/products/Men">Boys' Clothing</Link>
                       </li>
                       <li>
-                        <a href="/#">Boys' Shoes</a>
+                        <Link to="/products/Shoes">Boys' Shoes</Link>
                       </li>
                       <li>
-                        <a href="/#">Kids' Shoes</a>
+                        <Link to="/products/Shoes">Kids' Shoes</Link>
                       </li>
                       <li>
-                        <a href="/#">Baby Clothing & Shoes</a>
+                        <Link to="/products/Shoes">Baby Clothing & Shoes</Link>
                       </li>
                       <br />
                       <li>
-                        <a href="/#" id="bold">Activewear</a>
+                        <Link to="/#" id="bold">
+                          Activewear
+                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -107,35 +122,37 @@ const Megha = () => {
                     <header>Home</header>
                     <ul className="mega-links">
                       <li>
-                        <a href="/#">Art & Wall Decor</a>
+                        <Link to="/#">Art & Wall Decor</Link>
                       </li>
                       <li>
-                        <a href="/#">Bath</a>
+                        <Link to="/#">Bath</Link>
                       </li>
                       <li>
-                        <a href="/#">Bedding</a>
+                        <Link to="/#">Bedding</Link>
                       </li>
                       <li>
-                        <a href="/#">Decor</a>
+                        <Link to="/#">Decor</Link>
                       </li>
                       <li>
-                        <a href="/#">Electronic & Tech Acessories</a>
+                        <Link to="/#">Electronic & Tech Acessories</Link>
                       </li>
                       <li>
-                        <a href="/#">Kitchen & Tabletop</a>
+                        <Link to="/#">Kitchen & Tabletop</Link>
                       </li>
                       <li>
-                        <a href="/#">Storage & Cleaning</a>
+                        <Link to="/#">Storage & Cleaning</Link>
                       </li>
                       <br />
                       <li>
-                        <a href="/#" id="bold">Beauty</a>
+                        <Link to="/#" id="bold">
+                          Beauty
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#">Makeup</a>
+                        <Link to="/#">Makeup</Link>
                       </li>
                       <li>
-                        <a href="/#">Skin Care</a>
+                        <Link to="/#">Skin Care</Link>
                       </li>
                     </ul>
                   </div>
@@ -143,9 +160,13 @@ const Megha = () => {
               </div>
             </li>
             <li>
-              <a href="/#" className="desktop-item">
+              <Link
+                to="/#"
+                className="desktop-item"
+                onClick={() => setHover((prev) => !prev)}
+              >
                 Women
-              </a>
+              </Link>
               <input type="checkbox" id="showMega" />
               <label htmlFor="showMega" className="mobile-item">
                 Services
@@ -155,55 +176,87 @@ const Megha = () => {
                 <div className="content">
                   <div className="row">
                     <header>Women: Get Inspired</header>
-                    <hr />
+                    <hr id="horizontal-line" />
                     <ul className="mega-links">
                       <li>
-                        <a href="/#" id="bold">Mother's Day Gifts</a>
+                        <Link to="/gift" id="bold">
+                          Mother's Day Gifts
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">New Arrivals</a>
+                        <Link to="/gift" id="bold">
+                          New Arrivals
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Best Sellers</a>
+                        <Link to="/gift" id="bold">
+                          Best Sellers
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Designer Brands</a>
+                        <Link to="/gift" id="bold">
+                          Designer Brands
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Contemporary Brands</a>
+                        <Link to="/gift" id="bold">
+                          Contemporary Brands
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Trend Brands</a>
+                        <Link to="/gift" id="bold">
+                          Trend Brands
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Dresses Under $50</a>
+                        <Link to="/gift" id="bold">
+                          Dresses Under $50
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Denim Under $50</a>
+                        <Link to="/gift" id="bold">
+                          Denim Under $50
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Swim & Sun Under $50</a>
+                        <Link to="/gift" id="bold">
+                          Swim & Sun Under $50
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Sandals Under $50p</a>
+                        <Link to="/gift" id="bold">
+                          Sandals Under $50p
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Wedding Shop</a>
+                        <Link to="/gift" id="bold">
+                          Wedding Shop
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Shop by Occasion</a>
+                        <Link to="/#" id="bold">
+                          Shop by Occasion
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Shop by Trend</a>
+                        <Link to="/#" id="bold">
+                          Shop by Trend
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Nike for the Family</a>
+                        <Link to="/#" id="bold">
+                          Nike for the Family
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Rack Essentials</a>
+                        <Link to="/#" id="bold">
+                          Rack Essentials
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Shop By Brand</a>
+                        <Link to="/#" id="bold">
+                          Shop By Brand
+                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -211,60 +264,62 @@ const Megha = () => {
                     <header>Clothing</header>
                     <ul className="mega-links">
                       <li>
-                        <a href="/#">Activewear</a>
+                        <Link to="/products/Shoes">Activewear</Link>
                       </li>
                       <li>
-                        <a href="/#">Blazers</a>
+                        <Link to="/products/women">Blazers</Link>
                       </li>
                       <li>
-                        <a href="/#">Coats & Jackets</a>
+                        <Link to="/products/women">Coats & Jackets</Link>
                       </li>
                       <li>
-                        <a href="/#">Dresses</a>
+                        <Link to="/products/women">Dresses</Link>
                       </li>
                       <li>
-                        <a href="/#">Jeans & Denim</a>
+                        <Link to="/products/women">Jeans & Denim</Link>
                       </li>
                       <li>
-                        <a href="/#">Jumpsuits & Rompers</a>
+                        <Link to="/products/women">Jumpsuits & Rompers</Link>
                       </li>
                       <li>
-                        <a href="/#">Lingerie, Hosiery & Shapewear</a>
+                        <Link to="/products/women">
+                          Lingerie, Hosiery & Shapewear
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#">Loungewear</a>
+                        <Link to="/products/women">Loungewear</Link>
                       </li>
                       <li>
-                        <a href="/#">Jeans & Denim</a>
+                        <Link to="/products/women">Jeans & Denim</Link>
                       </li>
                       <li>
-                        <a href="/#">Pants & Leggings</a>
+                        <Link to="/products/women">Pants & Leggings</Link>
                       </li>
                       <li>
-                        <a href="/#">Shorts</a>
+                        <Link to="/products/women">Shorts</Link>
                       </li>
                       <li>
-                        <a href="/#">Skirts</a>
+                        <Link to="/products/women">Skirts</Link>
                       </li>
                       <li>
-                        <a href="/#">Sleepwear & Robes</a>
+                        <Link to="/products/women">Sleepwear & Robes</Link>
                       </li>
                       <li>
-                        <a href="/#">Sweaters</a>
+                        <Link to="/products/women">Sweaters</Link>
                       </li>
                       <li>
-                        <a href="/#">Sweatshirts & Hoodies</a>
+                        <Link to="/products/women">Sweatshirts & Hoodies</Link>
                       </li>
                       <li>
-                        <a href="/#">Swimsuits & Cover-Ups</a>
+                        <Link to="/products/women">Swimsuits & Cover-Ups</Link>
                       </li>
                       <li>
-                        <a href="/#">Tops</a>
+                        <Link to="/products/women">Tops</Link>
                       </li>
                       <br />
 
                       <li>
-                        <a href="/#">Plus-Size</a>
+                        <Link to="/#">Plus-Size</Link>
                       </li>
                     </ul>
                   </div>
@@ -272,53 +327,55 @@ const Megha = () => {
                     <header>Shoes</header>
                     <ul className="mega-links">
                       <li>
-                        <a href="/#">Athletic & Running</a>
+                        <Link to="/products/Shoes">Athletic & Running</Link>
                       </li>
                       <li>
-                        <a href="/#">Boots & Booties</a>
+                        <Link to="/products/Shoes">Boots & Booties</Link>
                       </li>
                       <li>
-                        <a href="/#">Clogs</a>
+                        <Link to="/products/Shoes">Clogs</Link>
                       </li>
                       <li>
-                        <a href="/#">Comfort</a>
+                        <Link to="/products/Shoes">Comfort</Link>
                       </li>
                       <li>
-                        <a href="/#">Espadrilles</a>
+                        <Link to="/products/Shoes">Espadrilles</Link>
                       </li>
                       <li>
-                        <a href="/#">Flats</a>
+                        <Link to="/products/Shoes">Flats</Link>
                       </li>
                       <li>
-                        <a href="/#">Flip-Flops & Slides</a>
+                        <Link to="/products/Shoes">Flip-Flops & Slides</Link>
                       </li>
                       <li>
-                        <a href="/#">Heels</a>
+                        <Link to="/#">Heels</Link>
                       </li>
                       <li>
-                        <a href="/#">Loafers & Oxfords</a>
+                        <Link to="/products/Shoes">Loafers & Oxfords</Link>
                       </li>
                       <li>
-                        <a href="/#">Mules</a>
+                        <Link to="/products/Shoes">Mules</Link>
                       </li>
                       <li>
-                        <a href="/#">Rain Boots</a>
+                        <Link to="/products/Shoes">Rain Boots</Link>
                       </li>
                       <li>
-                        <a href="/#">Sandals</a>
+                        <Link to="/products/Shoes">Sandals</Link>
                       </li>
                       <li>
-                        <a href="/#">Slippers</a>
+                        <Link to="/products/Shoes">Slippers</Link>
                       </li>
                       <li>
-                        <a href="/#">Sneakers</a>
+                        <Link to="/products/Shoes">Sneakers</Link>
                       </li>
                       <li>
-                        <a href="/#">Wedges</a>
+                        <Link to="/products/Shoes">Wedges</Link>
                       </li>
                       <br />
                       <li>
-                        <a href="/#">Extended Shoe Sizes & Widths</a>
+                        <Link to="/products/Shoes">
+                          Extended Shoe Sizes & Widths
+                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -327,37 +384,51 @@ const Megha = () => {
                     <header>Young Adult</header>
                     <ul className="mega-links">
                       <li>
-                        <a href="/#">Accessories</a>
+                        <Link to="/products/Shoes">Accessories</Link>
                       </li>
                       <li>
-                        <a href="/#">Clothing</a>
+                        <Link to="/products/women">Clothing</Link>
                       </li>
                       <li>
-                        <a href="/#">Shoes</a>
+                        <Link to="/products/Shoes">Shoes</Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Handbags</a>
+                        <Link to="/products/bag" id="bold">
+                          Handbags
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#">Designer Bags</a>
+                        <Link to="/products/bag">Designer Bags</Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Sunglasses & Eyewear</a>
+                        <Link to="/products/bag" id="bold">
+                          Sunglasses & Eyewear
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Jewelry</a>
+                        <Link to="/products/bag" id="bold">
+                          Jewelry
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Watches</a>
+                        <Link to="/products/bag" id="bold">
+                          Watches
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Accessories</a>
+                        <Link to="/products/bag" id="bold">
+                          Accessories
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Luggage & Travel</a>
+                        <Link to="/products/bag" id="bold">
+                          Luggage & Travel
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Beauty</a>
+                        <Link to="/products/bag" id="bold">
+                          Beauty
+                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -365,50 +436,54 @@ const Megha = () => {
                     <header>Activewear</header>
                     <ul className="mega-links">
                       <li>
-                        <a href="/#">Crops & Capris</a>
+                        <Link to="/products/Men">Crops & Capris</Link>
                       </li>
                       <li>
-                        <a href="/#">Jackets</a>
+                        <Link to="/products/Men">Jackets</Link>
                       </li>
                       <li>
-                        <a href="/#">Leggings</a>
+                        <Link to="/products/Men">Leggings</Link>
                       </li>
                       <li>
-                        <a href="/#">Shirts&Tees</a>
+                        <Link to="/products/Men">Shirts&Tees</Link>
                       </li>
                       <li>
-                        <a href="/#">Shorts&Skirts</a>
+                        <Link to="/products/Men">Shorts&Skirts</Link>
                       </li>
                       <li>
-                        <a href="/#">Sports Bras</a>
+                        <Link to="/products/Men">Sports Bras</Link>
                       </li>
                       <li>
-                        <a href="/#">Sweatpants & Joggers</a>
+                        <Link to="/products/Men">Sweatpants & Joggers</Link>
                       </li>
                       <li>
-                        <a href="/#">Sweatshirts&Hoodies</a>
+                        <Link to="/products/Men">Sweatshirts&Hoodies</Link>
                       </li>
                       <li>
-                        <a href="/#">Tanks</a>
+                        <Link to="/products/Men">Tanks</Link>
                       </li>
 
                       <li>
-                        <a href="/#" id="bold">Active Shoes</a>
+                        <Link to="/#" id="bold">
+                          Active Shoes
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#">Hiking & Trail</a>
+                        <Link to="/products/Shoes">Hiking & Trail</Link>
                       </li>
                       <li>
-                        <a href="/#">Running</a>
+                        <Link to="/products/Shoes">Running</Link>
                       </li>
                       <li>
-                        <a href="/#">Training</a>
+                        <Link to="/products/Shoes">Training</Link>
                       </li>
                       <li>
-                        <a href="/#">Walking</a>
+                        <Link to="/products/Shoes">Walking</Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Athletic Gear & Equipment</a>
+                        <Link to="/products/Shoes" id="bold">
+                          Athletic Gear & Equipment
+                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -416,9 +491,13 @@ const Megha = () => {
               </div>
             </li>
             <li>
-              <a href="/#" className="desktop-item">
+              <Link
+                to="/#"
+                className="desktop-item"
+                onClick={() => setHover((prev) => !prev)}
+              >
                 Men
-              </a>
+              </Link>
               <input type="checkbox" id="showMega" />
               <label htmlFor="showMega" className="mobile-item">
                 Services
@@ -428,55 +507,87 @@ const Megha = () => {
                 <div className="content">
                   <div className="row">
                     <header>Men: Get Inspired</header>
-                    <hr />
+                    <hr id="horizontal-line" />
                     <ul className="mega-links">
                       <li>
-                        <a href="/#" id="bold">Mother's Day Gifts</a>
+                        <Link to="/gift" id="bold">
+                          Mother's Day Gifts
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">New Arrivals</a>
+                        <Link to="/gift" id="bold">
+                          New Arrivals
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Best Sellers</a>
+                        <Link to="/gift" id="bold">
+                          Best Sellers
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Designer Brands</a>
+                        <Link to="/gift" id="bold">
+                          Designer Brands
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Contemporary Brands</a>
+                        <Link to="/gift" id="bold">
+                          Contemporary Brands
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Graphic Tees Under $25</a>
+                        <Link to="/#" id="bold">
+                          Graphic Tees Under $25
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Denim Under $50</a>
+                        <Link to="/gift" id="bold">
+                          Denim Under $50
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Swim & Sun Under $50</a>
+                        <Link to="/gift" id="bold">
+                          Swim & Sun Under $50
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Sneakers Under $50</a>
+                        <Link to="/gift" id="bold">
+                          Sneakers Under $50
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Wedding Shop</a>
+                        <Link to="/gift" id="bold">
+                          Wedding Shop
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Shop by Occasion</a>
+                        <Link to="/gift" id="bold">
+                          Shop by Occasion
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Nike for the Family</a>
+                        <Link to="/gift" id="bold">
+                          Nike for the Family
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Rack Essentials</a>
+                        <Link to="/gift" id="bold">
+                          Rack Essentials
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Shop By Brand</a>
+                        <Link to="/gift" id="bold">
+                          Shop By Brand
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Nordstrom Made</a>
+                        <Link to="/gift" id="bold">
+                          Nordstrom Made
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Clearance</a>
+                        <Link to="/gift" id="bold">
+                          Clearance
+                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -484,59 +595,59 @@ const Megha = () => {
                     <header>Clothing</header>
                     <ul className="mega-links">
                       <li>
-                        <a href="/#">Activewear</a>
+                        <Link to="/products/Shoes">Activewear</Link>
                       </li>
                       <li>
-                        <a href="/#">Blazers&Sports Coats</a>
+                        <Link to="/products/Shoes">Blazers&Sports Coats</Link>
                       </li>
                       <li>
-                        <a href="/#">Coats & Jackets</a>
+                        <Link to="/products/Men">Coats & Jackets</Link>
                       </li>
                       <li>
-                        <a href="/#">Dress Shirts</a>
+                        <Link to="/products/Men">Dress Shirts</Link>
                       </li>
                       <li>
-                        <a href="/#">Jeans</a>
+                        <Link to="/products/Men">Jeans</Link>
                       </li>
                       <li>
-                        <a href="/#">Joggers & Sweatpants</a>
+                        <Link to="/products/Men">Joggers & Sweatpants</Link>
                       </li>
                       <li>
-                        <a href="/#">Lounge, Pajamas & Robes</a>
+                        <Link to="/products/Men">Lounge, Pajamas & Robes</Link>
                       </li>
                       <li>
-                        <a href="/#">Pants</a>
+                        <Link to="/products/Men">Pants</Link>
                       </li>
                       <li>
-                        <a href="/#">Polo Shirts</a>
+                        <Link to="/products/Men">Polo Shirts</Link>
                       </li>
                       <li>
-                        <a href="/#">Shirts</a>
+                        <Link to="/products/Men">Shirts</Link>
                       </li>
                       <li>
-                        <a href="/#">Shorts</a>
+                        <Link to="/products/Men">Shorts</Link>
                       </li>
                       <li>
-                        <a href="/#">Socks</a>
+                        <Link to="/products/Men">Socks</Link>
                       </li>
                       <li>
-                        <a href="/#">Suits & Separates</a>
+                        <Link to="/products/Men">Suits & Separates</Link>
                       </li>
                       <li>
-                        <a href="/#">Sweaters</a>
+                        <Link to="/products/Men">Sweaters</Link>
                       </li>
                       <li>
-                        <a href="/#">Sweatshirts & Hoodies</a>
+                        <Link to="/products/Men">Sweatshirts & Hoodies</Link>
                       </li>
                       <li>
-                        <a href="/#">Swimwear&Board Shorts</a>
+                        <Link to="/products/Men">Swimwear&Board Shorts</Link>
                       </li>
                       <li>
-                        <a href="/#">T-Shirts</a>
+                        <Link to="/products/Men">T-Shirts</Link>
                       </li>
 
                       <li>
-                        <a href="/#">Underwear</a>
+                        <Link to="/products/Men">Underwear</Link>
                       </li>
                     </ul>
                   </div>
@@ -544,39 +655,41 @@ const Megha = () => {
                     <header>Shoes</header>
                     <ul className="mega-links">
                       <li>
-                        <a href="/#">Athletic & Running</a>
+                        <Link to="/products/Shoes">Athletic & Running</Link>
                       </li>
                       <li>
-                        <a href="/#">Boot Shoes</a>
+                        <Link to="/products/Shoes">Boot Shoes</Link>
                       </li>
                       <li>
-                        <a href="/#">Boots</a>
+                        <Link to="/products/Shoes">Boots</Link>
                       </li>
                       <li>
-                        <a href="/#">Comfort</a>
+                        <Link to="/products/Shoes">Comfort</Link>
                       </li>
                       <li>
-                        <a href="/#">Dress Shoes</a>
+                        <Link to="/products/Shoes">Dress Shoes</Link>
                       </li>
                       <li>
-                        <a href="/#">Loafers & Slip-Ons</a>
+                        <Link to="/products/Shoes">Loafers & Slip-Ons</Link>
                       </li>
                       <li>
-                        <a href="/#">Oxfords & Derbys</a>
+                        <Link to="/products/Shoes">Oxfords & Derbys</Link>
                       </li>
                       <li>
-                        <a href="/#">Sandals & Flip-Flops</a>
+                        <Link to="/products/Shoes">Sandals & Flip-Flops</Link>
                       </li>
                       <li>
-                        <a href="/#">Slippers</a>
+                        <Link to="/products/Shoes">Slippers</Link>
                       </li>
                       <li>
-                        <a href="/#">Sneakers</a>
+                        <Link to="/products/Shoes">Sneakers</Link>
                       </li>
 
                       <br />
                       <li>
-                        <a href="/#">Extended Shoe Sizes & Widths</a>
+                        <Link to="/products/Shoes">
+                          Extended Shoe Sizes & Widths
+                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -585,50 +698,60 @@ const Megha = () => {
                     <header>Young Adult</header>
                     <ul className="mega-links">
                       <li>
-                        <a href="/#">Accessories</a>
+                        <Link to="/products/Shoes">Accessories</Link>
                       </li>
                       <li>
-                        <a href="/#">Clothing</a>
+                        <Link to="/products/Men">Clothing</Link>
                       </li>
                       <li>
-                        <a href="/#">Shoes</a>
+                        <Link to="/products/Shoes">Shoes</Link>
                       </li>
 
                       <li>
-                        <a href="/#" id="bold">Accessorise</a>
+                        <Link to="/products/bag" id="bold">
+                          Accessorise
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#"> Bags & Backpacks</a>
+                        <Link to="/products/bag"> Bags & Backpacks</Link>
                       </li>
                       <li>
-                        <a href="/#">Sunglasses & Eyewear</a>
+                        <Link to="/products/bag">Sunglasses & Eyewear</Link>
                       </li>
                       <li>
-                        <a href="/#">belt & Suspenders</a>
+                        <Link to="/products/bag">belt & Suspenders</Link>
                       </li>
                       <li>
-                        <a href="/#">Hats</a>
+                        <Link to="/products/bag">Hats</Link>
                       </li>
                       <li>
-                        <a href="/#">Jewelry</a>
+                        <Link to="/products/bag">Jewelry</Link>
                       </li>
                       <li>
-                        <a href="/#">Ties & Pocket Squares</a>
+                        <Link to="/products/bag">Ties & Pocket Squares</Link>
                       </li>
                       <li>
-                        <a href="/#">Wallets & Card Cases</a>
+                        <Link to="/products/bag">Wallets & Card Cases</Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Sunglasses & Eyewear</a>
+                        <Link to="/products/bag" id="bold">
+                          Sunglasses & Eyewear
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Watches</a>
+                        <Link to="/products/bag" id="bold">
+                          Watches
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Luggage & Travel</a>
+                        <Link to="/products/bag" id="bold">
+                          Luggage & Travel
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Grooming & Cologne</a>
+                        <Link to="/products/bag" id="bold">
+                          Grooming & Cologne
+                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -636,42 +759,46 @@ const Megha = () => {
                     <header>Activewear</header>
                     <ul className="mega-links">
                       <li>
-                        <a href="/#">Jackets</a>
+                        <Link to="/products/Men">Jackets</Link>
                       </li>
                       <li>
-                        <a href="/#">Shirts</a>
+                        <Link to="/products/Men">Shirts</Link>
                       </li>
                       <li>
-                        <a href="/#">Shorts</a>
+                        <Link to="/products/Men">Shorts</Link>
                       </li>
                       <li>
-                        <a href="/#">Sweatpants&Joggers</a>
+                        <Link to="/products/Men">Sweatpants&Joggers</Link>
                       </li>
                       <li>
-                        <a href="/#">Sweatshirts&Hoodies</a>
-                      </li>
-
-                      <li>
-                        <a href="/#">Tanks</a>
+                        <Link to="/products/Men">Sweatshirts&Hoodies</Link>
                       </li>
 
                       <li>
-                        <a href="/#" id="bold">Active Shoes</a>
+                        <Link to="/products/Men">Tanks</Link>
+                      </li>
+
+                      <li>
+                        <Link to="/products/Shoes" id="bold">
+                          Active Shoes
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#">Hiking & Trail</a>
+                        <Link to="/products/Shoes">Hiking & Trail</Link>
                       </li>
                       <li>
-                        <a href="/#">Running</a>
+                        <Link to="/products/Shoes">Running</Link>
                       </li>
                       <li>
-                        <a href="/#">Training</a>
+                        <Link to="/products/Shoes">Training</Link>
                       </li>
                       <li>
-                        <a href="/#">Walking</a>
+                        <Link to="/products/Shoes">Walking</Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Athletic Gear & Equipment</a>
+                        <Link to="/products/Shoes" id="bold">
+                          Athletic Gear & Equipment
+                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -679,9 +806,13 @@ const Megha = () => {
               </div>
             </li>
             <li>
-              <a href="/#" className="desktop-item">
+              <Link
+                to="/#"
+                className="desktop-item"
+                onClick={() => setHover((prev) => !prev)}
+              >
                 Kids
-              </a>
+              </Link>
               <input type="checkbox" id="showMega" />
               <label htmlFor="showMega" className="mobile-item">
                 Services
@@ -691,52 +822,82 @@ const Megha = () => {
                 <div className="content">
                   <div className="row">
                     <header>Kids: Get Inspired</header>
-                    <hr />
+                    <hr id="horizontal-line" />
                     <ul className="mega-links">
                       <li>
-                        <a href="/#" id="bold">Mother's Day Gifts</a>
+                        <Link to="/gift" id="bold">
+                          Mother's Day Gifts
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">New Arrivals</a>
+                        <Link to="/gift" id="bold">
+                          New Arrivals
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Best Sellers</a>
+                        <Link to="/gift" id="bold">
+                          Best Sellers
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Sandals Under $20</a>
+                        <Link to="/gift" id="bold">
+                          Sandals Under $20
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Sneakers Under $30</a>
+                        <Link to="/gift" id="bold">
+                          Sneakers Under $30
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Nike for the Family</a>
+                        <Link to="/gift" id="bold">
+                          Nike for the Family
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Swim Shop</a>
+                        <Link to="/gift" id="bold">
+                          Swim Shop
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Disney Shop</a>
+                        <Link to="/gift" id="bold">
+                          Disney Shop
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Z by Zella for the Family</a>
+                        <Link to="/gift" id="bold">
+                          Z by Zella for the Family
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Rack Essentials</a>
+                        <Link to="/gift" id="bold">
+                          Rack Essentials
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Baby Shower Gifts</a>
+                        <Link to="/gift" id="bold">
+                          Baby Shower Gifts
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Shop by Occasion</a>
+                        <Link to="/gift" id="bold">
+                          Shop by Occasion
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Shop By Brand</a>
+                        <Link to="/gift" id="bold">
+                          Shop By Brand
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Nordstrom Made</a>
+                        <Link to="/gift" id="bold">
+                          Nordstrom Made
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Clearance</a>
+                        <Link to="/gift" id="bold">
+                          Clearance
+                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -744,55 +905,59 @@ const Megha = () => {
                     <header>Girls' Clothing</header>
                     <ul className="mega-links">
                       <li>
-                        <a href="/#">Baby Girl (Sizes 0-24M)</a>
+                        <Link to="/products/women">
+                          Baby Girl (Sizes 0-24M)
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#">Toddler Girls (Sizes 2T-4T)</a>
+                        <Link to="/products/women">
+                          Toddler Girls (Sizes 2T-4T)
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#">Girls (Sizes 4-6x)</a>
+                        <Link to="/products/women">Girls (Sizes 4-6x)</Link>
                       </li>
                       <li>
-                        <a href="/#">Girls (Sizes 7-16)</a>
+                        <Link to="/products/women">Girls (Sizes 7-16)</Link>
                       </li>
                       <li>
-                        <a href="/#">Tween Girls</a>
+                        <Link to="/products/women">Tween Girls</Link>
                       </li>
                       <li>
-                        <a href="/#">Accessories</a>
+                        <Link to="/products/women">Accessories</Link>
                       </li>
                       <li>
-                        <a href="/#">Activewear s</a>
+                        <Link to="/products/women">Activewear s</Link>
                       </li>
                       <li>
-                        <a href="/#">Coats & Jackets</a>
+                        <Link to="/products/women">Coats & Jackets</Link>
                       </li>
                       <li>
-                        <a href="/#">Dresses & Rompers</a>
+                        <Link to="/products/women">Dresses & Rompers</Link>
                       </li>
                       <li>
-                        <a href="/#">Jeans</a>
+                        <Link to="/products/women">Jeans</Link>
                       </li>
                       <li>
-                        <a href="/#">Pajamas & Robes</a>
+                        <Link to="/products/women">Pajamas & Robes</Link>
                       </li>
                       <li>
-                        <a href="/#">Pants & Leggings</a>
+                        <Link to="/products/women">Pants & Leggings</Link>
                       </li>
                       <li>
-                        <a href="/#">Shorts</a>
+                        <Link to="/products/women">Shorts</Link>
                       </li>
                       <li>
-                        <a href="/#">Skirts</a>
+                        <Link to="/products/women">Skirts</Link>
                       </li>
                       <li>
-                        <a href="/#">Swimsuits & Cover-Ups</a>
+                        <Link to="/products/women">Swimsuits & Cover-Ups</Link>
                       </li>
                       <li>
-                        <a href="/#">Tops</a>
+                        <Link to="/products/women">Tops</Link>
                       </li>
                       <li>
-                        <a href="/#">Underwear, Socks & Bra</a>
+                        <Link to="/products/women">Underwear, Socks & Bra</Link>
                       </li>
                     </ul>
                   </div>
@@ -800,55 +965,57 @@ const Megha = () => {
                     <header>Boys' Clothing</header>
                     <ul className="mega-links">
                       <li>
-                        <a href="/#">Baby Boy (Sizes 0-24M)</a>
+                        <Link to="/products/Men">Baby Boy (Sizes 0-24M)</Link>
                       </li>
                       <li>
-                        <a href="/#">Toddler Boys (Sizes 2T-4T)</a>
+                        <Link to="/products/Men">
+                          Toddler Boys (Sizes 2T-4T)
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#">Boys (Sizes 4-7)</a>
+                        <Link to="/products/Men">Boys (Sizes 4-7)</Link>
                       </li>
                       <li>
-                        <a href="/#">Boys (Sizes 8-20)</a>
+                        <Link to="/products/Men">Boys (Sizes 8-20)</Link>
                       </li>
                       <li>
-                        <a href="/#">Accessories</a>
+                        <Link to="/products/Men">Accessories</Link>
                       </li>
                       <li>
-                        <a href="/#">Activewear</a>
+                        <Link to="/products/Men">Activewear</Link>
                       </li>
                       <li>
-                        <a href="/#">Coats & Jackets</a>
+                        <Link to="/products/Men">Coats & Jackets</Link>
                       </li>
                       <li>
-                        <a href="/#">Jeans</a>
+                        <Link to="/products/Men">Jeans</Link>
                       </li>
                       <li>
-                        <a href="/#">Pajamas & Robes</a>
+                        <Link to="/products/Men">Pajamas & Robes</Link>
                       </li>
                       <li>
-                        <a href="/#">Pants</a>
+                        <Link to="/products/Men">Pants</Link>
                       </li>
                       <li>
-                        <a href="/#">Sets</a>
+                        <Link to="/products/Men">Sets</Link>
                       </li>
                       <li>
-                        <a href="/#">Shirts & Tops</a>
+                        <Link to="/products/Men">Shirts & Tops</Link>
                       </li>
                       <li>
-                        <a href="/#">Shorts</a>
+                        <Link to="/products/Men">Shorts</Link>
                       </li>
                       <li>
-                        <a href="/#">Suits & Separates</a>
+                        <Link to="/products/Men">Suits & Separates</Link>
                       </li>
                       <li>
-                        <a href="/#">Swim Trunks & Rashguards</a>
+                        <Link to="/products/Men">Swim Trunks & Rashguards</Link>
                       </li>
                       <li>
-                        <a href="/#">T-Shirts</a>
+                        <Link to="/products/Men">T-Shirts</Link>
                       </li>
                       <li>
-                        <a href="/#">Underwear & Socks</a>
+                        <Link to="/products/Men">Underwear & Socks</Link>
                       </li>
                     </ul>
                   </div>
@@ -857,46 +1024,54 @@ const Megha = () => {
                     <header>Kids' Shoes</header>
                     <ul className="mega-links">
                       <li>
-                        <a href="/#">Baby (Sizes 0-4)</a>
+                        <Link to="/#">Baby (Sizes 0-4)</Link>
                       </li>
                       <li>
-                        <a href="/#">Toddler (Sizes 4.5-12)</a>
+                        <Link to="/#">Toddler (Sizes 4.5-12)</Link>
                       </li>
                       <li>
-                        <a href="/#">Little Kid (Sizes 12.5-3)</a>
+                        <Link to="/#">Little Kid (Sizes 12.5-3)</Link>
                       </li>
                       <li>
-                        <a href="/#">Big Kid (Sizes 3.5-7)</a>
+                        <Link to="/#">Big Kid (Sizes 3.5-7)</Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Girls' Shoes</a>
+                        <Link to="/products/Shoes" id="bold">
+                          Girls' Shoes
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#">Baby (Sizes 0-4)</a>
+                        <Link to="/products/Shoes">Baby (Sizes 0-4)</Link>
                       </li>
                       <li>
-                        <a href="/#">Toddler (Sizes 4.5-12)</a>
+                        <Link to="/products/Shoes">Toddler (Sizes 4.5-12)</Link>
                       </li>
                       <li>
-                        <a href="/#">Little Kid (Sizes 12.5-3)</a>
+                        <Link to="/products/Shoes">
+                          Little Kid (Sizes 12.5-3)
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#">Big Kid (Sizes 3.5-7)</a>
+                        <Link to="/products/Shoes">Big Kid (Sizes 3.5-7)</Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Boys' Shoes</a>
+                        <Link to="/products/Shoes" id="bold">
+                          Boys' Shoes
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#">Baby (Sizes 0-4)</a>
+                        <Link to="/products/Shoes">Baby (Sizes 0-4)</Link>
                       </li>
                       <li>
-                        <a href="/#">Toddler (Sizes 4.5-12)</a>
+                        <Link to="/products/Shoes">Toddler (Sizes 4.5-12)</Link>
                       </li>
                       <li>
-                        <a href="/#">Little Kid (Sizes 12.5-3)</a>
+                        <Link to="/products/Shoes">
+                          Little Kid (Sizes 12.5-3)
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#">Big Kid (Sizes 3.5-7)</a>
+                        <Link to="/products/Shoes">Big Kid (Sizes 3.5-7)</Link>
                       </li>
                     </ul>
                   </div>
@@ -904,26 +1079,28 @@ const Megha = () => {
                     <header>Security Services</header>
                     <ul className="mega-links">
                       <li>
-                        <a href="/#">Baby Clothing & Shoes</a>
+                        <Link to="/products/Men">Baby Clothing & Shoes</Link>
                       </li>
                       <li>
-                        <a href="/#">Baby Girl</a>
+                        <Link to="/products/women">Baby Girl</Link>
                       </li>
                       <li>
-                        <a href="/#">Baby Boy</a>
+                        <Link to="/products/Men">Baby Boy</Link>
                       </li>
                       <li>
-                        <a href="/#">Baby Shoes</a>
+                        <Link to="/products/Shoes">Baby Shoes</Link>
                       </li>
 
                       <li>
-                        <a href="/#">Baby Gear & Essentials</a>
+                        <Link to="/#">Baby Gear & Essentials</Link>
                       </li>
                       <li>
-                        <a href="/#">Baby Shower Gifts</a>
+                        <Link to="/gift">Baby Shower Gifts</Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Toys</a>
+                        <Link to="/#" id="bold">
+                          Toys
+                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -931,9 +1108,13 @@ const Megha = () => {
               </div>
             </li>
             <li>
-              <a href="/#" className="desktop-item">
+              <Link
+                to="/#"
+                className="desktop-item"
+                onClick={() => setHover((prev) => !prev)}
+              >
                 Shoes
-              </a>
+              </Link>
               <input type="checkbox" id="showMega" />
               <label htmlFor="showMega" className="mobile-item">
                 Services
@@ -943,109 +1124,143 @@ const Megha = () => {
                 <div className="content">
                   <div className="row">
                     <header>Shoes: Get Inspired</header>
-                    <hr/>
+                    <hr id="horizontal-line" />
                     <ul className="mega-links">
                       <li>
-                        <a href="/#" id="bold">Mother's Day Gifts</a>
+                        <Link to="/gift" id="bold">
+                          Mother's Day Gifts
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">New Arrivals</a>
+                        <Link to="/gift" id="bold">
+                          New Arrivals
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Best Sellers</a>
+                        <Link to="/gift" id="bold">
+                          Best Sellers
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Designer Brands</a>
+                        <Link to="/gift" id="bold">
+                          Designer Brands
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Contemporary Brands</a>
+                        <Link to="/gift" id="bold">
+                          Contemporary Brands
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Young Adult Brands</a>
+                        <Link to="/gift" id="bold">
+                          Young Adult Brands
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Sandals Under $50</a>
+                        <Link to="/gift" id="bold">
+                          Sandals Under $50
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Sneakers Under $50</a>
+                        <Link to="/gift" id="bold">
+                          Sneakers Under $50
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Flip-Flops & Slides for the Family</a>
+                        <Link to="/gift" id="bold">
+                          Flip-Flops & Slides for the Family
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Nike for the Family</a>
+                        <Link to="/gift" id="bold">
+                          Nike for the Family
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Special Occasion</a>
+                        <Link to="/gift" id="bold">
+                          Special Occasion
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Shop by Trend</a>
+                        <Link to="/gift" id="bold">
+                          Shop by Trend
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Nordstrom Made</a>
+                        <Link to="/gift" id="bold">
+                          Nordstrom Made
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Women's Shoes Clearance</a>
+                        <Link to="/products/Shoes" id="bold">
+                          Women's Shoes Clearance
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Men's Shoes Clearance</a>
+                        <Link to="/products/Shoes" id="bold">
+                          Men's Shoes Clearance
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Kids' Shoes Clearance</a>
+                        <Link to="/products/Shoes" id="bold">
+                          Kids' Shoes Clearance
+                        </Link>
                       </li>
                     </ul>
                   </div>
 
                   <div className="row">
                     <header>Women's Shoes</header>
-                    <ul className="mega-links">
+                    <ul className="mega-links" id="line-height-new">
                       <li>
-                        <a href="/#">Athletic & Running</a>
+                        <Link to="/products/Shoes">Athletic & Running</Link>
                       </li>
                       <li>
-                        <a href="/#">Boots & Booties</a>
+                        <Link to="/products/Shoes">Boots & Booties</Link>
                       </li>
                       <li>
-                        <a href="/#">Clogs</a>
+                        <Link to="/products/Shoes">Clogs</Link>
                       </li>
                       <li>
-                        <a href="/#">Comfort</a>
+                        <Link to="/products/Shoes">Comfort</Link>
                       </li>
                       <li>
-                        <a href="/#">Espadrilles</a>
+                        <Link to="/products/Shoes">Espadrilles</Link>
                       </li>
                       <li>
-                        <a href="/#">Flats</a>
+                        <Link to="/products/Shoes">Flats</Link>
                       </li>
                       <li>
-                        <a href="/#">Flip-Flops & Slides</a>
+                        <Link to="/products/Shoes">Flip-Flops & Slides</Link>
                       </li>
                       <li>
-                        <a href="/#">Heels</a>
+                        <Link to="/products/Shoes">Heels</Link>
                       </li>
                       <li>
-                        <a href="/#">Loafers & Oxfords</a>
+                        <Link to="/products/Shoes">Loafers & Oxfords</Link>
                       </li>
                       <li>
-                        <a href="/#">Mules</a>
+                        <Link to="/products/Shoes">Mules</Link>
                       </li>
                       <li>
-                        <a href="/#">Rain Boots</a>
+                        <Link to="/products/Shoes">Rain Boots</Link>
                       </li>
                       <li>
-                        <a href="/#">Sandals</a>
+                        <Link to="/products/Shoes">Sandals</Link>
                       </li>
                       <li>
-                        <a href="/#">Slippers</a>
+                        <Link to="/products/Shoes">Slippers</Link>
                       </li>
                       <li>
-                        <a href="/#">Sneakers</a>
+                        <Link to="/products/Shoes">Sneakers</Link>
                       </li>
                       <li>
-                        <a href="/#">Wedges</a>
+                        <Link to="/products/Shoes">Wedges</Link>
                       </li>
                       <li>
-                        <a href="/#">Extended Sizes & Widths</a>
+                        <Link to="/products/Shoes">
+                          Extended Sizes & Widths
+                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -1053,34 +1268,36 @@ const Megha = () => {
                     <header>Men's Shoes</header>
                     <ul className="mega-links">
                       <li>
-                        <a href="/#">Athletic & Running</a>
+                        <Link to="/products/Shoes">Athletic & Running</Link>
                       </li>
                       <li>
-                        <a href="/#">Boots</a>
+                        <Link to="/products/Shoes">Boots</Link>
                       </li>
                       <li>
-                        <a href="/#">Comfort</a>
+                        <Link to="/products/Shoes">Comfort</Link>
                       </li>
                       <li>
-                        <a href="/#">Dress Shoes</a>
+                        <Link to="/products/Shoes">Dress Shoes</Link>
                       </li>
                       <li>
-                        <a href="/#">Loafers & Slip-Ons</a>
+                        <Link to="/products/Shoes">Loafers & Slip-Ons</Link>
                       </li>
                       <li>
-                        <a href="/#">Oxfords & Derbys</a>
+                        <Link to="/products/Shoes">Oxfords & Derbys</Link>
                       </li>
                       <li>
-                        <a href="/#">Sandals & Flip-Flops</a>
+                        <Link to="/products/Shoes">Sandals & Flip-Flops</Link>
                       </li>
                       <li>
-                        <a href="/#">Slippers</a>
+                        <Link to="/products/Shoes">Slippers</Link>
                       </li>
                       <li>
-                        <a href="/#">Sneakers</a>
+                        <Link to="/products/Shoes">Sneakers</Link>
                       </li>
                       <li>
-                        <a href="/#">Extended Sizes & Widths</a>
+                        <Link to="/products/Shoes">
+                          Extended Sizes & Widths
+                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -1088,47 +1305,57 @@ const Megha = () => {
                     <header>Kids' Shoes</header>
                     <ul className="mega-links">
                       <li>
-                        <a href="/#">Baby (Sizes 0-4)</a>
+                        <Link to="/products/Shoes">Baby (Sizes 0-4)</Link>
                       </li>
                       <li>
-                        <a href="/#">Toddler (Sizes 4.5-12)</a>
+                        <Link to="/products/Shoes">Toddler (Sizes 4.5-12)</Link>
                       </li>
                       <li>
-                        <a href="/#">Little Kid (Sizes 12.5-3)</a>
+                        <Link to="/products/Shoes">
+                          Little Kid (Sizes 12.5-3)
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#">Big Kid (Sizes 3.5-7)</a>
+                        <Link to="/products/Shoes">Big Kid (Sizes 3.5-7)</Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Girls' Shoes</a>
+                        <Link to="/products/Shoes" id="bold">
+                          Girls' Shoes
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#">Baby (Sizes 0-4)</a>
+                        <Link to="/products/Shoes">Baby (Sizes 0-4)</Link>
                       </li>
                       <li>
-                        <a href="/#">Toddler (Sizes 4.5-12)</a>
+                        <Link to="/products/Shoes">Toddler (Sizes 4.5-12)</Link>
                       </li>
                       <li>
-                        <a href="/#">Little Kid (Sizes 12.5-3)</a>
+                        <Link to="/products/Shoes">
+                          Little Kid (Sizes 12.5-3)
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#">Big Kid (Sizes 3.5-7)</a>
+                        <Link to="/products/Shoes">Big Kid (Sizes 3.5-7)</Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Boys' Shoes</a>
+                        <Link to="/products/Shoes" id="bold">
+                          Boys' Shoes
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#">Baby (Sizes 0-4)</a>
+                        <Link to="/products/Shoes">Baby (Sizes 0-4)</Link>
                       </li>
                       <li>
-                        <a href="/#">Toddler (Sizes 4.5-12)</a>
+                        <Link to="/products/Shoes">Toddler (Sizes 4.5-12)</Link>
                       </li>
 
                       <li>
-                        <a href="/#">Little Kid (Sizes 12.5-3)</a>
+                        <Link to="/products/Shoes">
+                          Little Kid (Sizes 12.5-3)
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#">Big Kid (Sizes 3.5-7)</a>
+                        <Link to="/products/Shoes">Big Kid (Sizes 3.5-7)</Link>
                       </li>
                     </ul>
                   </div>
@@ -1136,37 +1363,37 @@ const Megha = () => {
                     <header>Shop By Brand</header>
                     <ul className="mega-links">
                       <li>
-                        <a href="/#">adidas</a>
+                        <Link to="/products/Shoes">adidas</Link>
                       </li>
                       <li>
-                        <a href="/#">adidas</a>
+                        <Link to="/products/Shoes">adidas</Link>
                       </li>
                       <li>
-                        <a href="/#">ASICS</a>
+                        <Link to="/products/Shoes">ASICS</Link>
                       </li>
                       <li>
-                        <a href="/#">Brooks</a>
+                        <Link to="/products/Shoes">Brooks</Link>
                       </li>
                       <li>
-                        <a href="/#">Cole Haan</a>
+                        <Link to="/products/Shoes">Cole Haan</Link>
                       </li>
                       <li>
-                        <a href="/#">Converse</a>
+                        <Link to="/products/Shoes">Converse</Link>
                       </li>
                       <li>
-                        <a href="/#">New Balance</a>
+                        <Link to="/products/Shoes">New Balance</Link>
                       </li>
                       <li>
-                        <a href="/#">Nike</a>
+                        <Link to="/products/Shoes">Nike</Link>
                       </li>
                       <li>
-                        <a href="/#">Sam Edelman</a>
+                        <Link to="/products/Shoes">Sam Edelman</Link>
                       </li>
                       <li>
-                        <a href="/#">Steve Madden</a>
+                        <Link to="/products/Shoes">Steve Madden</Link>
                       </li>
                       <li>
-                        <a href="/#">UGG</a>
+                        <Link to="/products/Shoes">UGG</Link>
                       </li>
                     </ul>
                   </div>
@@ -1175,9 +1402,13 @@ const Megha = () => {
             </li>
 
             <li>
-              <a href="/#" className="desktop-item">
+              <Link
+                to="/#"
+                className="desktop-item"
+                onClick={() => setHover((prev) => !prev)}
+              >
                 Activewear
-              </a>
+              </Link>
               <input type="checkbox" id="showMega" />
               <label htmlFor="showMega" className="mobile-item">
                 Services
@@ -1187,55 +1418,71 @@ const Megha = () => {
                 <div className="content">
                   <div className="row">
                     <header>Activewear: Get Inspired</header>
-                    <hr/>
+                    <hr id="horizontal-line" />
                     <ul className="mega-links">
                       <li>
-                        <a href="/#" id="bold">Mother's Day Gifts</a>
+                        <Link to="/gift" id="bold">
+                          Mother's Day Gifts
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">New Arrivals</a>
+                        <Link to="/gift" id="bold">
+                          New Arrivals
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Best Sellers</a>
+                        <Link to="/gift" id="bold">
+                          Best Sellers
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Adidas</a>
+                        <Link to="/gift" id="bold">
+                          Adidas
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Nike</a>
+                        <Link to="/gift" id="bold">
+                          Nike
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Z by Zella</a>
+                        <Link to="/gift" id="bold">
+                          Z by Zella
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Clearance</a>
+                        <Link to="/gift" id="bold">
+                          Clearance
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Shop by Activity</a>
+                        <Link to="/gift" id="bold">
+                          Shop by Activity
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#">Athleisure</a>
+                        <Link to="/gift">Athleisure</Link>
                       </li>
                       <li>
-                        <a href="/#">Commuter e</a>
+                        <Link to="/gift">Commuter e</Link>
                       </li>
                       <li>
-                        <a href="/#">Golf</a>
+                        <Link to="/gift">Golf</Link>
                       </li>
                       <li>
-                        <a href="/#">Hiking</a>
+                        <Link to="/gift">Hiking</Link>
                       </li>
                       <li>
-                        <a href="/#">Running</a>
+                        <Link to="/gift">Running</Link>
                       </li>
                       <li>
-                        <a href="/#">Swim & Surf</a>
+                        <Link to="/gift">Swim & Surf</Link>
                       </li>
                       <li>
-                        <a href="/#">Training</a>
+                        <Link to="/gift">Training</Link>
                       </li>
                       <li>
-                        <a href="/#">Yoga & Barr</a>
+                        <Link to="/gift">Yoga & Barr</Link>
                       </li>
                     </ul>
                   </div>
@@ -1243,40 +1490,40 @@ const Megha = () => {
                     <header>Women's Activewear</header>
                     <ul className="mega-links">
                       <li>
-                        <a href="/#">Crops & Capris</a>
+                        <Link to="/products/women">Crops & Capris</Link>
                       </li>
                       <li>
-                        <a href="/#">Jackets</a>
+                        <Link to="/products/women">Jackets</Link>
                       </li>
                       <li>
-                        <a href="/#">Leggings</a>
+                        <Link to="/products/women">Leggings</Link>
                       </li>
                       <li>
-                        <a href="/#">Shirts & Tees</a>
+                        <Link to="/products/women">Shirts & Tees</Link>
                       </li>
                       <li>
-                        <a href="/#">Shorts & Skirts</a>
+                        <Link to="/products/women">Shorts & Skirts</Link>
                       </li>
                       <li>
-                        <a href="/#">Socks</a>
+                        <Link to="/products/women">Socks</Link>
                       </li>
                       <li>
-                        <a href="/#">Sports Bras</a>
+                        <Link to="/products/women">Sports Bras</Link>
                       </li>
                       <li>
-                        <a href="/#">Sweatpants & Joggers</a>
+                        <Link to="/products/women">Sweatpants & Joggers</Link>
                       </li>
                       <li>
-                        <a href="/#">Sweatshirts & Hoodies</a>
+                        <Link to="/products/women">Sweatshirts & Hoodies</Link>
                       </li>
                       <li>
-                        <a href="/#">Swim</a>
+                        <Link to="/products/women">Swim</Link>
                       </li>
                       <li>
-                        <a href="/#">Tanks</a>
+                        <Link to="/products/women">Tanks</Link>
                       </li>
                       <li>
-                        <a href="/#">Plus Activewear</a>
+                        <Link to="/products/women">Plus Activewear</Link>
                       </li>
                     </ul>
                   </div>
@@ -1284,28 +1531,28 @@ const Megha = () => {
                     <header>Men's Activewear</header>
                     <ul className="mega-links">
                       <li>
-                        <a href="/#">Jackets</a>
+                        <Link to="/products/Men">Jackets</Link>
                       </li>
                       <li>
-                        <a href="/#">Shirts</a>
+                        <Link to="/products/Men">Shirts</Link>
                       </li>
                       <li>
-                        <a href="/#">Shorts</a>
+                        <Link to="/products/Men">Shorts</Link>
                       </li>
                       <li>
-                        <a href="/#">Socks</a>
+                        <Link to="/products/Men">Socks</Link>
                       </li>
                       <li>
-                        <a href="/#">Sweatpants & Joggers</a>
+                        <Link to="/products/Men">Sweatpants & Joggers</Link>
                       </li>
                       <li>
-                        <a href="/#">Sweatshirts & Hoodies</a>
+                        <Link to="/products/Men">Sweatshirts & Hoodies</Link>
                       </li>
                       <li>
-                        <a href="/#">Swim</a>
+                        <Link to="/products/Men">Swim</Link>
                       </li>
                       <li>
-                        <a href="/#">Tanks</a>
+                        <Link to="/products/Men">Tanks</Link>
                       </li>
                     </ul>
                   </div>
@@ -1314,74 +1561,73 @@ const Megha = () => {
                     <header>Women's Active Shoes</header>
                     <ul className="mega-links">
                       <li>
-                        <a href="/#">Hiking & Trail</a>
+                        <Link to="/products/Shoes">Hiking & Trail</Link>
                       </li>
                       <li>
-                        <a href="/#">Lifestyle</a>
+                        <Link to="/products/Shoes">Lifestyle</Link>
                       </li>
                       <li>
-                        <a href="/#">Running</a>
+                        <Link to="/products/Shoes">Running</Link>
                       </li>
                       <li>
-                        <a href="/#">Sport Sandals</a>
+                        <Link to="/products/Shoes">Sport Sandals</Link>
                       </li>
                       <li>
-                        <a href="/#">Training</a>
+                        <Link to="/products/Shoes">Training</Link>
                       </li>
                       <li>
-                        <a href="/#">Walking</a>
+                        <Link to="/products/Shoes">Walking</Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Men's Active Shoes</a>
+                        <Link to="/products/Shoes" id="bold">
+                          Men's Active Shoes
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#">Hiking & Trail</a>
+                        <Link to="/products/Shoes">Hiking & Trail</Link>
                       </li>
                       <li>
-                        <a href="/#">Lifestyle</a>
+                        <Link to="/products/Shoes">Lifestyle</Link>
                       </li>
                       <li>
-                        <a href="/#">Running</a>
+                        <Link to="/products/Shoes">Running</Link>
                       </li>
                       <li>
-                        <a href="/#">Sport Sandals</a>
+                        <Link to="/products/Shoes">Sport Sandals</Link>
                       </li>
                       <li>
-                        <a href="/#">Training</a>
+                        <Link to="/products/Shoes">Training</Link>
                       </li>
                       <li>
-                        <a href="/#">Walking</a>
+                        <Link to="/products/Shoes">Walking</Link>
                       </li>
                     </ul>
                   </div>
                   <div className="row">
-                    <header>Kids' Activewear
-</header>
+                    <header>Kids' Activewear</header>
                     <ul className="mega-links">
                       <li>
-                        <a href="/#">Girls' Activewear
-</a>
+                        <Link to="/products/Shoes">Girls' Activewear</Link>
                       </li>
                       <li>
-                        <a href="/#">Boys' Activewear
-</a>
+                        <Link to="/products/Shoes">Boys' Activewear</Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Kids' Active Shoes
-</a>
+                        <Link to="/products/Shoes" id="bold">
+                          Kids' Active Shoes
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#">Girls' Active Shoes
-</a>
+                        <Link to="/products/Shoes">Girls' Active Shoes</Link>
                       </li>
                       <li>
-                        <a href="/#">Boys' Active Shoes
-</a>
+                        <Link to="/products/Shoes">Boys' Active Shoes</Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Athletic Gear & Equipment</a>
+                        <Link to="/products/Shoes" id="bold">
+                          Athletic Gear & Equipment
+                        </Link>
                       </li>
-
                     </ul>
                   </div>
                 </div>
@@ -1389,9 +1635,13 @@ const Megha = () => {
             </li>
 
             <li>
-              <a href="/#" className="desktop-item">
+              <Link
+                to="/#"
+                className="desktop-item"
+                onClick={() => setHover((prev) => !prev)}
+              >
                 Bags&Accessories
-              </a>
+              </Link>
               <input type="checkbox" id="showMega" />
               <label htmlFor="showMega" className="mobile-item">
                 Services
@@ -1400,276 +1650,242 @@ const Megha = () => {
               <div className="mega-box">
                 <div className="content">
                   <div className="row">
-                    <header>Bags & Accessories: Get Inspired
-</header>
-<hr/>
+                    <header>Bags & Accessories: Get Inspired</header>
+                    <hr id="horizontal-line" />
                     <ul className="mega-links">
                       <li>
-                        <a href="/#" id="bold">Mother's Day Gifts
-</a>
+                        <Link to="/gift" id="bold">
+                          Mother's Day Gifts
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">New Arrivals
-</a>
+                        <Link to="/gift" id="bold">
+                          New Arrivals
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Best Sellers
-</a>
+                        <Link to="/gift" id="bold">
+                          Best Sellers
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Handbags Under $100
-</a>
+                        <Link to="/gift" id="bold">
+                          Handbags Under $100
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Designer Sunglasses Under $100
-</a>
+                        <Link to="/gift" id="bold">
+                          Designer Sunglasses Under $100
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Nordstrom Made
-</a>
+                        <Link to="/gift" id="bold">
+                          Nordstrom Made
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Women's Accessories Clearance
-</a>
+                        <Link to="/gift" id="bold">
+                          Women's Accessories Clearance
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Men's Accessories Clearance</a>
+                        <Link to="/gift" id="bold">
+                          Men's Accessories Clearance
+                        </Link>
                       </li>
-                    
                     </ul>
                   </div>
                   <div className="row">
-                    <header>Shop By Brand
-</header>
+                    <header>Shop By Brand</header>
                     <ul className="mega-links">
                       <li>
-                        <a href="/#">Bony Levy
-</a>
+                        <Link to="/gift">Bony Levy</Link>
                       </li>
                       <li>
-                        <a href="/#">Gucci Sunglasses
-</a>
+                        <Link to="/gift">Gucci Sunglasses</Link>
                       </li>
                       <li>
-                        <a href="/#">Kate Spade New York
-</a>
+                        <Link to="/gift">Kate Spade New York</Link>
                       </li>
                       <li>
-                        <a href="/#">Marc Jacobs
-</a>
+                        <Link to="/gift">Marc Jacobs</Link>
                       </li>
-                      <li><a href="/#">Ray-Ban</a></li>
+                      <li>
+                        <Link to="/gift">Ray-Ban</Link>
+                      </li>
 
-
-<li>
-                        <a href="/#" id="bold">Designer
-
-</a>
+                      <li>
+                        <Link to="/" id="bold">
+                          Designer
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#">Designer Accessories
-
-</a>
+                        <Link to="/">Designer Accessories</Link>
                       </li>
                       <li>
-                        <a href="/#">Designer Handbags
-
-</a>
+                        <Link to="/products/bag">Designer Handbags</Link>
                       </li>
                       <li>
-                        <a href="/#">Designer Sunglasses & Eyewear
-</a>
+                        <Link to="/">Designer Sunglasses & Eyewear</Link>
                       </li>
-                    
-                      
                     </ul>
                   </div>
                   <div className="row">
-                    <header>Handbags
-</header>
+                    <header>Handbags</header>
                     <ul className="mega-links">
                       <li>
-                        <a href="/#">Backpacks
-</a>
+                        <Link to="/products/bag">Backpacks</Link>
                       </li>
                       <li>
-                        <a href="/#">Beach & Straw Bags
-</a>
+                        <Link to="/products/bag">Beach & Straw Bags</Link>
                       </li>
                       <li>
-                        <a href="/#">Bucket Bags
-</a>
+                        <Link to="/products/bag">Bucket Bags</Link>
                       </li>
                       <li>
-                        <a href="/#">Clutches & Pouches
-</a>
+                        <Link to="/products/bag">Clutches & Pouches</Link>
                       </li>
                       <li>
-                        <a href="/#">Crossbody Bags
-</a>
+                        <Link to="/products/bag">Crossbody Bags</Link>
                       </li>
                       <li>
-                        <a href="/#">Designer Bags
-</a>
+                        <Link to="/products/bag">Designer Bags</Link>
                       </li>
                       <li>
-                        <a href="/#">Fanny Packs & Belt Bags
-</a>
+                        <Link to="/products/bag">Fanny Packs & Belt Bags</Link>
                       </li>
                       <li>
-                        <a href="/#">Mini Bags
-</a>
+                        <Link to="/products/bag">Mini Bags</Link>
                       </li>
                       <li>
-                        <a href="/#">Satchels
-</a>
+                        <Link to="/products/bag">Satchels</Link>
                       </li>
                       <li>
-                        <a href="/#">Shoulder Bags
-</a>
+                        <Link to="/products/bag">Shoulder Bags</Link>
                       </li>
                       <li>
-                        <a href="/#">Totes
-</a>
+                        <Link to="/products/bag">Totes</Link>
                       </li>
                       <li>
-                        <a href="/#">Wallets
-r</a>
+                        <Link to="/products/bag">Wallets r</Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Luggage & Travel
-</a>
+                        <Link to="/products/bag" id="bold">
+                          Luggage & Travel
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Tech Accessories
-</a>
+                        <Link to="/products/bag" id="bold">
+                          Tech Accessories
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Sunglasses & Eyewea</a>
+                        <Link to="/products/bag" id="bold">
+                          Sunglasses & Eyewea
+                        </Link>
                       </li>
-                     
                     </ul>
                   </div>
 
                   <div className="row">
-                    <header>Jewelry
-</header>
+                    <header>Jewelry</header>
                     <ul className="mega-links">
                       <li>
-                        <a href="/#">Bracelets
-</a>
+                        <Link to="/products/women">Bracelets</Link>
                       </li>
                       <li>
-                        <a href="/#">Earrings
-</a>
+                        <Link to="/products/women">Earrings</Link>
                       </li>
                       <li>
-                        <a href="/#">Necklaces
-</a>
+                        <Link to="/products/women">Necklaces</Link>
                       </li>
                       <li>
-                        <a href="/#">Rings
-</a>
+                        <Link to="/products/women">Rings</Link>
                       </li>
                       <li>
-                        <a href="/#">14K Gold Jewelry
-</a>
+                        <Link to="/products/women">14K Gold Jewelry</Link>
                       </li>
                       <li>
-                        <a href="/#">Diamond Jewelry
-</a>
+                        <Link to="/products/women">Diamond Jewelry</Link>
                       </li>
                       <li>
-                        <a href="/#">Gold Jewelry
-</a>
+                        <Link to="/products/women">Gold Jewelry</Link>
                       </li>
                       <li>
-                        <a href="/#">Rose Gold Jewelry
-</a>
+                        <Link to="/products/women">Rose Gold Jewelry</Link>
                       </li>
                       <li>
-                        <a href="/#">Sterling Silver Jewelry
-</a>
+                        <Link to="/products/women">
+                          Sterling Silver Jewelry
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Fine Jewelry
-</a>
+                        <Link to="/products/women" id="bold">
+                          Fine Jewelry
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#">Bracelets
-</a>
+                        <Link to="/products/women">Bracelets</Link>
                       </li>
                       <li>
-                        <a href="/#">Earrings
-</a>
+                        <Link to="/products/women">Earrings</Link>
                       </li>
                       <li>
-                        <a href="/#">Necklaces
-</a>
+                        <Link to="/products/women">Necklaces</Link>
                       </li>
                       <li>
-                        <a href="/#">Rings
-</a>
+                        <Link to="/products/women">Rings</Link>
                       </li>
-                     
-                      
                     </ul>
                   </div>
                   <div className="row">
-                    <header>Women's Accessories
-</header>
+                    <header>Women's Accessories</header>
                     <ul className="mega-links">
                       <li>
-                        <a href="/#">Belts
-</a>
+                        <Link to="/products/women">Belts</Link>
                       </li>
                       <li>
-                        <a href="/#">Hair Accessories
-</a>
+                        <Link to="/products/women">Hair Accessories</Link>
                       </li>
                       <li>
-                        <a href="/#">Hats
-</a>
+                        <Link to="/products/women">Hats</Link>
                       </li>
                       <li>
-                        <a href="/#">Ponchos, Kimonos & Capes
-</a>
+                        <Link to="/products/women">
+                          Ponchos, Kimonos & Capes
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#">Sarongs, Caftans & Cover-Ups
-</a>
+                        <Link to="/products/women">
+                          Sarongs, Caftans & Cover-Ups
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#">Scarves
-</a>
+                        <Link to="/products/women">Scarves</Link>
                       </li>
                       <li>
-                        <a href="/#">Winter Accessories
-</a>
+                        <Link to="/products/women">Winter Accessories</Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Men's Accessories
-</a>
+                        <Link to="/products/women" id="bold">
+                          Men's Accessories
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#">Bags & Backpacks
-</a>
+                        <Link to="/products/bag">Bags & Backpacks</Link>
                       </li>
                       <li>
-                        <a href="/#">Belts & Suspenders
-</a>
-                      </li> <li>
-                        <a href="/#">Hats
-</a>
+                        <Link to="/products/bag">Belts & Suspenders</Link>
+                      </li>{" "}
+                      <li>
+                        <Link to="/gift">Hats</Link>
                       </li>
                       <li>
-                        <a href="/#">Wallets & Card Cases
-</a>
+                        <Link to="/gift">Wallets & Card Cases</Link>
                       </li>
                       <li>
-                        <a href="/#">Winter Accessories</a>
+                        <Link to="/gift">Winter Accessories</Link>
                       </li>
-                     
                     </ul>
                   </div>
                 </div>
@@ -1677,9 +1893,13 @@ r</a>
             </li>
 
             <li>
-              <a href="/#" className="desktop-item">
+              <Link
+                to="/#"
+                className="desktop-item"
+                onClick={() => setHover((prev) => !prev)}
+              >
                 Home
-              </a>
+              </Link>
               <input type="checkbox" id="showMega" />
               <label htmlFor="showMega" className="mobile-item">
                 Services
@@ -1688,278 +1908,263 @@ r</a>
               <div className="mega-box">
                 <div className="content">
                   <div className="row">
-                    <header>Home: Get Inspired
-</header><hr/>
+                    <header>Home: Get Inspired</header>
+                    <hr id="horizontal-line" />
                     <ul className="mega-links">
                       <li>
-                        <a href="/#" id="bold">Mother's Day Gifts
-</a>
+                        <Link to="/gift" id="bold">
+                          Mother's Day Gifts
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">New Arrivals
-</a>
+                        <Link to="/gift" id="bold">
+                          New Arrivals
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Best Sellers
-</a>
+                        <Link to="/gift" id="bold">
+                          Best Sellers
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Bedding Under $50
-</a>
+                        <Link to="/gift" id="bold">
+                          Bedding Under $50
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Home Decor Under $50
-</a>
+                        <Link to="/gift" id="bold">
+                          Home Decor Under $50
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Kitchen Appliances Under $100
-</a>
+                        <Link to="/gift" id="bold">
+                          Kitchen Appliances Under $100
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Rack Essentials
-</a>
+                        <Link to="/gift" id="bold">
+                          Rack Essentials
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Nordstrom Made
-</a>
+                        <Link to="/gift" id="bold">
+                          Nordstrom Made
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Clearance
-</a>
+                        <Link to="/gift" id="bold">
+                          Clearance
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Shop By Brand</a>
+                        <Link to="/gift" id="bold">
+                          Shop By Brand
+                        </Link>
                       </li>
-                      
                     </ul>
                   </div>
                   <div className="row">
-                    <header>Bath
-</header>
+                    <header>Bath</header>
                     <ul className="mega-links">
-                    <li>
-                        <a href="/#">Bath Rugs & Mats
-</a>
+                      <li>
+                        <Link to="/products/Home">Bath Rugs & Mats</Link>
                       </li>
                       <li>
-                        <a href="/#">Bath Towels
-</a>
+                        <Link to="/products/Home">Bath Towels</Link>
                       </li>
                       <li>
-                        <a href="/#">Bathroom Decor
-</a>
+                        <Link to="/products/Home">Bathroom Decor</Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Bedding
-</a>
+                        <Link to="/products/Home" id="bold">
+                          Bedding
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#">Comforters & Duvet Inserts
-</a>
+                        <Link to="/products/Home">
+                          Comforters & Duvet Inserts
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#">Duvet Covers
-</a>
+                        <Link to="/products/Home">Duvet Covers</Link>
                       </li>
                       <li>
-                        <a href="/#">Mattress Pads & Toppers
-</a>
+                        <Link to="/products/Home">Mattress Pads & Toppers</Link>
                       </li>
                       <li>
-                        <a href="/#">Pillow Cases
-</a>
+                        <Link to="/products/Home">Pillow Cases</Link>
                       </li>
                       <li>
-                        <a href="/#">Pillows
-</a>
+                        <Link to="/products/Home">Pillows</Link>
                       </li>
                       <li>
-                        <a href="/#">Quilts & Blankets
-</a>
+                        <Link to="/products/Home">Quilts & Blankets</Link>
                       </li>
                       <li>
-                        <a href="/#">Sheet Sets
-</a>
+                        <Link to="/products/Home">Sheet Sets</Link>
                       </li>
                       <li>
-                        <a href="/#">Throws</a>
+                        <Link to="/products/Home">Throws</Link>
                       </li>
-
                     </ul>
                   </div>
                   <div className="row">
-                    <header>Decor
-</header>
+                    <header>Decor</header>
                     <ul className="mega-links">
                       <li>
-                        <a href="/#">Decorative Accessories
-</a>
+                        <Link to="/products/Home">Decorative Accessories</Link>
                       </li>
                       <li>
-                        <a href="/#">Decorative Pillows
-</a>
+                        <Link to="/products/Home">Decorative Pillows</Link>
                       </li>
                       <li>
-                        <a href="/#">Faux Plants & Stands
-</a>
+                        <Link to="/products/Home">Faux Plants & Stands</Link>
                       </li>
                       <li>
-                        <a href="/#">Home Fragrances, Diffusers & Candles
-</a>
+                        <Link to="/products/Home">
+                          Home Fragrances, Diffusers & Candles
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#">Lighting & Lamps
-</a>
+                        <Link to="/products/Home">Lighting & Lamps</Link>
                       </li>
                       <li>
-                        <a href="/#">Rugs & Doormats
-</a>
+                        <Link to="/products/Home">Rugs & Doormats</Link>
                       </li>
                       <li>
-                        <a href="/#">Stationery & Desk Accessories
-</a>
+                        <Link to="/products/Home">
+                          Stationery & Desk Accessories
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#">Window Treatments
-</a>
+                        <Link to="/products/Home">Window Treatments</Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Holiday Decorations
-</a>
+                        <Link to="/products/Home" id="bold">
+                          Holiday Decorations
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Art & Wall Decor
-</a>
+                        <Link to="/products/Home" id="bold">
+                          Art & Wall Decor
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#">Art by Color
-</a>
+                        <Link to="/products/Home">Art by Color</Link>
                       </li>
                       <li>
-                        <a href="/#">Art by Subject
-</a>
+                        <Link to="/products/Home">Art by Subject</Link>
                       </li>
                       <li>
-                        <a href="/#">Art by Type
-</a>
+                        <Link to="/products/Home">Art by Type</Link>
                       </li>
                       <li>
-                        <a href="/#">Clocks
-</a>
+                        <Link to="/products/Home">Clocks</Link>
                       </li>
                       <li>
-                        <a href="/#">Mirrors</a>
+                        <Link to="/products/Home">Mirrors</Link>
                       </li>
-                      
                     </ul>
                   </div>
 
                   <div className="row">
-                    <header>Kitchen & Tabletop
-</header>
+                    <header>Kitchen & Tabletop</header>
                     <ul className="mega-links">
                       <li>
-                        <a href="/#">Bar Accessories
-</a>
+                        <Link to="/products/Home">Bar Accessories</Link>
                       </li>
                       <li>
-                        <a href="/#">Cookware & Bakeware
-</a>
+                        <Link to="/products/Home">Cookware & Bakeware</Link>
                       </li>
                       <li>
-                        <a href="/#">Cutlery & Kitchen Knives
-</a>
+                        <Link to="/products/Home">
+                          Cutlery & Kitchen Knives
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#">Dinnerware & Flatware
-</a>
+                        <Link to="/products/Home">Dinnerware & Flatware</Link>
                       </li>
                       <li>
-                        <a href="/#">Drinkware & Glassware
-</a>
+                        <Link to="/products/Home">Drinkware & Glassware</Link>
                       </li>
                       <li>
-                        <a href="/#">Serveware
-</a>
+                        <Link to="/products/Home">Serveware</Link>
                       </li>
                       <li>
-                        <a href="/#">Small Appliances
-</a>
+                        <Link to="/products/Home">Small Appliances</Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Outdoor Living
-</a>
+                        <Link to="/products/Home" id="bold">
+                          Outdoor Living
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#">Beach & Pool Accessories
-</a>
+                        <Link to="/products/Home">
+                          Beach & Pool Accessories
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#">Outdoor Dining
-</a>
+                        <Link to="/products/Home">Outdoor Dining</Link>
                       </li>
-                      
+
                       <li>
-                        <a href="/#" id="bold">Electronic & Tech Accessories
-</a>
-                      </li><li>
-                        <a href="/#">Headphones & Speakers
-</a>
+                        <Link to="/products/Home" id="bold">
+                          Electronic & Tech Accessories
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#">Phone Cases
-</a>
+                        <Link to="/products/Home">Headphones & Speakers</Link>
                       </li>
                       <li>
-                        <a href="/#">Smart Home
-</a>
+                        <Link to="/products/Home">Phone Cases</Link>
                       </li>
                       <li>
-                        <a href="/#">Smart Watches & Bands</a>
+                        <Link to="/products/Home">Smart Home</Link>
                       </li>
-                      
+                      <li>
+                        <Link to="/products/Home">Smart Watches & Bands</Link>
+                      </li>
                     </ul>
                   </div>
                   <div className="row">
-                    <header>Storage & Cleaning
-</header>
+                    <header>Storage & Cleaning</header>
                     <ul className="mega-links">
                       <li>
-                        <a href="/#">Bathroom Storage
-</a>
+                        <Link to="/products/Home">Bathroom Storage</Link>
                       </li>
                       <li>
-                        <a href="/#">Bedroom & Closet Storage
-</a>
+                        <Link to="/products/Home">
+                          Bedroom & Closet Storage
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#">Kitchen Storage
-</a>
+                        <Link to="/products/Home">Kitchen Storage</Link>
                       </li>
                       <li>
-                        <a href="/#">Laundry & Cleaning
-</a>
+                        <Link to="/products/Home">Laundry & Cleaning</Link>
                       </li>
                       <li>
-                        <a href="/#">Storage Baskets & Bins
-</a>
+                        <Link to="/products/Home">Storage Baskets & Bins</Link>
                       </li>
                       <li>
-                        <a href="/#">Vacuum & Floor Care
-</a>
+                        <Link to="/products/Home">Vacuum & Floor Care</Link>
                       </li>
-                      
+
                       <li>
-                        <a href="/#" id="bold">Pet Accessories
-</a>
-                      </li><li>
-                        <a href="/#" id="bold">Games
-</a>
+                        <Link to="/products/Home" id="bold">
+                          Pet Accessories
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Luggage & Travel</a>
+                        <Link to="/products/Home" id="bold">
+                          Games
+                        </Link>
                       </li>
-                     
+                      <li>
+                        <Link to="/products/Home" id="bold">
+                          Luggage & Travel
+                        </Link>
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -1967,9 +2172,13 @@ r</a>
             </li>
 
             <li>
-              <a href="/#" className="desktop-item">
+              <Link
+                to="/#"
+                className="desktop-item"
+                onClick={() => setHover((prev) => !prev)}
+              >
                 Beauty
-              </a>
+              </Link>
               <input type="checkbox" id="showMega" />
               <label htmlFor="showMega" className="mobile-item">
                 Services
@@ -1978,290 +2187,255 @@ r</a>
               <div className="mega-box">
                 <div className="content">
                   <div className="row">
-                    <header>Beauty: Get Inspired
-</header><hr/>
+                    <header>Beauty: Get Inspired</header>
+                    <hr id="horizontal-line" />
                     <ul className="mega-links">
                       <li>
-                        <a href="/#" id="bold">Mother's Day Gifts
-</a>
+                        <Link to="/gift" id="bold">
+                          Mother's Day Gifts
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">New Arrivals
-</a>
+                        <Link to="gift" id="bold">
+                          New Arrivals
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Best Sellers
-</a>
+                        <Link to="gift" id="bold">
+                          Best Sellers
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Prestige Beauty
-</a>
+                        <Link to="gift" id="bold">
+                          Prestige Beauty
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Natural Beauty
-</a>
+                        <Link to="gift" id="bold">
+                          Natural Beauty
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Beauty Under $25
-</a>
+                        <Link to="gift" id="bold">
+                          Beauty Under $25
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Hair Care Under $25
-</a>
+                        <Link to="gift" id="bold">
+                          Hair Care Under $25
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Skin Care Under $20
-</a>
-                      </li>
-                      
-                      <li>
-                        <a href="/#" id="bold">Makeup Under $20
-</a>
-                      </li> <li>
-                        <a href="/#" id="bold">Beauty Gifts & Sets
-</a>
+                        <Link to="gift" id="bold">
+                          Skin Care Under $20
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Travel & Mini Sizes
-</a>
+                        <Link to="gift" id="bold">
+                          Makeup Under $20
+                        </Link>
+                      </li>{" "}
+                      <li>
+                        <Link to="gift" id="bold">
+                          Beauty Gifts & Sets
+                        </Link>
                       </li>
                       <li>
-                        <a href="/#" id="bold">Clearance</a>
+                        <Link to="gift" id="bold">
+                          Travel & Mini Sizes
+                        </Link>
                       </li>
-                     
+                      <li>
+                        <Link to="gift" id="bold">
+                          Clearance
+                        </Link>
+                      </li>
                     </ul>
                   </div>
                   <div className="row">
-                    <header>Shop By Brand
-</header>
+                    <header>Shop By Brand</header>
                     <ul className="mega-links">
                       <li>
-                        <a href="/#">Charlotte Tilbury
-</a>
+                        <Link to="gift">Charlotte Tilbury</Link>
                       </li>
                       <li>
-                        <a href="/#">Clinique
-</a>
+                        <Link to="gift">Clinique</Link>
                       </li>
                       <li>
-                        <a href="/#">Drybar
-</a>
+                        <Link to="gift">Drybar</Link>
                       </li>
                       <li>
-                        <a href="/#">L'Occitane
-</a>
+                        <Link to="gift">L'Occitane</Link>
                       </li>
                       <li>
-                        <a href="/#">M.A.C. Cosmetics
-</a>
+                        <Link to="gift">M.A.C. Cosmetics</Link>
                       </li>
-                      
                       <li>
-                        <a href="/#">Mario Badescu
-</a>
-                      </li> 
-
+                        <Link to="gift">Mario Badescu</Link>
+                      </li>
                       <li>
-                        <a href="/#">Nudestix
-</a>
+                        <Link to="gift">Nudestix</Link>
                       </li>
-                       <li>
-                        <a href="/#">Shiseido
-</a>
-                      </li>
-                      
                       <li>
-                        <a href="/#">Too Faced
-</a>
-                      </li> <li>
-                        <a href="/#">Urban Decay</a>
+                        <Link to="gift">Shiseido</Link>
                       </li>
-                      
-                   
+                      <li>
+                        <Link to="gift">Too Faced</Link>
+                      </li>{" "}
+                      <li>
+                        <Link to="gift">Urban Decay</Link>
+                      </li>
                     </ul>
                   </div>
                   <div className="row">
-                    <header>Makeup
-</header>
+                    <header>Makeup</header>
                     <ul className="mega-links">
-                    <li>
-                        <a href="/#">Blush, Bronzer & Highlighter
-</a>
-                      </li> <li>
-                        <a href="/#">Brushes & Tools
-</a>
-                      </li>
-                      
                       <li>
-                        <a href="/#">Concealer & Foundation
-</a>
-                      </li> <li>
-                        <a href="/#">Eye Makeup
-</a>
-                      </li>
-                      
+                        <Link to="gift">Blush, Bronzer & Highlighter</Link>
+                      </li>{" "}
                       <li>
-                        <a href="/#">Eyebrows
-</a>
-                      </li> <li>
-                        <a href="/#">Eyeshadow & Eyeliner
-</a>
+                        <Link to="gift">Brushes & Tools</Link>
                       </li>
-                      
                       <li>
-                        <a href="/#">Gifts & Sets
-</a>
-                      </li> <li>
-                        <a href="/#">Lipstick, Lip Gloss & Liner
-</a>
-                      </li>
-                      
+                        <Link to="gift">Concealer & Foundation</Link>
+                      </li>{" "}
                       <li>
-                        <a href="/#">Mascara & Lashes
-</a>
+                        <Link to="gift">Eye Makeup</Link>
                       </li>
-                       <li>
-                        <a href="/#">Nail Polish & Care
-</a>
-                      </li>
-                      
                       <li>
-                        <a href="/#">Palettes
-</a>
-                      </li> <li>
-                        <a href="/#">Powder & Setting Sprays
-</a>
-                      </li>
-                      
+                        <Link to="gift">Eyebrows</Link>
+                      </li>{" "}
                       <li>
-                        <a href="/#">Primer</a>
-                      </li> 
+                        <Link to="gift">Eyeshadow & Eyeliner</Link>
+                      </li>
+                      <li>
+                        <Link to="gift">Gifts & Sets</Link>
+                      </li>{" "}
+                      <li>
+                        <Link to="gift">Lipstick, Lip Gloss & Liner</Link>
+                      </li>
+                      <li>
+                        <Link to="gift">Mascara & Lashes</Link>
+                      </li>
+                      <li>
+                        <Link to="gift">Nail Polish & Care</Link>
+                      </li>
+                      <li>
+                        <Link to="gift">Palettes</Link>
+                      </li>{" "}
+                      <li>
+                        <Link to="gift">Powder & Setting Sprays</Link>
+                      </li>
+                      <li>
+                        <Link to="gift">Primer</Link>
+                      </li>
                     </ul>
                   </div>
 
                   <div className="row">
-                    <header>Skin Care
-</header>
+                    <header>Skin Care</header>
                     <ul className="mega-links">
-                    <li>
-                        <a href="/#">Cleansers
-</a>
-                      </li>
-                      
                       <li>
-                        <a href="/#">Exfoliators
-</a>
-                      </li> <li>
-                        <a href="/#">Eye Creams & Treatments
-</a>
-                      </li>
-                      
-                      <li>
-                        <a href="/#">Face Mists & Toners
-</a>
-                      </li> <li>
-                        <a href="/#">Face Moisturizers
-</a>
-                      </li>
-                      
-                      <li>
-                        <a href="/#">Facial Masks
-</a>
-                      </li> <li>
-                        <a href="/#">Gifts & Sets
-</a>
-                      </li>
-                      
-                      <li>
-                        <a href="/#">Lip Balms & Treatments
-</a>
-                      </li> <li>
-                        <a href="/#">Makeup Remover
-</a>
-                      </li>
-                      
-                      <li>
-                        <a href="/#">Serums
-</a>
+                        <Link to="gift">Cleansers</Link>
                       </li>
                       <li>
-                        <a href="/#">Sunscreen
-</a>
-                      </li> <li>
-                        <a href="/#">Tools & Devices
-</a>
-                      </li>
-                      
+                        <Link to="gift">Exfoliators</Link>
+                      </li>{" "}
                       <li>
-                        <a href="/#" id="bold">Bath & Body</a>
-                      </li> 
+                        <Link to="gift">Eye Creams & Treatments</Link>
+                      </li>
+                      <li>
+                        <Link to="gift">Face Mists & Toners</Link>
+                      </li>{" "}
+                      <li>
+                        <Link to="gift">Face Moisturizers</Link>
+                      </li>
+                      <li>
+                        <Link to="gift">Facial Masks</Link>
+                      </li>{" "}
+                      <li>
+                        <Link to="gift">Gifts & Sets</Link>
+                      </li>
+                      <li>
+                        <Link to="/gift">Lip Balms & Treatments</Link>
+                      </li>{" "}
+                      <li>
+                        <Link to="/gift">Makeup Remover</Link>
+                      </li>
+                      <li>
+                        <Link to="/gift">Serums</Link>
+                      </li>
+                      <li>
+                        <Link to="/gift">Sunscreen</Link>
+                      </li>{" "}
+                      <li>
+                        <Link to="/gift">Tools & Devices</Link>
+                      </li>
+                      <li>
+                        <Link to="/gift" id="bold">
+                          Bath & Body
+                        </Link>
+                      </li>
                     </ul>
                   </div>
                   <div className="row">
-                    <header>Hair Care
-</header>
+                    <header>Hair Care</header>
                     <ul className="mega-links">
-                    <li>
-                        <a href="/#">Hair & Scalp Treatments
-</a>
-                      </li>
-                      
                       <li>
-                        <a href="/#">Hair Dryers & Styling Tools
-</a>
-                      </li> <li>
-                        <a href="/#">Hair Styling Products
-</a>
+                        <Link to="/products/Home">Hair & Scalp Treatments</Link>
                       </li>
-                      
                       <li>
-                        <a href="/#">Shampoo & Conditioner
-</a>
-                      </li> <li>
-                        <a href="/#" id="bold">Fragrance
-</a>
-                      </li>
-                      
+                        <Link to="/products/Home">
+                          Hair Dryers & Styling Tools
+                        </Link>
+                      </li>{" "}
                       <li>
-                        <a href="/#">Candles & Diffusers
-</a>
-                      </li> <li>
-                        <a href="/#">Designer Fragrance
-</a>
+                        <Link to="/products/Home">Hair Styling Products</Link>
                       </li>
-                      
                       <li>
-                        <a href="/#">Gifts & Sets
-</a>
-                      </li> <li>
-                        <a href="/#">Perfume
-</a>
-                      </li>
-                      
+                        <Link to="/products/Home">Shampoo & Conditioner</Link>
+                      </li>{" "}
                       <li>
-                        <a href="/#" id="bold">Tools, Brushes & Makeup Bags
-</a>
-                      </li> <li>
-                        <a href="/#">Bath & Body Tools
-</a>
+                        <Link to="/products/Home" id="bold">
+                          Fragrance
+                        </Link>
                       </li>
-                      
                       <li>
-                        <a href="/#">Hair Styling Tools
-</a>
-                      </li> <li>
-                        <a href="/#">Makeup Brushes, Tools, & Bags
-</a>
-                      </li>
-                      
+                        <Link to="/products/Home">Candles & Diffusers</Link>
+                      </li>{" "}
                       <li>
-                        <a href="/#">Skin Care Tools
-</a>
-                      </li> <li>
-                        <a href="/#" id="bold">Men's Grooming & Cologne</a>
+                        <Link to="/products/Home">Designer Fragrance</Link>
                       </li>
-                      
-                     
+                      <li>
+                        <Link to="/products/Home">Gifts & Sets</Link>
+                      </li>{" "}
+                      <li>
+                        <Link to="/products/Home">Perfume</Link>
+                      </li>
+                      <li>
+                        <Link to="/products/Home" id="bold">
+                          Tools, Brushes & Makeup Bags
+                        </Link>
+                      </li>{" "}
+                      <li>
+                        <Link to="/products/Home">Bath & Body Tools</Link>
+                      </li>
+                      <li>
+                        <Link to="/products/Home">Hair Styling Tools</Link>
+                      </li>{" "}
+                      <li>
+                        <Link to="/products/Home">
+                          Makeup Brushes, Tools, & Bags
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/products/Home">Skin Care Tools</Link>
+                      </li>{" "}
+                      <li>
+                        <Link to="/products/Home" id="bold">
+                          Men's Grooming & Cologne
+                        </Link>
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -2269,9 +2443,13 @@ r</a>
             </li>
 
             <li>
-              <a href="/#" className="desktop-item">
+              <Link
+                to="/#"
+                className="desktop-item"
+                onClick={() => setHover((prev) => !prev)}
+              >
                 Gifts
-              </a>
+              </Link>
               <input type="checkbox" id="showMega" />
               <label htmlFor="showMega" className="mobile-item">
                 Services
@@ -2280,124 +2458,113 @@ r</a>
               <div className="mega-box">
                 <div className="content">
                   <div className="row">
-                    <header>Gifts: Get Inspired
-</header><hr/>
+                    <header>Gifts: Get Inspired</header>
+                    <hr id="horizontal-line" />
                     <ul className="mega-links">
-                    <li>
-                        <a href="/#" id="bold">Gift Cards
-</a>
-                      </li> 
                       <li>
-                        <a href="/#" id="bold">Wish List</a>
+                        <Link to="/gift" id="bold">
+                          Gift Cards
+                        </Link>
                       </li>
-                      
-                     
+                      <li>
+                        <Link to="/wishlist" id="bold">
+                          Wish List
+                        </Link>
+                      </li>
                     </ul>
                   </div>
                   <div className="row">
-                    <header>Mother's Day Gifting
-</header>
+                    <header>Mother's Day Gifting</header>
                     <ul className="mega-links">
-                    <li>
-                        <a href="/#">Gifts for Mom Under $25
-</a>
-                      </li> <li>
-                        <a href="/#">Gifts for Mom Under $50
-</a>
-                      </li>
-                      
                       <li>
-                        <a href="/#">Unique Gifts for Mom
-</a>
+                        <Link to="/gift">Gifts for Mom Under $25</Link>
+                      </li>{" "}
+                      <li>
+                        <Link to="/gift">Gifts for Mom Under $50</Link>
                       </li>
                       <li>
-                        <a href="/#">Luxe & Designer for Mom
-</a>
-                      </li> <li>
-                        <a href="/#">Jewelry & Watches for Mom
-</a>
+                        <Link to="/gift">Unique Gifts for Mom</Link>
                       </li>
-                      
                       <li>
-                        <a href="/#">Wellness Gifts for Mom
-</a>
-                      </li> <li>
-                        <a href="/#">Home Gifts for Mom
-</a>
+                        <Link to="/gift">Luxe & Designer for Mom</Link>
+                      </li>{" "}
+                      <li>
+                        <Link to="/gift">Jewelry & Watches for Mom</Link>
                       </li>
-                      
                       <li>
-                        <a href="/#" id="bold">Dressed Up Styles for Mom
-</a>
-                      </li> <li>
-                        <a href="/#" id="bold">Activities for Mom: At-Home Spa
-</a>
+                        <Link to="/gift">Wellness Gifts for Mom</Link>
+                      </li>{" "}
+                      <li>
+                        <Link to="/gift">Home Gifts for Mom</Link>
                       </li>
-                      
                       <li>
-                        <a href="/#" id="bold">Activities for Mom: Cooking & Cocktails</a>
-                      </li> 
+                        <Link to="/gift" id="bold">
+                          Dressed Up Styles for Mom
+                        </Link>
+                      </li>{" "}
+                      <li>
+                        <Link to="/gift" id="bold">
+                          Activities for Mom: At-Home Spa
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/gift" id="bold">
+                          Activities for Mom: Cooking & Cocktails
+                        </Link>
+                      </li>
                     </ul>
                   </div>
                   <div className="row">
-                    <header>Everyday Gifting
-</header>
+                    <header>Everyday Gifting</header>
                     <ul className="mega-links">
-                    <li>
-                        <a href="/#">Gifts for Her
-</a>
-                      </li>
-                      
                       <li>
-                        <a href="/#">Gifts for Him
-</a>
-                      </li> <li>
-                        <a href="/#">Gifts for Kids
-</a>
+                        <Link to="/gift">Gifts for Her</Link>
                       </li>
-                      
                       <li>
-                        <a href="/#">Gifts for Home
-</a>
-                      </li> <li>
-                        <a href="/#">Gifts Under $25
-</a>
-                      </li>
-                      
+                        <Link to="/gift">Gifts for Him</Link>
+                      </li>{" "}
                       <li>
-                        <a href="/#">Gifts Under $50
-</a>
-                      </li> <li>
-                        <a href="/#">Gifts Under $100</a>
+                        <Link to="/gift">Gifts for Kids</Link>
                       </li>
-                      
-                      
+                      <li>
+                        <Link to="/gift">Gifts for Home</Link>
+                      </li>{" "}
+                      <li>
+                        <Link to="/gift">Gifts Under $25</Link>
+                      </li>
+                      <li>
+                        <Link to="/gift">Gifts Under $50</Link>
+                      </li>{" "}
+                      <li>
+                        <Link to="/gift">Gifts Under $100</Link>
+                      </li>
                     </ul>
                   </div>
 
                   <div className="row">
-                    <header>Gifts by Occasion
-</header>
+                    <header>Gifts by Occasion</header>
                     <ul className="mega-links">
-                    <li>
-                        <a href="/#">Baby Shower Gifts
-</a>
-                      </li> <li>
-                        <a href="/#">Wedding Gifts</a>
+                      <li>
+                        <Link to="/gift">Baby Shower Gifts</Link>
                       </li>
-                      
-                     
+                      <li>
+                        <Link to="/gift">Wedding Gifts</Link>
+                      </li>
                     </ul>
                   </div>
-                
                 </div>
               </div>
             </li>
 
             <li>
-              <a href="/#" className="desktop-item" id="col">
+              <Link
+                to="#"
+                className="desktop-item"
+                onClick={() => setHover((prev) => !prev)}
+                id="col"
+              >
                 FlashEvents
-              </a>
+              </Link>
               <input type="checkbox" id="showMega" />
               <label htmlFor="showMega" className="mobile-item">
                 Services
@@ -2405,82 +2572,90 @@ r</a>
 
               <div className="mega-box" id="megas">
                 <div className="content">
-                <div className="row">
-                    <header>Flash Events: Get Inspired
-</header><hr/>
+                  <div className="row">
+                    <header>Flash Events: Get Inspired</header>
+                    <hr id="horizontal-line" />
                     <ul className="mega-links">
-                    <li>
-                        <a href="/#" id="bold">Women's Flash Events
-</a>
-                      </li> <li>
-                        <a href="/#" id="bold">Men's Flash Events
-</a>
-                      </li>
-                      
                       <li>
-                        <a href="/#" id="bold">Kids' Flash Events
-</a>
-                      </li> <li>
-                        <a href="/#" id="bold">Home Flash Events
-</a>
-                      </li>
-                      
+                        <Link to="/flash/women" id="bold">
+                          Women's Flash Events
+                        </Link>
+                      </li>{" "}
                       <li>
-                        <a href="/#" id="bold">Beauty Flash Events</a>
-                      </li> 
+                        <Link to="/flash/mens" id="bold">
+                          Men's Flash Events
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/flash/kids" id="bold">
+                          Kids' Flash Events
+                        </Link>
+                      </li>{" "}
+                      <li>
+                        <Link to="/flash/home" id="bold">
+                          Home Flash Events
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/flash/beauty" id="bold">
+                          Beauty Flash Events
+                        </Link>
+                      </li>
                     </ul>
                   </div>
                   <div className="row">
-                    <header>Women's Must-Have Bright & Bold Sandals
-</header>
+                    <header>Women's Must-Have Bright & Bold Sandals</header>
                     <ul className="mega-links">
-                    <li>
-                        <a href="/#">Men's Must-Have Sandals Up to 60% Off
-</a>
-                      </li>
-                      
                       <li>
-                        <a href="/#">Kids' Must-Have Sandals Up to 50% Off
-</a>
+                        <Link to="/#">
+                          Men's Must-Have Sandals Up to 60% Off
+                        </Link>
                       </li>
-                         <li>
-                        <a href="/#">Free People Starting at $30
-</a>
-                      </li> <li>
-                        <a href="/#">Alexia Admor Up to 65% Off Including Plus
-</a>
-                      </li>
-                      
                       <li>
-                        <a href="/#">Beach Party: Women's Swimwear, Cover-Ups & More Up to 60% Off
-</a>
-                      </li> <li>
-                        <a href="/#">Beach Party: Women's Summer & Resort Styles Up to 65% Off
-</a>
+                        <Link to="/#">
+                          Kids' Must-Have Sandals Up to 50% Off
+                        </Link>
                       </li>
-                      
                       <li>
-                        <a href="/#">Beach Party: Men's Summer & Resort Styles Up to 65% Off
-</a>
-                      </li> <li>
-                        <a href="/#">Beach Party: Kids' Swim & Summer Styles Up to 60% Off
-</a>
+                        <Link to="/#">Free People Starting at $30</Link>
                       </li>
-                      
                       <li>
-                        <a href="/#">Cozy Throws Feat. Barefoot Dreams</a>
-                      </li> 
+                        <Link to="/#">
+                          Alexia Admor Up to 65% Off Including Plus
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/#">
+                          Beach Party: Women's Swimwear, Cover-Ups & More Up to
+                          60% Off
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/#">
+                          Beach Party: Women's Summer & Resort Styles Up to 65%
+                          Off
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/#">
+                          Beach Party: Men's Summer & Resort Styles Up to 65%
+                          Off
+                        </Link>
+                      </li>{" "}
+                      <li>
+                        <Link to="/#">
+                          Beach Party: Kids' Swim & Summer Styles Up to 60% Off
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/#">Cozy Throws Feat. Barefoot Dreams</Link>
+                      </li>
                     </ul>
                   </div>
-                  
-                  
                 </div>
               </div>
             </li>
-
-           
           </ul>
-         
         </div>
       </nav>
     </>

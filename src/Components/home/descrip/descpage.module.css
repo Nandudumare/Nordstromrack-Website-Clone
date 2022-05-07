@@ -3,6 +3,7 @@
     justify-content:space-between;
     /* border:1px solid black; */
     margin-top:50px;
+    padding: 70px;
 }
 
 .descimagediv{
@@ -40,7 +41,7 @@
     color: #fff;
     font-weight: 400;
     text-align: center;
-    border-radius:5px
+ 
 
 }
 
@@ -54,7 +55,8 @@
     font-weight: 400;
     text-align: center;
     border-radius:5px;
-    padding:9px
+    padding:9px;
+    cursor: pointer;
     /* border:1px solid black */
 
 }
@@ -63,5 +65,6 @@
     color:teal;
     transition:all ease 0.3sec;
     background-color:white;
+    border:1px solid #00819d;
 }
 
