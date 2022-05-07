@@ -75,7 +75,7 @@ const Modals = () => {
       ) : (
         <div
           style={{
-            marginTop: "50px",
+            marginTop: "80px",
             marginLeft: "430px",
             display: "grid",
             gridTemplateRows: "30px 80px",
