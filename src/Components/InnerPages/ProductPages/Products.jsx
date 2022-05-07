@@ -62,7 +62,9 @@ const Products = () => {
       <div className={styles.left}>
         <p> Home /</p>
         <p>Category / </p>
+      
         <p className={styles.ids}>{id} </p>
+      
       </div>
       <div className={styles.topdiv}>
         <div>
@@ -70,37 +72,27 @@ const Products = () => {
             {/* side bar div */}
             <div className={styles.sidebar__1}>
               <Navigation
-                // you can use your own router's api to get pathname
-                activeItemId="/management/members"
                 onSelect={({ itemId }) => {
-                  // maybe push to the route
                 }}
                 items={[
                   {
                     itemId: "/dashboard",
-                    // you can use your own custom Icon component as well
-                    // icon is optional
-                    // elemBefore: () => <Icon name="inbox" />,
                   },
                   {
                     title: <h4>Size</h4>,
                     itemId: "/1",
-                    // elemBefore: () => <Icon name="users" />,
                     subNav: [
-                      // {
-                      //   title:<input style={{width:"20px"}} type="checkbox" />,
-                      //   itemId: '/management/projects',
-                      // },
                       {
                         title: (
-                          <div className={styles.flex__div}>
-                            <input style={{ width: "50px" }} type="checkbox" />
+                          < >
+          
+                            <input style={{ width: "50px" }} type="checkbox" /> 
                             <lable
                               style={{ marginTop: "5px", fontSize: "0.8rem" }}
                             >
                               XXS
-                            </lable>
-                          </div>
+                            </lable> 
+                          </>
                         ),
 
                         itemId: "/11",
@@ -108,6 +100,7 @@ const Products = () => {
                       {
                         title: (
                           <div className={styles.flex__div}>
+                              <input type="text"/>
                             <input style={{ width: "20px" }} type="checkbox" />
                             <lable
                               style={{ marginTop: "5px", fontSize: "0.8rem" }}
@@ -138,7 +131,7 @@ const Products = () => {
                             <lable
                               style={{ marginTop: "5px", fontSize: "0.8rem" }}
                             >
-                              {" "}
+                         
                               4,S
                             </lable>
                           </div>
@@ -211,7 +204,7 @@ const Products = () => {
                             <lable
                               style={{ marginTop: "5px", fontSize: "0.8rem" }}
                             >
-                              {" "}
+                      
                               Grey
                             </lable>
                           </div>
@@ -225,7 +218,7 @@ const Products = () => {
                             <lable
                               style={{ marginTop: "5px", fontSize: "0.8rem" }}
                             >
-                              {" "}
+                         
                               White
                             </lable>
                           </div>
@@ -574,20 +567,17 @@ const Products = () => {
         </div>
       </div>
 
-      <h2 className={styles.left1}>Items for {id}</h2>
+      <h2 className={styles.left1}>Products for Categoty of {id}</h2>
 
       <div className={styles.allcategory}>
-        <a>All Dresses</a>
-        <a>Casual</a>
-        <a>Cocktail & Party</a>
-        <a>Daytime & Sundresses</a>
-        <a>Floral</a>
-        <a>Formal</a>
-        <a>Going Out</a>
-        <a>Long Sleeve</a>
-        <a>Maxi</a>
-        <a>Midi</a>
-        <a>Shirt</a>
+        <p>All</p>
+        <p>Casual</p>
+        <p>Cocktail & Party</p>
+        <p>Daytime & Sundresses</p>
+      
+        <p>Formal</p>
+        <p>Going Out</p>
+    
       </div>
       <div className={styles.line}></div>
       <p className={styles.left2}>{filterData.length} items</p>

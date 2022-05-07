@@ -90,7 +90,14 @@
 .allcategory{
     display: flex;
     margin-left: 23%;
-    justify-content: space-around;
+    width: 100%;
+    justify-content: space-between;
+    cursor: pointer;
+    /* border: 1px solid red; */
+}
+.allcategory>p:hover{
+    text-decoration: underline;
+    
 }
 
 .shipping{
