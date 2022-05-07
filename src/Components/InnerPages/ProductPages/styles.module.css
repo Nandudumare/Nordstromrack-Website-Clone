@@ -128,7 +128,7 @@
     position: relative;
     cursor: pointer;
     /* border: 1px solid green; */
-    height: 600px;
+    height: 500px;
     display: flex;
     flex-direction:column;
     justify-content: space-between;
@@ -137,17 +137,26 @@
   }
   .productContainer>div:nth-child(1){
       position: relative;
+      width: 240px;
+      height: 240px;
+      /* border: 1px solid green; */
+    
+
+  }
+  .productContainer>div:nth-child(1) img{
+      width:100%;
+      height: 100%;
   }
 
 .Quicklook{
-  width:110%;
+  width:105%;
   height:50px;
   position: absolute;
   top:100%;
   display:none;
   color:rgb(77, 133, 156);
   background-color:0.2px transparent;
-  margin-left: -12px;
+  margin-left: -10px;
   z-index:-0.8;
   border:0.7px solid rgb(77, 133, 156);
   /* border:2.1px solid rgb(24, 134, 134); */
@@ -168,6 +177,7 @@
 
   .grid___1{
     display: grid;
+    height:auto;
     grid-template-columns: repeat(4,250px);
     margin-left: 23%;
     margin-top: 5%;
