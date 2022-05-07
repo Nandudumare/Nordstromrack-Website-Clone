@@ -73,7 +73,7 @@ const Checkout = () => {
           </div>
 
           <div className={styles.shipping}>
-            <p className={styles.size}>Shipping adress</p>
+            <p className={styles.size}>Shipping address</p>
 
             {/* onClick={()=>{handleclick(e)}} */}
 
