@@ -18,7 +18,7 @@ const Megha = () => {
             </label>
             <li>
               <Link
-                to="/#"
+                to=""
                 className="desktop-item"
                 onClick={() => setHover((prev) => !prev)}
                 id="clear"
@@ -161,7 +161,7 @@ const Megha = () => {
             </li>
             <li>
               <Link
-                to="/#"
+                to=""
                 className="desktop-item"
                 onClick={() => setHover((prev) => !prev)}
               >
@@ -492,7 +492,7 @@ const Megha = () => {
             </li>
             <li>
               <Link
-                to="/#"
+                to=""
                 className="desktop-item"
                 onClick={() => setHover((prev) => !prev)}
               >
@@ -807,7 +807,7 @@ const Megha = () => {
             </li>
             <li>
               <Link
-                to="/#"
+                to=""
                 className="desktop-item"
                 onClick={() => setHover((prev) => !prev)}
               >
@@ -1109,7 +1109,7 @@ const Megha = () => {
             </li>
             <li>
               <Link
-                to="/#"
+                to=""
                 className="desktop-item"
                 onClick={() => setHover((prev) => !prev)}
               >
@@ -1403,7 +1403,7 @@ const Megha = () => {
 
             <li>
               <Link
-                to="/#"
+                to=""
                 className="desktop-item"
                 onClick={() => setHover((prev) => !prev)}
               >
@@ -1636,7 +1636,7 @@ const Megha = () => {
 
             <li>
               <Link
-                to="/#"
+                to=""
                 className="desktop-item"
                 onClick={() => setHover((prev) => !prev)}
               >
@@ -1894,7 +1894,7 @@ const Megha = () => {
 
             <li>
               <Link
-                to="/#"
+                to=""
                 className="desktop-item"
                 onClick={() => setHover((prev) => !prev)}
               >
@@ -2173,7 +2173,7 @@ const Megha = () => {
 
             <li>
               <Link
-                to="/#"
+                to=""
                 className="desktop-item"
                 onClick={() => setHover((prev) => !prev)}
               >
@@ -2444,7 +2444,7 @@ const Megha = () => {
 
             <li>
               <Link
-                to="/#"
+                to=""
                 className="desktop-item"
                 onClick={() => setHover((prev) => !prev)}
               >
@@ -2558,7 +2558,7 @@ const Megha = () => {
 
             <li>
               <Link
-                to="#"
+                to=""
                 className="desktop-item"
                 onClick={() => setHover((prev) => !prev)}
                 id="col"
@@ -2625,7 +2625,7 @@ const Megha = () => {
                         </Link>
                       </li>
                       <li>
-                        <Link to="/#">
+                        <Link to="">
                           Beach Party: Women's Swimwear, Cover-Ups & More Up to
                           60% Off
                         </Link>

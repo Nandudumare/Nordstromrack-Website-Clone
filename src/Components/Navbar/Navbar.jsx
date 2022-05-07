@@ -457,7 +457,7 @@ const Navbar = () => {
                   right: "37px",
                   top: "68px",
                   color: "red",
-                  fontWeight: "bold"
+                  fontWeight: "bold",
                 }}
               >
                 {cartData.length}
@@ -480,6 +480,7 @@ const Navbar = () => {
 
       <hr style={{ marginBottom: "0px" }} />
       {/* <Modals /> */}
+     
     </>
   );
 };
