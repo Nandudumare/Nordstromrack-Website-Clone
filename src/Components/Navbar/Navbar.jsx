@@ -480,7 +480,6 @@ const Navbar = () => {
 
       <hr style={{ marginBottom: "0px" }} />
       {/* <Modals /> */}
-     
     </>
   );
 };
