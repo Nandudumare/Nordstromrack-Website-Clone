@@ -29,9 +29,6 @@ const MainRoutes = () => {
   return (
     <>
       <Navbar />
-
-      {/* <Checkout/> */}
-
       <Routes>
         <Route path="checkout" element={<Checkout />} />
 
