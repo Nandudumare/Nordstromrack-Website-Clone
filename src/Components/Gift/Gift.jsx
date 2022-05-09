@@ -4,12 +4,14 @@ import Shopyourway from "./Shopyourway";
 
 const Gift = () => {
   return (
-    <div>
+    <>
       <Momgift />
       <Therealdeal />
       <Motherfaq />
       <Shopyourway />
-    </div>
+    </>
+     
+  
   );
 };
 
