@@ -37,6 +37,11 @@ ___
 * Series & Shows Gallery 
 * Show Carousels
 * Show Details.
+* Product adding to cart, and deleting from Cart
+* Different Page Related to Brand
+* Searching
+* Payment Option
+* Sorting, Filtering, and Searching.
 
 ### Screenshots
 ___
