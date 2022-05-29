@@ -1,4 +1,74 @@
-# Getting Started with Create React App
+## Nordstromrack.com Clone 
+---
+<p>
+This was a collaborative construct week project at Masai School.
+Goal behind the project was to create a clone of the Nordstromrack website as close as possible to the original one with all the major functionalities of this website, such as User Authentication, User Details Management, Series & Shows gallery and carousels and Show Details.
+This project was built by a team of 6 developers in 4 Days. 
+</p>
+
+* [Click Here](https://precious-lokum-c13ef5.netlify.app/ "Nordstromrack.com Clone") to view the deployed website.
+
+<p>
+Nordstrom Rack is an American off-price department store chain founded in 1973, and a subsidiary of the luxury department store chain Nordstrom. Nordstrom Rack offers branded clothing and accessories for women, men, and kids at a large discount to consumers across the United States and Canada.
+</p>
+
+### Credits
+___
+* Images: [nordstromrack.com](https://www.nordstromrack.com/)
+* Content & Data: [nordstromrack.com](https://www.nordstromrack.com/)
+* Icons: [Bootstrap Icons](https://icons.getbootstrap.com/)
+* References: [MDN Docs](https://developer.mozilla.org/en-US/ ) | [W3Schools](https://www.w3schools.com/) 
+
+### Tech-Stack
+___
+
+* HTML 5
+* CSS 3
+* React JS
+* Redux
+* Bootsrap
+* Git
+
+### Features
+___
+* User Authentication
+* User Details Management 
+* Series & Shows Gallery 
+* Show Carousels
+* Show Details.
+
+### Screenshots
+___
+![screehshot](https://miro.medium.com/max/1400/1*waAgZgWdPbKaSa2TJQ_GOw.png)
+<br/>
+![screehshot2](https://miro.medium.com/max/1400/1*YlnFjcVxpxAHKEh6fXaf7Q.png)
+<br/>
+![screehshot3](https://miro.medium.com/max/1400/1*-J94ifrXnJQj-jNfC54I4w.png)
+<br/>
+![screehshot4](https://miro.medium.com/max/1400/1*zkAyQ5hb9KlI8RFAKSN93w.png)
+<br/>
+![screehshot5](https://miro.medium.com/max/1400/1*FswDNinnLpe95QoF5JAvoQ.png)
+<br/>
+![screehshot5](https://miro.medium.com/max/1400/1*D7VjzDzjjufnWAw_ZxCvjA.png)
+<br/>
+![screehshot5](https://miro.medium.com/max/1400/1*X4H7giWuV6FWZCRqHB-_LQ.png)
+
+### Blog
+___
+* Link (https://medium.com/@Jayavish143/my-unit-4construct-week-project-at-masai-8b7d35550634)
+
+### Team
+___
+* Nandkishor Dumare
+* Aakash-kushwaha
+* Monica R Priya
+* Swapnil kapadnis
+* Sachin Kumar Keshri
+* Jaya Vishwakarma
+
+### Deployment
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
