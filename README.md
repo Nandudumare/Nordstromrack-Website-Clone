@@ -26,6 +26,7 @@ ___
 * CSS 3
 * React JS
 * Redux
+* Redux-Thunk
 * Bootsrap
 * Git
 
